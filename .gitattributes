@@ -1,0 +1,5 @@
+ml/weights/*.pt filter=lfs diff=lfs merge=lfs -text
+docs/reports/figures/*.png filter=lfs diff=lfs merge=lfs -text
+docs/reports/figures/*.jpg filter=lfs diff=lfs merge=lfs -text
+docs/reports/metrics/*.json filter=lfs diff=lfs merge=lfs -text
+docs/reports/*.csv filter=lfs diff=lfs merge=lfs -text

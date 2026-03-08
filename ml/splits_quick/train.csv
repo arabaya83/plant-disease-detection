@@ -1,0 +1,761 @@
+image_path,class_name,label_idx
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Apple___Apple_scab/d1773f0b-f049-4bb1-b13f-d33b96078ab3___FREC_Scab 3046.JPG,Apple___Apple_scab,0
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Apple___Apple_scab/ed33dbe0-edc4-4ad8-85c2-0495f384e3fe___FREC_Scab 3467.JPG,Apple___Apple_scab,0
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Apple___Apple_scab/5d398d0d-256d-4de5-8dcd-f3b455da2b76___FREC_Scab 3522.JPG,Apple___Apple_scab,0
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Apple___Apple_scab/8c5418d9-37db-450f-a20e-7fccfe69f57a___FREC_Scab 3404.JPG,Apple___Apple_scab,0
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Apple___Apple_scab/51929389-451f-4c78-a66b-b644e82a33b6___FREC_Scab 3528.JPG,Apple___Apple_scab,0
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Apple___Apple_scab/1bcc3b5d-7e00-43fb-983e-95ae271a715b___FREC_Scab 3061.JPG,Apple___Apple_scab,0
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Apple___Apple_scab/d730c2c9-ac5f-4c4e-b568-2f3e8b43b1a9___FREC_Scab 3074.JPG,Apple___Apple_scab,0
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Apple___Apple_scab/5345e6fb-1829-457f-ac86-6683d762c9ea___FREC_Scab 3482.JPG,Apple___Apple_scab,0
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Apple___Apple_scab/ce7338f4-ed12-4014-8d2f-4b674b672357___FREC_Scab 3532.JPG,Apple___Apple_scab,0
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Apple___Apple_scab/12bc3d5c-2409-426e-b6cb-a08cbf488153___FREC_Scab 3154.JPG,Apple___Apple_scab,0
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Apple___Apple_scab/9a544639-1fc6-4c45-88e4-3049c2bc0814___FREC_Scab 3439.JPG,Apple___Apple_scab,0
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Apple___Apple_scab/44dcf367-d162-407e-8ea8-e363ab8ff5c4___FREC_Scab 3282.JPG,Apple___Apple_scab,0
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Apple___Apple_scab/0b170906-9436-4c0d-84c1-c396ad9d909b___FREC_Scab 3101.JPG,Apple___Apple_scab,0
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Apple___Apple_scab/45000608-507a-46f5-be52-3ee24d0fb47d___FREC_Scab 3113.JPG,Apple___Apple_scab,0
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Apple___Apple_scab/affb666c-6915-48e6-ba8a-92385af75826___FREC_Scab 3395.JPG,Apple___Apple_scab,0
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Apple___Apple_scab/f1017472-d391-4a66-b9b2-d52916cd0c0b___FREC_Scab 3176.JPG,Apple___Apple_scab,0
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Apple___Apple_scab/84ba6fe9-427e-415b-8bfe-a1f8670e1537___FREC_Scab 3530.JPG,Apple___Apple_scab,0
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Apple___Apple_scab/1d9d67e2-5603-4710-ae2b-6cb0b922ae61___FREC_Scab 3122.JPG,Apple___Apple_scab,0
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Apple___Apple_scab/83d10707-6253-4717-8c8a-6ea3ebb1e0e1___FREC_Scab 3138.JPG,Apple___Apple_scab,0
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Apple___Apple_scab/76eca386-c7c1-4807-ae27-13c793d06e02___FREC_Scab 3272.JPG,Apple___Apple_scab,0
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Apple___Black_rot/719f24ab-9127-4a77-9f7e-7b47acb9f977___JR_FrgE.S 8802.JPG,Apple___Black_rot,1
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Apple___Black_rot/2478fee4-ef3a-4638-8641-f5524246f29a___JR_FrgE.S 2951.JPG,Apple___Black_rot,1
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Apple___Black_rot/dddffcc1-874d-4a5a-a030-14a6e2a4bf0d___JR_FrgE.S 2958.JPG,Apple___Black_rot,1
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Apple___Black_rot/448d1f3f-9794-4148-a180-7246ef9291cf___JR_FrgE.S 2930.JPG,Apple___Black_rot,1
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Apple___Black_rot/48d6f0b4-71e8-418f-8558-b38b89ed3c0b___JR_FrgE.S 8569.JPG,Apple___Black_rot,1
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Apple___Black_rot/f63c8d11-234c-4ff4-bd81-5c3947503038___JR_FrgE.S 3085.JPG,Apple___Black_rot,1
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Apple___Black_rot/c4746563-b461-420a-9963-9a9b467c97d6___JR_FrgE.S 2742.JPG,Apple___Black_rot,1
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Apple___Black_rot/eb36abb9-44c2-47e1-86fe-36c834ed7add___JR_FrgE.S 8644.JPG,Apple___Black_rot,1
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Apple___Black_rot/1dfd4db7-a456-4785-bf16-f517bcaf54e8___JR_FrgE.S 3089.JPG,Apple___Black_rot,1
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Apple___Black_rot/7375bf36-7a8e-4fc5-8ee8-0bee7bfb3574___JR_FrgE.S 2874.JPG,Apple___Black_rot,1
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Apple___Black_rot/723e8edc-3701-4ba1-bda2-7e0ebd535797___JR_FrgE.S 2837.JPG,Apple___Black_rot,1
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Apple___Black_rot/8c033a16-bdf6-46ee-ac3b-2d84a6940950___JR_FrgE.S 8614.JPG,Apple___Black_rot,1
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Apple___Black_rot/fc7d3fc0-1b3c-4865-adee-3670870ec4c3___JR_FrgE.S 2913.JPG,Apple___Black_rot,1
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Apple___Black_rot/3ef4204e-d2c3-42b5-ac97-0eabb3d64b3f___JR_FrgE.S 8815.JPG,Apple___Black_rot,1
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Apple___Black_rot/0ebea6f4-08e4-4380-86f8-34d854697e32___JR_FrgE.S 2877.JPG,Apple___Black_rot,1
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Apple___Black_rot/2b16890e-753f-4ee8-a78e-d0a7fdf8d91a___JR_FrgE.S 2838.JPG,Apple___Black_rot,1
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Apple___Black_rot/b48b4bc3-f7dc-4c57-90eb-0bc29c8c1b5f___JR_FrgE.S 2744.JPG,Apple___Black_rot,1
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Apple___Black_rot/7f11ba2d-0894-4240-9d41-b0e131d8e711___JR_FrgE.S 2731.JPG,Apple___Black_rot,1
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Apple___Black_rot/a0953d6d-067c-4b49-86fb-162d14d2fed0___JR_FrgE.S 2796.JPG,Apple___Black_rot,1
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Apple___Black_rot/7389e6f0-9d77-41fd-b58c-e7d80c659ab6___JR_FrgE.S 8773.JPG,Apple___Black_rot,1
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Apple___Cedar_apple_rust/9f7d070e-f51d-4b14-86e4-6f059ea4eca7___FREC_C.Rust 0210.JPG,Apple___Cedar_apple_rust,2
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Apple___Cedar_apple_rust/1b567c7d-1041-4240-a56c-8ea94e6252b4___FREC_C.Rust 4245.JPG,Apple___Cedar_apple_rust,2
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Apple___Cedar_apple_rust/96bec7bd-9c12-4284-a298-d20379abb4a2___FREC_C.Rust 3815.JPG,Apple___Cedar_apple_rust,2
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Apple___Cedar_apple_rust/c16bbb5c-bd59-4568-80a4-ac10eb488a4e___FREC_C.Rust 4274.JPG,Apple___Cedar_apple_rust,2
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Apple___Cedar_apple_rust/d4547913-b1ce-4620-b078-dbf24ea71764___FREC_C.Rust 4197.JPG,Apple___Cedar_apple_rust,2
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Apple___Cedar_apple_rust/d64bd246-5ab0-4b1e-b522-3f69668214d1___FREC_C.Rust 4290.JPG,Apple___Cedar_apple_rust,2
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Apple___Cedar_apple_rust/dec47754-abfe-496b-a310-47d1fbb077ba___FREC_C.Rust 9910.JPG,Apple___Cedar_apple_rust,2
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Apple___Cedar_apple_rust/a9c36955-73f5-43d5-9e1e-03672ed95b38___FREC_C.Rust 3893.JPG,Apple___Cedar_apple_rust,2
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Apple___Cedar_apple_rust/811b2953-8508-4327-944e-8d999211790c___FREC_C.Rust 3891.JPG,Apple___Cedar_apple_rust,2
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Apple___Cedar_apple_rust/3ef85bf3-728f-46d7-95cc-a5bddf34db98___FREC_C.Rust 3885.JPG,Apple___Cedar_apple_rust,2
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Apple___Cedar_apple_rust/4dc8e2a8-4374-488a-afc6-fd0ea7f15c88___FREC_C.Rust 3991.JPG,Apple___Cedar_apple_rust,2
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Apple___Cedar_apple_rust/77f413dd-06cd-4e01-92f9-fdb8d0320b68___FREC_C.Rust 0089.JPG,Apple___Cedar_apple_rust,2
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Apple___Cedar_apple_rust/7b2dd7f1-d16e-47b6-8750-cfaf315aad87___FREC_C.Rust 0109.JPG,Apple___Cedar_apple_rust,2
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Apple___Cedar_apple_rust/eb94b818-0cd7-4233-8315-1138c258eb88___FREC_C.Rust 0164.JPG,Apple___Cedar_apple_rust,2
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Apple___Cedar_apple_rust/d4cda9ab-6b06-4551-ad3d-ee61dd78450a___FREC_C.Rust 3592.JPG,Apple___Cedar_apple_rust,2
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Apple___Cedar_apple_rust/3fe25d8e-4497-49bd-b4e0-9c7dd3c3c6cd___FREC_C.Rust 9960.JPG,Apple___Cedar_apple_rust,2
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Apple___Cedar_apple_rust/7ddc6bbf-42d1-4c84-b695-88077058656f___FREC_C.Rust 4079.JPG,Apple___Cedar_apple_rust,2
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Apple___Cedar_apple_rust/92f2fe26-624c-4620-8210-0e2ff92e594d___FREC_C.Rust 4354.JPG,Apple___Cedar_apple_rust,2
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Apple___Cedar_apple_rust/d523dfa0-a337-44db-a994-669ac6e0a87c___FREC_C.Rust 4006.JPG,Apple___Cedar_apple_rust,2
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Apple___Cedar_apple_rust/fb11d069-d664-4666-ab51-3a7a4284e495___FREC_C.Rust 3791.JPG,Apple___Cedar_apple_rust,2
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Apple___healthy/77b8d24a-27e6-410e-97ef-faacc60c5a10___RS_HL 5831.JPG,Apple___healthy,3
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Apple___healthy/2cad835a-1b47-4cad-b08e-acfd29cf5883___RS_HL 7647.JPG,Apple___healthy,3
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Apple___healthy/d826b07d-a57b-4331-a451-8bb1ea264861___RS_HL 7537.JPG,Apple___healthy,3
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Apple___healthy/f2904228-2cc6-4c6c-a2b5-6951a6f3535e___RS_HL 6254.JPG,Apple___healthy,3
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Apple___healthy/1cbe6aef-57d4-4f2a-b8fb-0375db7084d3___RS_HL 7356.JPG,Apple___healthy,3
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Apple___healthy/29745ef7-133c-4f61-a5bd-592790f81a32___RS_HL 6326.JPG,Apple___healthy,3
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Apple___healthy/d1dd75fa-e0f8-4942-b530-5f6371ac9bc8___RS_HL 7427.JPG,Apple___healthy,3
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Apple___healthy/b06260e3-9149-43c1-ab1d-2a592ee2b7fc___RS_HL 5825.JPG,Apple___healthy,3
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Apple___healthy/871420e0-e5de-40c7-a79c-a17fe1781f8e___RS_HL 7444.JPG,Apple___healthy,3
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Apple___healthy/6806c56d-b5d6-45fc-8e96-0d8def5932b9___RS_HL 5692.JPG,Apple___healthy,3
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Apple___healthy/c936479f-544d-482a-a3d2-19b8bf69bf8d___RS_HL 7898.JPG,Apple___healthy,3
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Apple___healthy/278e3aec-395c-457a-8fd0-ddf0ad8f3056___RS_HL 7377.JPG,Apple___healthy,3
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Apple___healthy/e60576a0-8d11-4fe9-8efa-5fe763573dc7___RS_HL 7406.JPG,Apple___healthy,3
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Apple___healthy/a4c37f29-8f5a-4a06-b6c4-367d523d452a___RS_HL 7374.JPG,Apple___healthy,3
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Apple___healthy/72059689-4c66-4922-8702-1a8d1fef1594___RS_HL 7729.JPG,Apple___healthy,3
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Apple___healthy/30995ef5-ad2d-4949-b0e0-f98b074b4a96___RS_HL 7378.JPG,Apple___healthy,3
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Apple___healthy/4306468f-a177-4c65-bb9a-4167e8d33223___RS_HL 5897.JPG,Apple___healthy,3
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Apple___healthy/6422d3df-4b2d-4e73-b1c9-3da9f763cb75___RS_HL 7259.JPG,Apple___healthy,3
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Apple___healthy/43619607-151e-41c1-b428-89f24c177515___RS_HL 5723.JPG,Apple___healthy,3
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Apple___healthy/a30bee25-14fb-43d2-9ab2-b179c920839c___RS_HL 5778.JPG,Apple___healthy,3
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Blueberry___healthy/c249b5a6-3a7f-41cc-9c1c-0c6b253ce802___RS_HL 0654.JPG,Blueberry___healthy,4
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Blueberry___healthy/da3219a3-b0ec-43fb-ad2e-eedd7d11e212___RS_HL 5015.JPG,Blueberry___healthy,4
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Blueberry___healthy/5e88a94a-3f18-411b-b943-81b501cf8bdd___RS_HL 2657.JPG,Blueberry___healthy,4
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Blueberry___healthy/94c6876f-4d68-4cc4-a361-75ae56d7a885___RS_HL 0617.JPG,Blueberry___healthy,4
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Blueberry___healthy/201aef7f-4e1c-4197-ae37-66ca340909bc___RS_HL 0672.JPG,Blueberry___healthy,4
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Blueberry___healthy/78eedc31-b104-456b-a312-3a804a017da1___RS_HL 5090.JPG,Blueberry___healthy,4
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Blueberry___healthy/6eac2d81-1878-4cd5-8602-40b02ff39cca___RS_HL 0597.JPG,Blueberry___healthy,4
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Blueberry___healthy/1e6cad77-e0db-452f-9781-b45d18b465cd___RS_HL 5304.JPG,Blueberry___healthy,4
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Blueberry___healthy/37721995-b612-41d8-8963-837e5b1d1510___RS_HL 0436.JPG,Blueberry___healthy,4
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Blueberry___healthy/7c6c3c41-8c5f-421a-92d5-898db8939ead___RS_HL 2277.JPG,Blueberry___healthy,4
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Blueberry___healthy/f4ffe8a6-b7a7-4e62-bbb0-3f1383e47abd___RS_HL 5302.JPG,Blueberry___healthy,4
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Blueberry___healthy/44b995ab-dd7c-492e-aa68-f9ca7e1cf3d6___RS_HL 2358.JPG,Blueberry___healthy,4
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Blueberry___healthy/04e3318d-104f-474f-b9ea-d630f366edac___RS_HL 5492.JPG,Blueberry___healthy,4
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Blueberry___healthy/e829c80a-6787-4d9f-a41a-4965a19557fb___RS_HL 2456.JPG,Blueberry___healthy,4
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Blueberry___healthy/767f9252-73cd-469f-9270-54b0a35b8bc9___RS_HL 0481.JPG,Blueberry___healthy,4
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Blueberry___healthy/712ccd76-40fb-4399-a1e9-025f0cc4fdfa___RS_HL 5300.JPG,Blueberry___healthy,4
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Blueberry___healthy/e036c3f5-aa88-4682-8797-38ae75a9d656___RS_HL 2537.JPG,Blueberry___healthy,4
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Blueberry___healthy/461099d3-3abb-4983-b34e-8b7366ae327b___RS_HL 5109.JPG,Blueberry___healthy,4
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Blueberry___healthy/63e05a62-1e80-4aea-975a-55a5ba1ed5f0___RS_HL 5406.JPG,Blueberry___healthy,4
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Blueberry___healthy/2d781105-f8f5-422d-96cb-d794714f89f4___RS_HL 2650.JPG,Blueberry___healthy,4
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Cherry_(including_sour)___Powdery_mildew/4e37a789-6cb3-4721-ad87-1a60f0d14912___FREC_Pwd.M 4836.JPG,Cherry_(including_sour)___Powdery_mildew,5
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Cherry_(including_sour)___Powdery_mildew/112567fd-5046-4328-80f1-f33e01f76cbf___FREC_Pwd.M 5038.JPG,Cherry_(including_sour)___Powdery_mildew,5
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Cherry_(including_sour)___Powdery_mildew/bfa2932f-7203-4a9c-99e7-bb0a4d887cd6___FREC_Pwd.M 4515.JPG,Cherry_(including_sour)___Powdery_mildew,5
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Cherry_(including_sour)___Powdery_mildew/908003f7-4b82-4be9-9d9d-e2e8debb230e___FREC_Pwd.M 0453.JPG,Cherry_(including_sour)___Powdery_mildew,5
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Cherry_(including_sour)___Powdery_mildew/5839bbe0-dd92-4b79-8c12-5ae604e7bf0d___FREC_Pwd.M 5039.JPG,Cherry_(including_sour)___Powdery_mildew,5
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Cherry_(including_sour)___Powdery_mildew/4089802b-53ff-475e-a074-da6c0423a82a___FREC_Pwd.M 0313.JPG,Cherry_(including_sour)___Powdery_mildew,5
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Cherry_(including_sour)___Powdery_mildew/e5914945-129f-4862-836e-0866309dc6b1___FREC_Pwd.M 4989.JPG,Cherry_(including_sour)___Powdery_mildew,5
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Cherry_(including_sour)___Powdery_mildew/00f8611c-0f2c-4f24-8241-d1748c8bb48f___FREC_Pwd.M 0479.JPG,Cherry_(including_sour)___Powdery_mildew,5
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Cherry_(including_sour)___Powdery_mildew/59f996b8-cda8-44d9-807e-4567efaeade8___FREC_Pwd.M 4714.JPG,Cherry_(including_sour)___Powdery_mildew,5
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Cherry_(including_sour)___Powdery_mildew/898a840a-b4a5-4f12-830b-434e07538b2e___FREC_Pwd.M 4649.JPG,Cherry_(including_sour)___Powdery_mildew,5
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Cherry_(including_sour)___Powdery_mildew/10defdf7-7522-4d15-b65a-b6477e950b04___FREC_Pwd.M 4971.JPG,Cherry_(including_sour)___Powdery_mildew,5
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Cherry_(including_sour)___Powdery_mildew/67d60449-6625-4372-90fd-452fc9c345cf___FREC_Pwd.M 4550.JPG,Cherry_(including_sour)___Powdery_mildew,5
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Cherry_(including_sour)___Powdery_mildew/0a283423-3a6d-43a4-92e5-267c8153ca45___FREC_Pwd.M 4921.JPG,Cherry_(including_sour)___Powdery_mildew,5
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Cherry_(including_sour)___Powdery_mildew/2c9735ee-ac5b-4312-8956-beadb239456f___FREC_Pwd.M 4527.JPG,Cherry_(including_sour)___Powdery_mildew,5
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Cherry_(including_sour)___Powdery_mildew/080a25a5-9b62-4fa7-b7fe-44fef2750e0c___FREC_Pwd.M 4673.JPG,Cherry_(including_sour)___Powdery_mildew,5
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Cherry_(including_sour)___Powdery_mildew/5cd2f748-9c48-4014-a623-719154ad16e9___FREC_Pwd.M 0589.JPG,Cherry_(including_sour)___Powdery_mildew,5
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Cherry_(including_sour)___Powdery_mildew/a6421f2e-fa46-45a6-9f1b-64b60cde096a___FREC_Pwd.M 4743.JPG,Cherry_(including_sour)___Powdery_mildew,5
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Cherry_(including_sour)___Powdery_mildew/3f16d4f4-5cc6-4817-852f-6ab66dcee360___FREC_Pwd.M 0528.JPG,Cherry_(including_sour)___Powdery_mildew,5
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Cherry_(including_sour)___Powdery_mildew/503409a9-1a72-4cbf-98ab-421139942fd9___FREC_Pwd.M 0296.JPG,Cherry_(including_sour)___Powdery_mildew,5
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Cherry_(including_sour)___Powdery_mildew/0a5aacba-0363-4b71-9beb-30183982d415___FREC_Pwd.M 4919.JPG,Cherry_(including_sour)___Powdery_mildew,5
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Cherry_(including_sour)___healthy/135f64b7-91ed-40b5-a27b-9a8a602001ec___JR_HL 9878 copy.JPG,Cherry_(including_sour)___healthy,6
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Cherry_(including_sour)___healthy/ab72c1fa-5d40-4bc9-a384-a99fab121811___JR_HL 9510.JPG,Cherry_(including_sour)___healthy,6
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Cherry_(including_sour)___healthy/e8603072-d743-4b79-a882-3699649ffff4___JR_HL 9753.JPG,Cherry_(including_sour)___healthy,6
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Cherry_(including_sour)___healthy/b98e33ce-f1b1-45ab-8429-23c303eb079a___JR_HL 3981.JPG,Cherry_(including_sour)___healthy,6
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Cherry_(including_sour)___healthy/b489ce0e-ab37-4bd9-b45a-84f8d994eb0f___JR_HL 9495.JPG,Cherry_(including_sour)___healthy,6
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Cherry_(including_sour)___healthy/7f127004-56f7-4f16-a34f-9d5cbaaa9f8e___JR_HL 4041.JPG,Cherry_(including_sour)___healthy,6
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Cherry_(including_sour)___healthy/3e01a27d-037d-4bf8-81ee-c2ee958ebfec___JR_HL 9615.JPG,Cherry_(including_sour)___healthy,6
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Cherry_(including_sour)___healthy/cbb4bd24-9572-4235-a9c1-e6b73118b7d5___JR_HL 4120.JPG,Cherry_(including_sour)___healthy,6
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Cherry_(including_sour)___healthy/0cc09402-01b5-46a2-a5b1-f9b22f415eaf___JR_HL 9885 copy.JPG,Cherry_(including_sour)___healthy,6
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Cherry_(including_sour)___healthy/91dda36e-1105-43e1-806f-e728843ac9a5___JR_HL 9806.JPG,Cherry_(including_sour)___healthy,6
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Cherry_(including_sour)___healthy/16952b2d-daf9-47c6-b15e-c2c465bd5cf0___JR_HL 9882.JPG,Cherry_(including_sour)___healthy,6
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Cherry_(including_sour)___healthy/ccb0e9ab-f7d0-4a63-9ab3-d1653a807f09___JR_HL 3946.JPG,Cherry_(including_sour)___healthy,6
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Cherry_(including_sour)___healthy/ee08caf8-fa0d-4a79-bb2e-5399197d01e4___JR_HL 4279.JPG,Cherry_(including_sour)___healthy,6
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Cherry_(including_sour)___healthy/4ec2d760-cc99-4368-b94d-637022f8ea12___JR_HL 9538.JPG,Cherry_(including_sour)___healthy,6
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Cherry_(including_sour)___healthy/72e6c2ef-5908-4be8-a26e-0261a9627466___JR_HL 4283.JPG,Cherry_(including_sour)___healthy,6
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Cherry_(including_sour)___healthy/28821198-5ac9-45e1-a5d7-37d58258a58a___JR_HL 9543.JPG,Cherry_(including_sour)___healthy,6
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Cherry_(including_sour)___healthy/78761149-870c-4ab1-8de3-4361d2866dd5___JR_HL 3982.JPG,Cherry_(including_sour)___healthy,6
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Cherry_(including_sour)___healthy/27ab799c-5868-4386-8891-6b4ae53fa725___JR_HL 9794.JPG,Cherry_(including_sour)___healthy,6
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Cherry_(including_sour)___healthy/bcbb8047-c1a7-4728-a5fa-b07e784f9bc5___JR_HL 4121.JPG,Cherry_(including_sour)___healthy,6
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Cherry_(including_sour)___healthy/a97e7cd1-52ee-49fa-a352-f424d8ad6c8f___JR_HL 9529.JPG,Cherry_(including_sour)___healthy,6
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot/7394c8a3-7c6e-486b-a2b3-bb54d7dfba25___RS_GLSp 4334.JPG,Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot,7
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot/4be4a686-ab64-43d7-9d7c-0939e389aac9___RS_GLSp 9338.JPG,Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot,7
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot/13c0f3a6-6958-455d-bf3e-ad09b5e9e0dc___RS_GLSp 4663.JPG,Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot,7
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot/6d5fa9cd-63d6-4b4d-a932-9df6cd8b6524___RS_GLSp 4325.JPG,Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot,7
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot/7aaf97df-dc18-4858-887d-e27dfe6c020e___RS_GLSp 7330.JPG,Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot,7
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot/7c479d6b-0f9a-4646-8337-445b76d2959e___RS_GLSp 9349.JPG,Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot,7
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot/97bc3c85-3c34-47c1-9bb8-5eccc54d0427___RS_GLSp 9267.JPG,Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot,7
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot/1157b4eb-dfb3-41b7-a083-77b0ca2e7634___RS_GLSp 4460.JPG,Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot,7
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot/c29e2fb4-4bc4-4025-a29f-170a3477cd11___RS_GLSp 4317.JPG,Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot,7
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot/99238e07-5714-429e-9e3b-cdaebef9ab85___RS_GLSp 3810 copy.jpg,Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot,7
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot/ac871be5-33e2-4fda-995a-8818e8cb7fa2___RS_GLSp 4663 copy 2.jpg,Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot,7
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot/6feb357f-c0ff-484f-8c7b-5f4ec92f56cd___RS_GLSp 4338.JPG,Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot,7
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot/f7044e72-6f61-45ce-9636-43f653381797___RS_GLSp 4637 copy.jpg,Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot,7
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot/038464d1-47a9-4169-afb1-72c87e568a95___RS_GLSp 4480.JPG,Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot,7
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot/837474e2-d11d-44b7-b39b-0a21442b1e04___RS_GLSp 4455.JPG,Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot,7
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot/ceac7e26-3dbe-48a1-b111-3b4149cda69d___RS_GLSp 9316.JPG,Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot,7
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot/22e876a7-46e4-4b87-b2ac-0668117fb455___RS_GLSp 4469.JPG,Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot,7
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot/3d30d46e-da0d-402f-97e8-e1d79cdd7a56___RS_GLSp 4638.JPG,Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot,7
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot/e83678ff-832f-45eb-b95b-766701e6c051___RS_GLSp 9285.JPG,Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot,7
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot/8689aa30-316a-4c89-b3d5-9f0467899cea___RS_GLSp 4498.JPG,Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot,7
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Corn_(maize)___Common_rust_/RS_Rust 1854.JPG,Corn_(maize)___Common_rust_,8
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Corn_(maize)___Common_rust_/RS_Rust 2032.JPG,Corn_(maize)___Common_rust_,8
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Corn_(maize)___Common_rust_/RS_Rust 2214.JPG,Corn_(maize)___Common_rust_,8
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Corn_(maize)___Common_rust_/RS_Rust 1743.JPG,Corn_(maize)___Common_rust_,8
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Corn_(maize)___Common_rust_/RS_Rust 2535.JPG,Corn_(maize)___Common_rust_,8
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Corn_(maize)___Common_rust_/RS_Rust 1713.JPG,Corn_(maize)___Common_rust_,8
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Corn_(maize)___Common_rust_/RS_Rust 2195.JPG,Corn_(maize)___Common_rust_,8
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Corn_(maize)___Common_rust_/RS_Rust 1602.JPG,Corn_(maize)___Common_rust_,8
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Corn_(maize)___Common_rust_/RS_Rust 2130.JPG,Corn_(maize)___Common_rust_,8
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Corn_(maize)___Common_rust_/RS_Rust 1568.JPG,Corn_(maize)___Common_rust_,8
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Corn_(maize)___Common_rust_/RS_Rust 1618.JPG,Corn_(maize)___Common_rust_,8
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Corn_(maize)___Common_rust_/RS_Rust 2629.JPG,Corn_(maize)___Common_rust_,8
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Corn_(maize)___Common_rust_/RS_Rust 2079.JPG,Corn_(maize)___Common_rust_,8
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Corn_(maize)___Common_rust_/RS_Rust 2713.JPG,Corn_(maize)___Common_rust_,8
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Corn_(maize)___Common_rust_/RS_Rust 2069.JPG,Corn_(maize)___Common_rust_,8
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Corn_(maize)___Common_rust_/RS_Rust 2086.JPG,Corn_(maize)___Common_rust_,8
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Corn_(maize)___Common_rust_/RS_Rust 2304.JPG,Corn_(maize)___Common_rust_,8
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Corn_(maize)___Common_rust_/RS_Rust 2508.JPG,Corn_(maize)___Common_rust_,8
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Corn_(maize)___Common_rust_/RS_Rust 1771.JPG,Corn_(maize)___Common_rust_,8
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Corn_(maize)___Common_rust_/RS_Rust 2565.JPG,Corn_(maize)___Common_rust_,8
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Corn_(maize)___Northern_Leaf_Blight/1d53e037-ce69-43af-b814-769eedde54c8___RS_NLB 3628.JPG,Corn_(maize)___Northern_Leaf_Blight,9
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Corn_(maize)___Northern_Leaf_Blight/0e9f32b5-3423-4412-a9b6-69ba653db207___RS_NLB 3565 copy 2.jpg,Corn_(maize)___Northern_Leaf_Blight,9
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Corn_(maize)___Northern_Leaf_Blight/203e38d5-5a1b-463a-85b8-cba4aa1da1b6___RS_NLB 0806.JPG,Corn_(maize)___Northern_Leaf_Blight,9
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Corn_(maize)___Northern_Leaf_Blight/a3be7c5c-5a5c-4b66-87f9-d74a9d5d409d___RS_NLB 4228 copy.jpg,Corn_(maize)___Northern_Leaf_Blight,9
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Corn_(maize)___Northern_Leaf_Blight/5fc48a9b-7aee-4262-adf3-1102e354dd61___RS_NLB 3690.JPG,Corn_(maize)___Northern_Leaf_Blight,9
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Corn_(maize)___Northern_Leaf_Blight/40ca043f-ee3d-4327-95ee-09d7b41ebfc4___RS_NLB 3890.JPG,Corn_(maize)___Northern_Leaf_Blight,9
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Corn_(maize)___Northern_Leaf_Blight/47f24ceb-34e8-4c13-acac-e48549bc7cfa___RS_NLB 3932 copy 2.jpg,Corn_(maize)___Northern_Leaf_Blight,9
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Corn_(maize)___Northern_Leaf_Blight/be7a6052-bb7e-4348-bc97-5591277fa769___RS_NLB 4273 copy.jpg,Corn_(maize)___Northern_Leaf_Blight,9
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Corn_(maize)___Northern_Leaf_Blight/6fd2d660-7294-4a2c-8626-27228b1c8b70___RS_NLB 3627.JPG,Corn_(maize)___Northern_Leaf_Blight,9
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Corn_(maize)___Northern_Leaf_Blight/e6f10c6e-9cd7-4ad1-98d8-0fb8038e4c1a___RS_NLB 0820.JPG,Corn_(maize)___Northern_Leaf_Blight,9
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Corn_(maize)___Northern_Leaf_Blight/2c827454-4902-4ff2-9237-687281600a19___RS_NLB 3736.JPG,Corn_(maize)___Northern_Leaf_Blight,9
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Corn_(maize)___Northern_Leaf_Blight/1f36d729-d193-4824-a159-a6085f2b7159___RS_NLB 3741.JPG,Corn_(maize)___Northern_Leaf_Blight,9
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Corn_(maize)___Northern_Leaf_Blight/5b4f7b36-0ce5-491c-93bb-ac81b21b13c6___RS_NLB 3824.JPG,Corn_(maize)___Northern_Leaf_Blight,9
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Corn_(maize)___Northern_Leaf_Blight/057c3f91-c15e-464b-b4ba-66b16dbe5149___RS_NLB 3565 copy.jpg,Corn_(maize)___Northern_Leaf_Blight,9
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Corn_(maize)___Northern_Leaf_Blight/eaf93f13-37be-489a-9405-b7602bf59f8a___RS_NLB 3963 copy.jpg,Corn_(maize)___Northern_Leaf_Blight,9
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Corn_(maize)___Northern_Leaf_Blight/d4e0ed9b-03b3-487a-9fc5-1a1be771367f___RS_NLB 4256.JPG,Corn_(maize)___Northern_Leaf_Blight,9
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Corn_(maize)___Northern_Leaf_Blight/0118e276-ee7b-4fed-961d-057590ae9f7f___RS_NLB 4666 copy 2.jpg,Corn_(maize)___Northern_Leaf_Blight,9
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Corn_(maize)___Northern_Leaf_Blight/aec48247-935f-4062-a1ba-7018ee81f5a7___RS_NLB 3579.JPG,Corn_(maize)___Northern_Leaf_Blight,9
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Corn_(maize)___Northern_Leaf_Blight/b7ec2193-2a49-43b9-9962-7a13d472e668___RS_NLB 4044.JPG,Corn_(maize)___Northern_Leaf_Blight,9
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Corn_(maize)___Northern_Leaf_Blight/2206258a-43f1-481e-ace3-f55851e4c9a9___RS_NLB 4114.JPG,Corn_(maize)___Northern_Leaf_Blight,9
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Corn_(maize)___healthy/64d75b51-f153-4bb5-84b4-d7fcb8279f25___R.S_HL 8018 copy 2.jpg,Corn_(maize)___healthy,10
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Corn_(maize)___healthy/ae2d73a4-c6e2-4b85-aaa7-3027e2a2c6a9___R.S_HL 5564 copy.jpg,Corn_(maize)___healthy,10
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Corn_(maize)___healthy/466155e6-ef86-4024-9c0a-de7ca09a1d07___R.S_HL 7986 copy.jpg,Corn_(maize)___healthy,10
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Corn_(maize)___healthy/ab0fc79a-bd95-406c-a008-21985ddcb71a___R.S_HL 7985 copy 2.jpg,Corn_(maize)___healthy,10
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Corn_(maize)___healthy/254d1f23-8a22-4f21-9d5e-0c66733f102f___R.S_HL 8083 copy.jpg,Corn_(maize)___healthy,10
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Corn_(maize)___healthy/51f761a5-df28-4a44-bb1c-abd0ac8fe3f9___R.S_HL 7894 copy 2.jpg,Corn_(maize)___healthy,10
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Corn_(maize)___healthy/9d47547e-512f-49d0-9589-081a50333382___R.S_HL 7985 copy.jpg,Corn_(maize)___healthy,10
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Corn_(maize)___healthy/1b969db5-ff14-4340-94c2-c4bafd6e35b9___R.S_HL 0639 copy 3.jpg,Corn_(maize)___healthy,10
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Corn_(maize)___healthy/a44d7b6a-f02f-4e2b-b43e-afe21be8f8d1___R.S_HL 8115 copy 2.jpg,Corn_(maize)___healthy,10
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Corn_(maize)___healthy/a9fb7f08-cb01-431e-ae32-cbeb1279e866___R.S_HL 8313 copy 2.jpg,Corn_(maize)___healthy,10
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Corn_(maize)___healthy/35e4b031-57a0-40b1-b234-d96324708a43___R.S_HL 8162 copy.jpg,Corn_(maize)___healthy,10
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Corn_(maize)___healthy/1e79939c-ad56-48fe-b742-bee115562523___R.S_HL 8060 copy.jpg,Corn_(maize)___healthy,10
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Corn_(maize)___healthy/f6701648-427e-41ff-a375-96821ff63f26___R.S_HL 8076 copy 2.jpg,Corn_(maize)___healthy,10
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Corn_(maize)___healthy/a7f5fc47-53d2-412b-9198-98fa1d049fae___R.S_HL 8146 copy.jpg,Corn_(maize)___healthy,10
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Corn_(maize)___healthy/40016f08-81b6-462f-b6f5-f1c8cf9cc519___R.S_HL 8084 copy.jpg,Corn_(maize)___healthy,10
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Corn_(maize)___healthy/0f9d8b9a-a49d-4641-b956-dc0963d7b6da___R.S_HL 8148 copy 2.jpg,Corn_(maize)___healthy,10
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Corn_(maize)___healthy/8da335ea-37c5-4b1d-8805-79cb369f08d1___R.S_HL 8313 copy.jpg,Corn_(maize)___healthy,10
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Corn_(maize)___healthy/c4b6565f-e6df-47c4-8426-d98081757564___R.S_HL 8013 copy.jpg,Corn_(maize)___healthy,10
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Corn_(maize)___healthy/06f252bb-2ceb-4ca3-a25b-3c8016ee7ee8___R.S_HL 5498 copy 2.jpg,Corn_(maize)___healthy,10
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Corn_(maize)___healthy/3e1226c4-baf1-46fa-8253-e777ca911e2f___R.S_HL 8345 copy.jpg,Corn_(maize)___healthy,10
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Grape___Black_rot/7a57ab26-9a62-403a-9f93-205a2513dcec___FAM_B.Rot 0693.JPG,Grape___Black_rot,11
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Grape___Black_rot/c2b0fdc2-edae-40a8-a908-f0075799e648___FAM_B.Rot 2999.JPG,Grape___Black_rot,11
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Grape___Black_rot/e4276ce3-ffbc-4203-9b52-cc75d6a6b8df___FAM_B.Rot 3115.JPG,Grape___Black_rot,11
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Grape___Black_rot/89a2ecc2-8ecd-405e-ab7d-7ab6fc20c99d___FAM_B.Rot 3201.JPG,Grape___Black_rot,11
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Grape___Black_rot/dc153453-87fc-4b8e-a9f1-40acdc86b70b___FAM_B.Rot 3082.JPG,Grape___Black_rot,11
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Grape___Black_rot/1ac53f1b-5d2c-4f6a-b4fe-dccd5dad551f___FAM_B.Rot 3046.JPG,Grape___Black_rot,11
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Grape___Black_rot/74a188bf-3523-4e1e-a373-3449b758f18a___FAM_B.Rot 5095.JPG,Grape___Black_rot,11
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Grape___Black_rot/7b4de55e-c967-42b1-97a1-b60363dcb84a___FAM_B.Rot 3190.JPG,Grape___Black_rot,11
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Grape___Black_rot/513c17f5-6161-4fca-975b-d8dca8912fdc___FAM_B.Rot 0591.JPG,Grape___Black_rot,11
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Grape___Black_rot/2d73e025-38f5-4d98-8ca9-253d44c922c6___FAM_B.Rot 3232.JPG,Grape___Black_rot,11
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Grape___Black_rot/244704b0-04bb-4cf8-aa12-cde3425ecf77___FAM_B.Rot 5079.JPG,Grape___Black_rot,11
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Grape___Black_rot/93a283be-7304-41d4-ac1f-be703b4671ee___FAM_B.Rot 5012.JPG,Grape___Black_rot,11
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Grape___Black_rot/e746d45b-f78b-4c7b-a419-acb0e8127448___FAM_B.Rot 3544.JPG,Grape___Black_rot,11
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Grape___Black_rot/c9e80cc7-a928-42a6-a84d-0fd112c538a7___FAM_B.Rot 0520.JPG,Grape___Black_rot,11
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Grape___Black_rot/ef1eac6a-c3f0-4620-9ae3-a162b6fca7db___FAM_B.Rot 3597.JPG,Grape___Black_rot,11
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Grape___Black_rot/63e24d93-6779-49b5-b0d0-d793cd68943b___FAM_B.Rot 3436.JPG,Grape___Black_rot,11
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Grape___Black_rot/b3a0889f-8c22-4686-992f-81158e7681bc___FAM_B.Rot 0465.JPG,Grape___Black_rot,11
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Grape___Black_rot/42e774fe-ff8e-4044-8dd5-5deedc64c991___FAM_B.Rot 3148.JPG,Grape___Black_rot,11
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Grape___Black_rot/fdce74c1-e968-40ea-83d6-f216a2f3e3d5___FAM_B.Rot 3324.JPG,Grape___Black_rot,11
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Grape___Black_rot/de422312-2639-46bf-86f4-e8f81a97f296___FAM_B.Rot 0646.JPG,Grape___Black_rot,11
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Grape___Esca_(Black_Measles)/6dde4150-9c70-4d59-87b7-e1bc8fe0a7ad___FAM_B.Msls 1081.JPG,Grape___Esca_(Black_Measles),12
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Grape___Esca_(Black_Measles)/77af75d8-610e-49e7-b73a-6c0324aa9881___FAM_B.Msls 1321.JPG,Grape___Esca_(Black_Measles),12
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Grape___Esca_(Black_Measles)/d6c1cc97-5246-4e49-bc59-e38459e83cdc___FAM_B.Msls 4361.JPG,Grape___Esca_(Black_Measles),12
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Grape___Esca_(Black_Measles)/c88bd1a0-a0fa-474a-981d-da10a72930ae___FAM_B.Msls 1029.JPG,Grape___Esca_(Black_Measles),12
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Grape___Esca_(Black_Measles)/17566750-1381-4ab9-987c-d945ef653a36___FAM_B.Msls 3903.JPG,Grape___Esca_(Black_Measles),12
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Grape___Esca_(Black_Measles)/4ccb1d95-9211-4042-9237-6da530658378___FAM_B.Msls 0952.JPG,Grape___Esca_(Black_Measles),12
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Grape___Esca_(Black_Measles)/18bac66a-6e2d-4e97-971a-feb14f9b7d77___FAM_B.Msls 3879.JPG,Grape___Esca_(Black_Measles),12
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Grape___Esca_(Black_Measles)/dabf5fbf-aa53-4393-ae00-b6b4636ddd96___FAM_B.Msls 1203.JPG,Grape___Esca_(Black_Measles),12
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Grape___Esca_(Black_Measles)/f8bac4d0-89ad-40f0-ab42-19001b7a7b81___FAM_B.Msls 4428.JPG,Grape___Esca_(Black_Measles),12
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Grape___Esca_(Black_Measles)/f2412a05-edfd-4958-9d3a-85999a712eb5___FAM_B.Msls 0890.JPG,Grape___Esca_(Black_Measles),12
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Grape___Esca_(Black_Measles)/e923c5ba-9751-49d2-bd83-c8caa16c3f26___FAM_B.Msls 4318.JPG,Grape___Esca_(Black_Measles),12
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Grape___Esca_(Black_Measles)/901a9bf6-ab3f-49a5-bcc7-1976ebcb82ec___FAM_B.Msls 4260.JPG,Grape___Esca_(Black_Measles),12
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Grape___Esca_(Black_Measles)/2290a5b0-8dc5-4b06-813c-a3b3cd20edcb___FAM_B.Msls 1296.JPG,Grape___Esca_(Black_Measles),12
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Grape___Esca_(Black_Measles)/0336e894-5963-4a7e-9b56-e802473ae4c5___FAM_B.Msls 1231.JPG,Grape___Esca_(Black_Measles),12
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Grape___Esca_(Black_Measles)/76d695c1-b75a-417b-8072-084500a836dc___FAM_B.Msls 1066.JPG,Grape___Esca_(Black_Measles),12
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Grape___Esca_(Black_Measles)/ffc0847a-e88d-4332-8c7c-4b63ba65a471___FAM_B.Msls 1130.JPG,Grape___Esca_(Black_Measles),12
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Grape___Esca_(Black_Measles)/80300739-9967-4a4e-8088-9e7ae84fc7b4___FAM_B.Msls 4122.JPG,Grape___Esca_(Black_Measles),12
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Grape___Esca_(Black_Measles)/fb1fddab-023e-4dc5-aff7-5db33c755b50___FAM_B.Msls 0839.JPG,Grape___Esca_(Black_Measles),12
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Grape___Esca_(Black_Measles)/6b16600f-d675-4639-a387-24b38714b9dd___FAM_B.Msls 1208.JPG,Grape___Esca_(Black_Measles),12
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Grape___Esca_(Black_Measles)/062d27c7-8c0f-4ed9-bd63-e506d9965281___FAM_B.Msls 4200.JPG,Grape___Esca_(Black_Measles),12
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/ab266d06-4dce-4857-b0b6-6df6905f7323___FAM_L.Blight 4590.JPG,Grape___Leaf_blight_(Isariopsis_Leaf_Spot),13
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/eded00cb-201d-41e2-88ab-11562cfb8029___FAM_L.Blight 1388.JPG,Grape___Leaf_blight_(Isariopsis_Leaf_Spot),13
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/54396503-ef60-4a0b-b38c-9b041a2f9d53___FAM_L.Blight 1496.JPG,Grape___Leaf_blight_(Isariopsis_Leaf_Spot),13
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/4c8b2623-41a0-4b0f-a78a-acb446063cc9___FAM_L.Blight 3690.JPG,Grape___Leaf_blight_(Isariopsis_Leaf_Spot),13
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/62ffd952-f0c8-4e42-ba6b-ad2597c337bc___FAM_L.Blight 4851.JPG,Grape___Leaf_blight_(Isariopsis_Leaf_Spot),13
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/13088557-074c-44c4-884a-4494d4140032___FAM_L.Blight 1436.JPG,Grape___Leaf_blight_(Isariopsis_Leaf_Spot),13
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/42032c9c-e401-452a-9b77-e19ee8cd7ed5___FAM_L.Blight 0772.JPG,Grape___Leaf_blight_(Isariopsis_Leaf_Spot),13
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/a7a1aee8-f715-4586-bc14-c739da6b2b35___FAM_L.Blight 4998.JPG,Grape___Leaf_blight_(Isariopsis_Leaf_Spot),13
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/ee0925ea-d5bc-4e6a-9884-26c4395b7162___FAM_L.Blight 4811.JPG,Grape___Leaf_blight_(Isariopsis_Leaf_Spot),13
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/58413dac-4a1a-4ac2-8e6d-59ee0addea73___FAM_L.Blight 4725.JPG,Grape___Leaf_blight_(Isariopsis_Leaf_Spot),13
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/1b1d619f-fc47-4752-90c4-4aceda71b8ec___FAM_L.Blight 3709.JPG,Grape___Leaf_blight_(Isariopsis_Leaf_Spot),13
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/d7741e25-d0b3-4706-9791-439373cafbdd___FAM_L.Blight 4671.JPG,Grape___Leaf_blight_(Isariopsis_Leaf_Spot),13
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/4f8f850f-225e-4f66-ac47-ecb430bd4b4a___FAM_L.Blight 4672.JPG,Grape___Leaf_blight_(Isariopsis_Leaf_Spot),13
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/c93d9ab9-7c24-41a4-81ad-26fb6d2539e2___FAM_L.Blight 1611.JPG,Grape___Leaf_blight_(Isariopsis_Leaf_Spot),13
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/24dd13d4-ea7c-4abd-a41f-b99baadaf77c___FAM_L.Blight 1627.JPG,Grape___Leaf_blight_(Isariopsis_Leaf_Spot),13
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/e3dbdce6-da4d-4557-ab5e-0dc7198a6a81___FAM_L.Blight 4794.JPG,Grape___Leaf_blight_(Isariopsis_Leaf_Spot),13
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/b0dfd9ec-fa42-4ca4-ad8b-76be947df409___FAM_L.Blight 1683.JPG,Grape___Leaf_blight_(Isariopsis_Leaf_Spot),13
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/f2eca1ca-2e0b-41c5-8dd0-15e8353e51b2___FAM_L.Blight 4539.JPG,Grape___Leaf_blight_(Isariopsis_Leaf_Spot),13
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/ce5a71c6-62f0-4b2c-89d8-acd4c171b290___FAM_L.Blight 0769.JPG,Grape___Leaf_blight_(Isariopsis_Leaf_Spot),13
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Grape___Leaf_blight_(Isariopsis_Leaf_Spot)/5e8f63c0-aa67-4d3d-86d6-41343405abf5___FAM_L.Blight 4511.JPG,Grape___Leaf_blight_(Isariopsis_Leaf_Spot),13
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Grape___healthy/37730143-a639-46a3-b6a5-e1385e8ae4a4___Mt.N.V_HL 9049.JPG,Grape___healthy,14
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Grape___healthy/bd7f0429-550b-4e28-95af-98e56b282437___Mt.N.V_HL 6130.JPG,Grape___healthy,14
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Grape___healthy/61c91bc6-ac97-4427-9691-f2015b1c0453___Mt.N.V_HL 9076.JPG,Grape___healthy,14
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Grape___healthy/8af21b75-7158-4286-acdf-ef35cf54fe26___Mt.N.V_HL 6116.JPG,Grape___healthy,14
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Grape___healthy/f37f2d8a-9f14-4b68-a680-3f2a483ccb6f___Mt.N.V_HL 9073.JPG,Grape___healthy,14
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Grape___healthy/24d55be0-9985-4ace-bb02-d3f5a2f2ce18___Mt.N.V_HL 6040.JPG,Grape___healthy,14
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Grape___healthy/2bd2ff11-36dc-43ec-888c-efa38601ef88___Mt.N.V_HL 8907.JPG,Grape___healthy,14
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Grape___healthy/b556f11d-115a-4bac-8120-05195ac42e1d___Mt.N.V_HL 9123.JPG,Grape___healthy,14
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Grape___healthy/87d84f4b-0dfa-46f5-9bf9-87b3bb636d65___Mt.N.V_HL 6038.JPG,Grape___healthy,14
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Grape___healthy/9155a721-9e2c-4b58-99be-eba41f454525___Mt.N.V_HL 6053.JPG,Grape___healthy,14
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Grape___healthy/9b9de786-29d7-4585-9760-76ee562530e3___Mt.N.V_HL 9063.JPG,Grape___healthy,14
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Grape___healthy/e53defea-84c4-4b41-8c12-a53dda9e61b8___Mt.N.V_HL 9085.JPG,Grape___healthy,14
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Grape___healthy/0163a6aa-fbf8-47c5-965f-59b6efe8bfe5___Mt.N.V_HL 6103.JPG,Grape___healthy,14
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Grape___healthy/8c5181ab-8b06-41a8-9b26-b3be052dcea1___Mt.N.V_HL 8905.JPG,Grape___healthy,14
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Grape___healthy/22b7199f-581e-4330-b14f-4cb7b382340a___Mt.N.V_HL 6115.JPG,Grape___healthy,14
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Grape___healthy/198fbad6-0192-4263-96c8-74c330667d61___Mt.N.V_HL 9032.JPG,Grape___healthy,14
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Grape___healthy/94e1829a-d9ce-4638-8c7b-3a67133de4c9___Mt.N.V_HL 6190.JPG,Grape___healthy,14
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Grape___healthy/b6c49725-ccb9-46a9-abca-c99f51e13d0a___Mt.N.V_HL 6026.JPG,Grape___healthy,14
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Grape___healthy/cf290224-e5ca-4d0b-8037-c147acfc290d___Mt.N.V_HL 6049.JPG,Grape___healthy,14
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Grape___healthy/6b11a8e2-a729-4f80-9836-e90402c0b47f___Mt.N.V_HL 6062.JPG,Grape___healthy,14
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Orange___Haunglongbing_(Citrus_greening)/e2ce55b5-0787-442d-87d0-63cd0c733de7___UF.Citrus_HLB_Lab 1630.JPG,Orange___Haunglongbing_(Citrus_greening),15
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Orange___Haunglongbing_(Citrus_greening)/a8d058c4-43d4-4421-81b7-0162d6ff28e7___CREC_HLB 6401.JPG,Orange___Haunglongbing_(Citrus_greening),15
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Orange___Haunglongbing_(Citrus_greening)/c8bde32b-95f4-41a6-ab09-f31d01d042fa___UF.Citrus_HLB_Lab 9817.JPG,Orange___Haunglongbing_(Citrus_greening),15
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Orange___Haunglongbing_(Citrus_greening)/02d742ed-9437-4440-a2be-5013392cf453___CREC_HLB 7720.JPG,Orange___Haunglongbing_(Citrus_greening),15
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Orange___Haunglongbing_(Citrus_greening)/0bdb1bd6-e5e9-4f69-9f26-43ef97884fc9___UF.Citrus_HLB_Lab 0486.JPG,Orange___Haunglongbing_(Citrus_greening),15
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Orange___Haunglongbing_(Citrus_greening)/d1ebc7e8-26a6-4b61-bb6a-ab5e9c2654f0___CREC_HLB 7074.JPG,Orange___Haunglongbing_(Citrus_greening),15
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Orange___Haunglongbing_(Citrus_greening)/bf6db298-67fc-46b1-9168-3ab4df533ef9___CREC_HLB 4205.JPG,Orange___Haunglongbing_(Citrus_greening),15
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Orange___Haunglongbing_(Citrus_greening)/8ed0f3dc-4b4e-4f8e-881a-82d7b1b65842___UF.Citrus_HLB_Lab 0211.JPG,Orange___Haunglongbing_(Citrus_greening),15
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Orange___Haunglongbing_(Citrus_greening)/c3802ae4-a4e4-4fbf-b264-e00b59041d7e___CREC_HLB 5587.JPG,Orange___Haunglongbing_(Citrus_greening),15
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Orange___Haunglongbing_(Citrus_greening)/d60be66b-a963-4f02-8ccf-c8cb732a2ef7___CREC_HLB 5145.JPG,Orange___Haunglongbing_(Citrus_greening),15
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Orange___Haunglongbing_(Citrus_greening)/9849c8d3-d74d-44f3-bbd4-d17ff1e7e217___CREC_HLB 4428.JPG,Orange___Haunglongbing_(Citrus_greening),15
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Orange___Haunglongbing_(Citrus_greening)/cb8476e3-16c7-42fc-a73b-65f60a4f0a1a___UF.Citrus_HLB_Lab 0872.JPG,Orange___Haunglongbing_(Citrus_greening),15
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Orange___Haunglongbing_(Citrus_greening)/65215849-608a-422b-9dc5-12ebdd3e5d75___UF.Citrus_HLB_Lab 0333.JPG,Orange___Haunglongbing_(Citrus_greening),15
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Orange___Haunglongbing_(Citrus_greening)/0d3edf48-a20e-45d6-8370-de24724db663___UF.Citrus_HLB_Lab 9900.JPG,Orange___Haunglongbing_(Citrus_greening),15
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Orange___Haunglongbing_(Citrus_greening)/4f60c417-0cae-4e2b-b7e7-b895b37d08c9___CREC_HLB 7399.JPG,Orange___Haunglongbing_(Citrus_greening),15
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Orange___Haunglongbing_(Citrus_greening)/dd3fa8e2-5392-452e-9480-238721333464___UF.Citrus_HLB_Lab 9634.JPG,Orange___Haunglongbing_(Citrus_greening),15
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Orange___Haunglongbing_(Citrus_greening)/f45c8a9e-6a4d-4d59-8bc1-9c4f8e287569___CREC_HLB 6992.JPG,Orange___Haunglongbing_(Citrus_greening),15
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Orange___Haunglongbing_(Citrus_greening)/227fd7eb-d4e2-4b3e-9482-e2d9e552ffa0___CREC_HLB 4861.JPG,Orange___Haunglongbing_(Citrus_greening),15
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Orange___Haunglongbing_(Citrus_greening)/44911473-0c18-419d-b52d-7f431af31189___CREC_HLB 5216.JPG,Orange___Haunglongbing_(Citrus_greening),15
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Orange___Haunglongbing_(Citrus_greening)/7a16042a-03e2-40b0-9530-be3c350c4e2d___UF.Citrus_HLB_Lab 0632.JPG,Orange___Haunglongbing_(Citrus_greening),15
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Peach___Bacterial_spot/9988a274-f103-4dd5-97b5-0c0b171bf405___Rutg._Bact.S 1663.JPG,Peach___Bacterial_spot,16
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Peach___Bacterial_spot/3d5c02e9-c038-4f33-afa6-0da99d5006d8___Rut._Bact.S 0804.JPG,Peach___Bacterial_spot,16
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Peach___Bacterial_spot/0bb77fcc-27ca-474f-beae-6b3519727cf9___Rutg._Bact.S 1901.JPG,Peach___Bacterial_spot,16
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Peach___Bacterial_spot/693c2280-e48e-46a2-8ae2-06a477862208___Rutg._Bact.S 1338.JPG,Peach___Bacterial_spot,16
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Peach___Bacterial_spot/16a68d47-311a-4e64-8ac0-7620fe16204f___Rutg._Bact.S 2013.JPG,Peach___Bacterial_spot,16
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Peach___Bacterial_spot/97a1acd2-dd7d-425e-a5d3-10d5cd154ed7___Rutg._Bact.S 1414.JPG,Peach___Bacterial_spot,16
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Peach___Bacterial_spot/5ccc8e1d-6a9f-4cb5-a369-1490f60fad1f___Rutg._Bact.S 1960.JPG,Peach___Bacterial_spot,16
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Peach___Bacterial_spot/7beaa21c-5eb0-4a4a-8bde-028b69c73d58___Rut._Bact.S 1217.JPG,Peach___Bacterial_spot,16
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Peach___Bacterial_spot/78db4327-d82a-4dff-8a9d-1db54800fc3b___Rutg._Bact.S 1768.JPG,Peach___Bacterial_spot,16
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Peach___Bacterial_spot/5de44aec-79cd-4942-a1ca-2ecf110350b9___Rut._Bact.S 1527.JPG,Peach___Bacterial_spot,16
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Peach___Bacterial_spot/81d21a0e-8551-41e5-b8d6-b5840fc6cda9___Rut._Bact.S 1400.JPG,Peach___Bacterial_spot,16
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Peach___Bacterial_spot/85e8d149-d1ef-4e52-b054-f71b91ae91f5___Rutg._Bact.S 1444.JPG,Peach___Bacterial_spot,16
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Peach___Bacterial_spot/f6dde179-db72-40f1-beea-3566d1ca4eed___Rutg._Bact.S 1291.JPG,Peach___Bacterial_spot,16
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Peach___Bacterial_spot/2768430d-337c-4550-94c6-c9df6dcaeab5___Rut._Bact.S 1501.JPG,Peach___Bacterial_spot,16
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Peach___Bacterial_spot/e4edaeb8-c428-443b-aaaf-c317942a1be6___Rut._Bact.S 1045.JPG,Peach___Bacterial_spot,16
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Peach___Bacterial_spot/a0787da2-e797-48a2-83e4-6d95c3bdf5ab___Rutg._Bact.S 1882.JPG,Peach___Bacterial_spot,16
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Peach___Bacterial_spot/cda8c388-1575-4272-80ea-6b6eef622efa___Rutg._Bact.S 2181.JPG,Peach___Bacterial_spot,16
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Peach___Bacterial_spot/366fa68c-221a-4a5c-ab91-6dc200cbea3f___Rutg._Bact.S 1796.JPG,Peach___Bacterial_spot,16
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Peach___Bacterial_spot/1bd8b031-51e2-4415-90b9-94fa4f0d6942___Rutg._Bact.S 2161.JPG,Peach___Bacterial_spot,16
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Peach___Bacterial_spot/dba846ad-67ee-4a38-be9f-f4d76532a350___Rut._Bact.S 1041.JPG,Peach___Bacterial_spot,16
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Peach___healthy/66408ce6-6721-4c8c-b454-ab258fb71661___Rutg._HL 3510.JPG,Peach___healthy,17
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Peach___healthy/64a6b33f-e9eb-431f-a252-954ed9dccd7b___Rutg._HL 3622.JPG,Peach___healthy,17
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Peach___healthy/701a4099-7ad0-4121-bec5-ea3248288302___Rutg._HL 3708.JPG,Peach___healthy,17
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Peach___healthy/e2d5ec35-0df5-4a48-92bd-1047ef19a164___Rutg._HL 3757.JPG,Peach___healthy,17
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Peach___healthy/edebdf94-67a7-4d5e-8e0d-bc06494ad3d5___Rutg._HL 2464.JPG,Peach___healthy,17
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Peach___healthy/06432e54-2ada-44c5-a720-656b254f8ddd___Rutg._HL 2410.JPG,Peach___healthy,17
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Peach___healthy/af21b56c-130f-4598-849b-a6fb36664c42___Rutg._HL 3637.JPG,Peach___healthy,17
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Peach___healthy/26f351fc-7166-4eea-971e-1bca2c99cb80___Rutg._HL 2411.JPG,Peach___healthy,17
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Peach___healthy/0999b486-f391-4b79-8c3f-41e957e606a7___Rutg._HL 3701.JPG,Peach___healthy,17
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Peach___healthy/987e0ba5-46c4-45ff-bf11-4553365e217c___Rutg._HL 3703.JPG,Peach___healthy,17
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Peach___healthy/aedd3442-b50a-4df3-aed3-dbcfd371f925___Rutg._HL 3550.JPG,Peach___healthy,17
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Peach___healthy/ac2d8133-2f14-4970-9fab-317113de0dc6___Rutg._HL 3584.JPG,Peach___healthy,17
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Peach___healthy/fe3bc54d-4164-4fea-a0bd-d96299ab3422___Rutg._HL 3578.JPG,Peach___healthy,17
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Peach___healthy/4279599c-decb-4727-917a-d8544cd5fc3a___Rutg._HL 3654.JPG,Peach___healthy,17
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Peach___healthy/321c6841-896c-4ba6-8532-2f977685003b___Rutg._HL 3513.JPG,Peach___healthy,17
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Peach___healthy/b37d17c9-3614-47df-8f7c-0a30bfd50d8d___Rutg._HL 3606.JPG,Peach___healthy,17
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Peach___healthy/e95e665b-4b1d-4442-a047-7c03c58ce7c6___Rutg._HL 3537.JPG,Peach___healthy,17
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Peach___healthy/7ff2a455-a9d4-43ca-9c1b-6819adaa3c59___Rutg._HL 3623.JPG,Peach___healthy,17
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Peach___healthy/f66ae60d-38db-4b67-8b43-a69ece8a32f6___Rutg._HL 3531.JPG,Peach___healthy,17
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Peach___healthy/2e9b1f70-53cb-452a-84ff-dada75773e2e___Rutg._HL 2442.JPG,Peach___healthy,17
+"/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Pepper,_bell___Bacterial_spot/a326fc1a-66ff-4ca1-b19c-2ce6cb760cd9___JR_B.Spot 9011.JPG","Pepper,_bell___Bacterial_spot",18
+"/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Pepper,_bell___Bacterial_spot/8631f961-c7d1-4ce8-b777-44aa9fbdb24a___JR_B.Spot 3180.JPG","Pepper,_bell___Bacterial_spot",18
+"/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Pepper,_bell___Bacterial_spot/28b0cad6-b695-4e4b-9cd1-27f2e43647e7___JR_B.Spot 9071.JPG","Pepper,_bell___Bacterial_spot",18
+"/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Pepper,_bell___Bacterial_spot/50d0c9c6-94ad-46aa-a94f-5a595eb65998___NREC_B.Spot 1946.JPG","Pepper,_bell___Bacterial_spot",18
+"/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Pepper,_bell___Bacterial_spot/3fdbfdf3-ae31-49eb-8012-04cb4d3fc051___NREC_B.Spot 1973.JPG","Pepper,_bell___Bacterial_spot",18
+"/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Pepper,_bell___Bacterial_spot/7f9fc159-4db8-4e64-93eb-47e1f323d981___JR_B.Spot 8872.JPG","Pepper,_bell___Bacterial_spot",18
+"/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Pepper,_bell___Bacterial_spot/718cf35c-8f3b-4d29-9c49-0aac5a8b6660___NREC_B.Spot 9098.JPG","Pepper,_bell___Bacterial_spot",18
+"/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Pepper,_bell___Bacterial_spot/260e0075-466d-4aa2-8ad6-825cce898cdb___JR_B.Spot 9065.JPG","Pepper,_bell___Bacterial_spot",18
+"/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Pepper,_bell___Bacterial_spot/644b37d1-495a-40ef-9cff-163a97016d71___JR_B.Spot 3269.JPG","Pepper,_bell___Bacterial_spot",18
+"/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Pepper,_bell___Bacterial_spot/948bc0e0-8552-426a-898f-270b9573c28f___NREC_B.Spot 9062.JPG","Pepper,_bell___Bacterial_spot",18
+"/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Pepper,_bell___Bacterial_spot/08485974-1e38-4e34-b296-fadd9cc26942___NREC_B.Spot 9193.JPG","Pepper,_bell___Bacterial_spot",18
+"/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Pepper,_bell___Bacterial_spot/49df8e8e-ecbb-4a62-b417-16f662d67b09___JR_B.Spot 9042.JPG","Pepper,_bell___Bacterial_spot",18
+"/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Pepper,_bell___Bacterial_spot/937f93b6-2ecd-4129-9995-e0473d498335___NREC_B.Spot 9045.JPG","Pepper,_bell___Bacterial_spot",18
+"/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Pepper,_bell___Bacterial_spot/cbb8c960-5659-4bf1-b75e-f5b2e65b7c0b___NREC_B.Spot 9074.JPG","Pepper,_bell___Bacterial_spot",18
+"/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Pepper,_bell___Bacterial_spot/c5a3ed0e-ea2d-499a-a78c-53cc073cbc9e___JR_B.Spot 3241.JPG","Pepper,_bell___Bacterial_spot",18
+"/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Pepper,_bell___Bacterial_spot/cfe02ced-6be9-4119-933f-75f95b88a940___JR_B.Spot 8838.JPG","Pepper,_bell___Bacterial_spot",18
+"/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Pepper,_bell___Bacterial_spot/7b371f7e-a8de-4b89-812d-0526237a6fea___JR_B.Spot 3404.JPG","Pepper,_bell___Bacterial_spot",18
+"/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Pepper,_bell___Bacterial_spot/58fe22f7-f357-448a-b0aa-ebad44a91f3d___JR_B.Spot 8895.JPG","Pepper,_bell___Bacterial_spot",18
+"/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Pepper,_bell___Bacterial_spot/313665a9-0f55-4f00-9373-74bf7349e6a6___NREC_B.Spot 1982.JPG","Pepper,_bell___Bacterial_spot",18
+"/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Pepper,_bell___Bacterial_spot/45de9eff-47b2-4e93-941a-11eeedbefc4f___NREC_B.Spot 1945.JPG","Pepper,_bell___Bacterial_spot",18
+"/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Pepper,_bell___healthy/105c1a83-1454-4b75-a174-4fa8443ff97f___JR_HL 8844.JPG","Pepper,_bell___healthy",19
+"/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Pepper,_bell___healthy/73ac9ebe-2f3f-455e-8ae7-750b3be4a7f6___JR_HL 8532.JPG","Pepper,_bell___healthy",19
+"/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Pepper,_bell___healthy/f3c34e2d-5b85-44fc-96b6-e23cbae88046___JR_HL 7682.JPG","Pepper,_bell___healthy",19
+"/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Pepper,_bell___healthy/d42c38ac-661e-4af1-8352-0a1fd5c56cd7___JR_HL 8019.JPG","Pepper,_bell___healthy",19
+"/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Pepper,_bell___healthy/6de912b6-f7e5-4980-be35-63ba2564d5d3___JR_HL 8059.JPG","Pepper,_bell___healthy",19
+"/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Pepper,_bell___healthy/2359f487-7e4a-4480-a788-72fbc570afba___JR_HL 7739.JPG","Pepper,_bell___healthy",19
+"/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Pepper,_bell___healthy/1a629a1c-1000-48ce-a7d8-2064aa7e24ae___JR_HL 6001.JPG","Pepper,_bell___healthy",19
+"/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Pepper,_bell___healthy/f3cb1c60-4aae-4f2d-ae59-6654296a969b___JR_HL 8399.JPG","Pepper,_bell___healthy",19
+"/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Pepper,_bell___healthy/206df1c4-53c0-4678-9d2a-61f431aa7e73___JR_HL 8168.JPG","Pepper,_bell___healthy",19
+"/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Pepper,_bell___healthy/d84e8e33-74fc-41e7-b5b2-0ffcd609d191___JR_HL 7921.JPG","Pepper,_bell___healthy",19
+"/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Pepper,_bell___healthy/b0dfaf4d-1c02-4438-b711-274dc92f8ed7___JR_HL 8180.JPG","Pepper,_bell___healthy",19
+"/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Pepper,_bell___healthy/ee42aa43-86bf-418d-8716-3cc8c710a0b3___JR_HL 8337.JPG","Pepper,_bell___healthy",19
+"/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Pepper,_bell___healthy/d21b4b16-a871-4df5-95f0-f3ae890401c0___JR_HL 5893.JPG","Pepper,_bell___healthy",19
+"/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Pepper,_bell___healthy/f2cf1271-b257-452e-8c4f-1db1ff8babd5___JR_HL 5883.JPG","Pepper,_bell___healthy",19
+"/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Pepper,_bell___healthy/261f9a0f-eccc-41fb-be35-cabed2531059___JR_HL 8722.JPG","Pepper,_bell___healthy",19
+"/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Pepper,_bell___healthy/7503d4d1-fa90-458d-8833-0550b8ce5f07___JR_HL 8694.JPG","Pepper,_bell___healthy",19
+"/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Pepper,_bell___healthy/b9857b11-defc-472d-9775-95be585284f8___JR_HL 7707.JPG","Pepper,_bell___healthy",19
+"/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Pepper,_bell___healthy/e0bc5745-37b1-4207-855f-3cfadd2316d4___JR_HL 8457.JPG","Pepper,_bell___healthy",19
+"/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Pepper,_bell___healthy/4e9af7bf-96f5-4973-8470-0db94ef8e375___JR_HL 7896.JPG","Pepper,_bell___healthy",19
+"/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Pepper,_bell___healthy/46ee2cd9-3312-43de-928e-6b9de2f01e82___JR_HL 7658.JPG","Pepper,_bell___healthy",19
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Potato___Early_blight/4f5ed8b8-7266-451d-a726-c1dbba2e5381___RS_Early.B 7384.JPG,Potato___Early_blight,20
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Potato___Early_blight/6173dbe2-1379-4241-a43e-7cbad448b6cc___RS_Early.B 6993.JPG,Potato___Early_blight,20
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Potato___Early_blight/1f80f111-6a3e-4dfc-8456-0f3e9a19ae10___RS_Early.B 6879.JPG,Potato___Early_blight,20
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Potato___Early_blight/945f4d4b-5e0a-4cc0-8b7c-d82854730b9d___RS_Early.B 7836.JPG,Potato___Early_blight,20
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Potato___Early_blight/904dba96-8ff1-45e2-af16-9c9cc5865c32___RS_Early.B 7349.JPG,Potato___Early_blight,20
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Potato___Early_blight/0e0a1b51-f61c-4934-bc57-a820af1faacb___RS_Early.B 7147.JPG,Potato___Early_blight,20
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Potato___Early_blight/dd875158-7897-4f5d-ada1-46e7e382ea96___RS_Early.B 7912.JPG,Potato___Early_blight,20
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Potato___Early_blight/0c5b14d9-8b1c-4c39-bb23-1835b5760caa___RS_Early.B 7937.JPG,Potato___Early_blight,20
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Potato___Early_blight/f7db505f-aabe-4b96-b719-8c930b5ff471___RS_Early.B 9224.JPG,Potato___Early_blight,20
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Potato___Early_blight/caef0735-6517-4194-b124-5916815e4a71___RS_Early.B 7956.JPG,Potato___Early_blight,20
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Potato___Early_blight/879d0dfe-d17d-486a-992c-d80089133c50___RS_Early.B 7428.JPG,Potato___Early_blight,20
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Potato___Early_blight/98d40b59-5c50-45b6-9b8b-268c40547334___RS_Early.B 8031.JPG,Potato___Early_blight,20
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Potato___Early_blight/422fa1a6-d0f7-4634-9233-0d002ff139ae___RS_Early.B 7218.JPG,Potato___Early_blight,20
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Potato___Early_blight/99d75573-472e-4f57-ab82-b49b78853d03___RS_Early.B 7847.JPG,Potato___Early_blight,20
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Potato___Early_blight/a8933319-d98e-4e71-a2ac-e22f7e1bca08___RS_Early.B 7499.JPG,Potato___Early_blight,20
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Potato___Early_blight/8e99bd85-9c90-4d29-ba2c-2110f46cef07___RS_Early.B 8570.JPG,Potato___Early_blight,20
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Potato___Early_blight/b954c296-ae18-4efb-8a8c-450486faa919___RS_Early.B 6998.JPG,Potato___Early_blight,20
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Potato___Early_blight/08029ccc-387e-4be6-9389-04f7b82fdb2a___RS_Early.B 9130.JPG,Potato___Early_blight,20
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Potato___Early_blight/51f59871-72dc-490c-a550-9e7869142284___RS_Early.B 7224.JPG,Potato___Early_blight,20
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Potato___Early_blight/86562214-f8b9-4105-9513-4847520aff9a___RS_Early.B 7515.JPG,Potato___Early_blight,20
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Potato___Late_blight/aa58c1c8-82a1-4e68-9ecb-3cd47341d09b___RS_LB 4331.JPG,Potato___Late_blight,21
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Potato___Late_blight/fdb4e132-c71b-413f-93c0-c863dd4582a7___RS_LB 2582.JPG,Potato___Late_blight,21
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Potato___Late_blight/d8580222-d6c2-4519-94f2-f59c2d613d8b___RS_LB 4158.JPG,Potato___Late_blight,21
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Potato___Late_blight/531a9b98-e034-4a76-81f0-55f597552f6a___RS_LB 5021.JPG,Potato___Late_blight,21
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Potato___Late_blight/734b84f8-3bcb-4abd-bf22-0896a16e8df7___RS_LB 2929.JPG,Potato___Late_blight,21
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Potato___Late_blight/72e10017-f8a6-4813-8036-0cde4dad6057___RS_LB 4666.JPG,Potato___Late_blight,21
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Potato___Late_blight/def9c9e1-fd12-44d9-92ae-18c5ff0f52da___RS_LB 2605.JPG,Potato___Late_blight,21
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Potato___Late_blight/6522615a-cbe1-4770-a137-25a2c081e1d9___RS_LB 2917.JPG,Potato___Late_blight,21
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Potato___Late_blight/ae52f85f-bce0-4fb9-a109-009e099a72e6___RS_LB 4972.JPG,Potato___Late_blight,21
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Potato___Late_blight/967a677a-712c-447f-ba27-f59818944af0___RS_LB 4353.JPG,Potato___Late_blight,21
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Potato___Late_blight/a9d4290d-55a1-4a8d-83a8-5277a00e5fbc___RS_LB 4076.JPG,Potato___Late_blight,21
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Potato___Late_blight/9009c86e-1205-4694-b0bb-ef7cf78dd104___RS_LB 3995.JPG,Potato___Late_blight,21
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Potato___Late_blight/d3811753-f672-405c-afa3-8fbaa2715bf4___RS_LB 2720.JPG,Potato___Late_blight,21
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Potato___Late_blight/bbdf98a1-9e54-4afd-bdfc-870d91627a52___RS_LB 2853.JPG,Potato___Late_blight,21
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Potato___Late_blight/4fbe268d-dabb-4a25-8283-7968fd91fcdb___RS_LB 4819.JPG,Potato___Late_blight,21
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Potato___Late_blight/546fcdf5-862b-42fb-931d-a51a85dc843c___RS_LB 4403.JPG,Potato___Late_blight,21
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Potato___Late_blight/e95f2954-1b68-490d-9684-90b3080676b1___RS_LB 3997.JPG,Potato___Late_blight,21
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Potato___Late_blight/08ce9666-2dda-4fa8-8d58-55bb9fa19484___RS_LB 3318.JPG,Potato___Late_blight,21
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Potato___Late_blight/aceeb511-1332-4d25-b9fe-64d53445396a___RS_LB 4837.JPG,Potato___Late_blight,21
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Potato___Late_blight/da16cb94-4f1d-4390-b446-19eac2110115___RS_LB 2912.JPG,Potato___Late_blight,21
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Potato___healthy/bf2bffbb-cd8f-4d36-bd58-847808397c75___RS_HL 1786.JPG,Potato___healthy,22
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Potato___healthy/14484ea5-9c34-427c-abe4-2743265aced0___RS_HL 4204.JPG,Potato___healthy,22
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Potato___healthy/142fb983-2166-4a0f-b99b-a6c21e99987e___RS_HL 5398.JPG,Potato___healthy,22
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Potato___healthy/5fcbde8f-52af-4963-b324-ff7f4dd6bd4c___RS_HL 1762.JPG,Potato___healthy,22
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Potato___healthy/9b5be0c5-7d7e-493d-88ba-c721c85f73ca___RS_HL 5405.JPG,Potato___healthy,22
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Potato___healthy/f4b5ec24-d318-4309-8294-9126450d5d7f___RS_HL 1824.JPG,Potato___healthy,22
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Potato___healthy/52dd2fdd-6966-450c-a42b-ee14428d4271___RS_HL 1955.JPG,Potato___healthy,22
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Potato___healthy/a3ec91aa-8503-4711-a912-0d1427e25686___RS_HL 5409.JPG,Potato___healthy,22
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Potato___healthy/774875d3-438a-4305-afe2-7d59e2925dc4___RS_HL 1759.JPG,Potato___healthy,22
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Potato___healthy/533abd3a-3e1d-42d0-ae9c-5189282b78af___RS_HL 5369.JPG,Potato___healthy,22
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Potato___healthy/c548fe0e-21c2-4241-b806-1e438a1213bd___RS_HL 1770.JPG,Potato___healthy,22
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Potato___healthy/5a3fc4bb-a78c-4276-8934-f0b037ffb860___RS_HL 5412.JPG,Potato___healthy,22
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Potato___healthy/2d98cbc8-cbe6-423c-b2ab-3f7f8bcea5d5___RS_HL 1945.JPG,Potato___healthy,22
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Potato___healthy/468d3107-f09a-4f0d-8b9d-f08d7c49738f___RS_HL 1747.JPG,Potato___healthy,22
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Potato___healthy/f0fdde26-78b4-46f0-9eb8-7c2a743d34aa___RS_HL 4165.JPG,Potato___healthy,22
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Potato___healthy/b42621c3-f751-46e1-a8d2-83ed85b90554___RS_HL 1740.JPG,Potato___healthy,22
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Potato___healthy/f0036dfd-9f46-4f2f-9001-5973495f2171___RS_HL 1849.JPG,Potato___healthy,22
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Potato___healthy/923d4cc3-021a-4bcd-9f5f-1d6f69e4ad33___RS_HL 1888.JPG,Potato___healthy,22
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Potato___healthy/3a00204c-5e53-4e5d-95a6-f8819031744e___RS_HL 5420.JPG,Potato___healthy,22
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Potato___healthy/5d505af8-3f73-4781-980c-a4a696a04550___RS_HL 1934.JPG,Potato___healthy,22
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Raspberry___healthy/f9a17672-1988-4d21-be88-a47880d56e44___Mary_HL 6365.JPG,Raspberry___healthy,23
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Raspberry___healthy/7ea7a4b0-d404-4355-acfb-c0fa23d976b0___Mary_HL 6342.JPG,Raspberry___healthy,23
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Raspberry___healthy/13c2d9a8-e8ee-49a1-aaf4-b81ef121be2a___Mary_HL 6225.JPG,Raspberry___healthy,23
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Raspberry___healthy/3368e77a-9245-4e4f-89ee-41968b060e56___Mary_HL 6251.JPG,Raspberry___healthy,23
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Raspberry___healthy/6f4c7d33-4f72-44e7-9354-2e8e86fcd304___Mary_HL 9191.JPG,Raspberry___healthy,23
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Raspberry___healthy/4ad8532d-57cd-41b7-af50-c6e13e009ae8___Mary_HL 9236.JPG,Raspberry___healthy,23
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Raspberry___healthy/3734da4f-b4d3-4457-b73e-1da889ff9ca1___Mary_HL 6347.JPG,Raspberry___healthy,23
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Raspberry___healthy/54564261-1cce-4a60-ab02-ff8b31b5e6f1___Mary_HL 6244.JPG,Raspberry___healthy,23
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Raspberry___healthy/47bf725b-8d18-4469-89e4-43f9102e6e48___Mary_HL 6276.JPG,Raspberry___healthy,23
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Raspberry___healthy/06959ec3-a76b-4968-b64b-ad874b958fc7___Mary_HL 6323.JPG,Raspberry___healthy,23
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Raspberry___healthy/4cc1078f-0752-4e3c-bfa0-ed787c1631a4___Mary_HL 6351.JPG,Raspberry___healthy,23
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Raspberry___healthy/ecd85c83-4675-4657-9c48-ca9ef7bdd1ef___Mary_HL 9157.JPG,Raspberry___healthy,23
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Raspberry___healthy/2c4cea4a-66cc-49c5-9c8c-2a641e52eb61___Mary_HL 9212.JPG,Raspberry___healthy,23
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Raspberry___healthy/da79a019-69b8-4174-8246-abf7409941ce___Mary_HL 9233.JPG,Raspberry___healthy,23
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Raspberry___healthy/b2c6d751-869b-4b4e-b521-dda5be29482c___Mary_HL 9173.JPG,Raspberry___healthy,23
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Raspberry___healthy/9efc34db-3437-4ba6-b989-70febfb37305___Mary_HL 6298.JPG,Raspberry___healthy,23
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Raspberry___healthy/23ba8894-db3b-4a55-8a7b-703bf9ddaccc___Mary_HL 9138.JPG,Raspberry___healthy,23
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Raspberry___healthy/3d9757e9-7753-4d8c-8c60-d78f4522b021___Mary_HL 6352.JPG,Raspberry___healthy,23
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Raspberry___healthy/f73bf684-5c02-4b2e-83d7-f32839231ec1___Mary_HL 9322.JPG,Raspberry___healthy,23
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Raspberry___healthy/815ae985-1b09-4989-8efc-3c30fec46202___Mary_HL 9286.JPG,Raspberry___healthy,23
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Soybean___healthy/f81667dc-a726-4fd4-ae9d-4409608a5391___RS_HL 2873.JPG,Soybean___healthy,24
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Soybean___healthy/86408366-c846-4f1b-8088-21b9fe7ef69f___RS_HL 3908.JPG,Soybean___healthy,24
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Soybean___healthy/2f7bf8dd-a588-4a41-a0ef-41260a8eb521___RS_HL 7510.JPG,Soybean___healthy,24
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Soybean___healthy/c7caf31a-4ef1-40ec-a1df-87745676e1fb___RS_HL 4703.JPG,Soybean___healthy,24
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Soybean___healthy/8fbac4c2-4e15-4ee7-8c85-0396595c8b34___RS_HL 7463.JPG,Soybean___healthy,24
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Soybean___healthy/395f2e6b-11e8-42e3-ac31-1ab253d02031___RS_HL 3587.JPG,Soybean___healthy,24
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Soybean___healthy/eb8cfd26-bc41-4a4a-ace8-dac9882ad396___RS_HL 5677.JPG,Soybean___healthy,24
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Soybean___healthy/f74b5035-34b3-4415-8ba7-35e38bc15ecb___RS_HL 5587.JPG,Soybean___healthy,24
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Soybean___healthy/00457581-0077-442d-b19a-0dc6027e8cfc___RS_HL 5635.JPG,Soybean___healthy,24
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Soybean___healthy/ea7f5e25-0e96-40e5-acef-9384b8e3948c___RS_HL 6814.JPG,Soybean___healthy,24
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Soybean___healthy/34a9d783-bd12-4679-ae57-52bec4cf9f6c___RS_HL 5229.JPG,Soybean___healthy,24
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Soybean___healthy/2b2fa5ac-c961-4f81-8563-0d0e4d173bad___RS_HL 4960.JPG,Soybean___healthy,24
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Soybean___healthy/f20778e6-6880-4e1a-afbd-97d643062236___RS_HL 6852.JPG,Soybean___healthy,24
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Soybean___healthy/1b9dedc5-4de3-4bc5-8d2e-1adf470790d3___RS_HL 3922.JPG,Soybean___healthy,24
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Soybean___healthy/8bf696ba-08af-478c-90f3-01c622b23af7___RS_HL 6352.JPG,Soybean___healthy,24
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Soybean___healthy/d1d34213-0585-409c-9475-6fc0af085c62___RS_HL 4928.JPG,Soybean___healthy,24
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Soybean___healthy/bf56b3c8-16a4-4654-8b2d-b875c4180e38___RS_HL 6912.JPG,Soybean___healthy,24
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Soybean___healthy/b5ab45ed-a998-4e7c-831a-cb98b53450f2___RS_HL 5949.JPG,Soybean___healthy,24
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Soybean___healthy/fc9a49d7-9f70-4685-a521-e6fabff2b148___RS_HL 2932.JPG,Soybean___healthy,24
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Soybean___healthy/685177ee-ba69-414b-8362-f050a8eb0a2d___RS_HL 5858.JPG,Soybean___healthy,24
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Squash___Powdery_mildew/cb7cf571-1dbe-4a20-9bae-9d6cfb5c08bd___MD_Powd.M 0958.JPG,Squash___Powdery_mildew,25
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Squash___Powdery_mildew/335614ff-0957-4314-8557-c3273eef5b66___MD_Powd.M 0417.JPG,Squash___Powdery_mildew,25
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Squash___Powdery_mildew/358d6a10-6f39-46c2-ad7c-ec12b1b21b87___UMD_Powd.M 0373.JPG,Squash___Powdery_mildew,25
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Squash___Powdery_mildew/c49732c9-e96c-425d-a74d-44b916c3fdd6___MD_Powd.M 9999.JPG,Squash___Powdery_mildew,25
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Squash___Powdery_mildew/aa5c8c2e-2eda-4ede-96cf-0edde1636d1f___MD_Powd.M 0751.JPG,Squash___Powdery_mildew,25
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Squash___Powdery_mildew/55e4780b-e495-4497-9307-a37e3deeedcf___MD_Powd.M 0755.JPG,Squash___Powdery_mildew,25
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Squash___Powdery_mildew/a23a9dfe-ba62-42ff-b605-7992104746c0___UMD_Powd.M 0061.JPG,Squash___Powdery_mildew,25
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Squash___Powdery_mildew/ad8ae8eb-c2c0-4f34-b3b4-ba7130b4a8f8___MD_Powd.M 0145 copy.jpg,Squash___Powdery_mildew,25
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Squash___Powdery_mildew/7d75beb1-8673-4faa-9c60-d6b0275cc1e3___UMD_Powd.M 0124.JPG,Squash___Powdery_mildew,25
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Squash___Powdery_mildew/009f52f7-d279-4af0-95c1-938264186ed1___MD_Powd.M 0493.JPG,Squash___Powdery_mildew,25
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Squash___Powdery_mildew/03192d3c-e756-4692-99a1-bcae9b61a84f___UMD_Powd.M 0408.JPG,Squash___Powdery_mildew,25
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Squash___Powdery_mildew/3527f840-a203-48c5-b0e6-1919a26bf447___UMD_Powd.M 0368.JPG,Squash___Powdery_mildew,25
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Squash___Powdery_mildew/3de82440-5188-40f8-b28f-d54227b6ee05___UMD_Powd.M 9871.JPG,Squash___Powdery_mildew,25
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Squash___Powdery_mildew/1553bca1-0f4f-4cd6-ba9f-fa91fc218e87___UMD_Powd.M 9675.JPG,Squash___Powdery_mildew,25
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Squash___Powdery_mildew/296e55a9-f076-4641-b541-9fa28ee1aece___MD_Powd.M 0445.JPG,Squash___Powdery_mildew,25
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Squash___Powdery_mildew/70eea90e-c88d-4c7b-80cd-cf77a5773978___MD_Powd.M 0129.JPG,Squash___Powdery_mildew,25
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Squash___Powdery_mildew/3628254e-5942-4664-8faa-29bb8891ca25___MD_Powd.M 9904.JPG,Squash___Powdery_mildew,25
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Squash___Powdery_mildew/185e7c4d-22f4-4f34-8d8a-c3c9a653c630___UMD_Powd.M 0656.JPG,Squash___Powdery_mildew,25
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Squash___Powdery_mildew/b73f1a2b-025f-44e5-a3be-eacbb767c4cd___UMD_Powd.M 0133.JPG,Squash___Powdery_mildew,25
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Squash___Powdery_mildew/7f870f59-f04d-45e9-bf1c-e07155ee6730___UMD_Powd.M 0331.JPG,Squash___Powdery_mildew,25
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Strawberry___Leaf_scorch/516b081c-77ec-40bc-a6c1-0a1c18a353e2___RS_L.Scorch 1292.JPG,Strawberry___Leaf_scorch,26
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Strawberry___Leaf_scorch/76393088-1815-4397-9ca6-2243078f21ce___RS_L.Scorch 1100.JPG,Strawberry___Leaf_scorch,26
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Strawberry___Leaf_scorch/7f982441-7f2a-48e1-b570-0f97713a0e21___RS_L.Scorch 0957.JPG,Strawberry___Leaf_scorch,26
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Strawberry___Leaf_scorch/f91864a1-4522-48f0-8e93-dff9ecf251be___RS_L.Scorch 0920.JPG,Strawberry___Leaf_scorch,26
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Strawberry___Leaf_scorch/0be84fb6-08e5-40a0-af47-b576e92c12f8___RS_L.Scorch 1001.JPG,Strawberry___Leaf_scorch,26
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Strawberry___Leaf_scorch/24273ca3-0d5b-405e-903b-1d5485ef326e___RS_L.Scorch 1451.JPG,Strawberry___Leaf_scorch,26
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Strawberry___Leaf_scorch/bfbc366b-d28e-48d6-9f82-d57535e17889___RS_L.Scorch 9993.JPG,Strawberry___Leaf_scorch,26
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Strawberry___Leaf_scorch/428f2d2f-1c57-478a-a3db-3cd2e66ae7bf___RS_L.Scorch 0044.JPG,Strawberry___Leaf_scorch,26
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Strawberry___Leaf_scorch/2c20ad16-5d7c-48dd-9c50-f504caf993d2___RS_L.Scorch 1197.JPG,Strawberry___Leaf_scorch,26
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Strawberry___Leaf_scorch/70834193-9370-4411-a30d-478e872c9ba4___RS_L.Scorch 1224.JPG,Strawberry___Leaf_scorch,26
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Strawberry___Leaf_scorch/3ce5d5e5-3f64-45d2-b7ca-1b6d7141e5d8___RS_L.Scorch 1586.JPG,Strawberry___Leaf_scorch,26
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Strawberry___Leaf_scorch/0dda76f4-d38e-4547-a341-546e84d72346___RS_L.Scorch 9973.JPG,Strawberry___Leaf_scorch,26
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Strawberry___Leaf_scorch/aa8c2cc5-1f2b-448d-ad62-b70a82fdb911___RS_L.Scorch 0113.JPG,Strawberry___Leaf_scorch,26
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Strawberry___Leaf_scorch/b41e624c-f0f2-480e-921a-126300ae4d35___RS_L.Scorch 0098.JPG,Strawberry___Leaf_scorch,26
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Strawberry___Leaf_scorch/5286ac37-b3ce-4177-bf6f-24ff545cabdd___RS_L.Scorch 1053.JPG,Strawberry___Leaf_scorch,26
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Strawberry___Leaf_scorch/72004a28-4169-447c-972f-183619971f6b___RS_L.Scorch 0878.JPG,Strawberry___Leaf_scorch,26
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Strawberry___Leaf_scorch/1ba17895-c6a5-404a-967c-ef33d16a5b65___RS_L.Scorch 0108.JPG,Strawberry___Leaf_scorch,26
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Strawberry___Leaf_scorch/320d687e-0c4f-4ecc-bf4c-b2d1aaf2fd20___RS_L.Scorch 0855.JPG,Strawberry___Leaf_scorch,26
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Strawberry___Leaf_scorch/018eaeaf-82a5-407c-87f2-fc7edfc89ecc___RS_L.Scorch 0951.JPG,Strawberry___Leaf_scorch,26
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Strawberry___Leaf_scorch/b2f174f5-6ab4-46db-adbc-a392bebe3f1f___RS_L.Scorch 0926.JPG,Strawberry___Leaf_scorch,26
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Strawberry___healthy/6e3bbd66-5fb8-4cef-a84f-ac093bb96b1f___RS_HL 4856.JPG,Strawberry___healthy,27
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Strawberry___healthy/961cb53b-3ad0-4b8c-9de3-3bfec73ea444___RS_HL 4340.JPG,Strawberry___healthy,27
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Strawberry___healthy/672fc7b7-9bb6-4966-9240-41214be74253___RS_HL 1716.JPG,Strawberry___healthy,27
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Strawberry___healthy/fb8db167-dda8-4bda-99a5-d7b688b14e89___RS_HL 4442.JPG,Strawberry___healthy,27
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Strawberry___healthy/9c969fa3-09f8-4d4e-bd3d-77f009602d39___RS_HL 2037.JPG,Strawberry___healthy,27
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Strawberry___healthy/ebd8d3f6-aa1e-4cc0-acb0-3e6c1ceb4bae___RS_HL 4379.JPG,Strawberry___healthy,27
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Strawberry___healthy/0cb1928d-bed3-4bb7-8c08-35848eb0f7e8___RS_HL 1718.JPG,Strawberry___healthy,27
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Strawberry___healthy/bc26adda-8cdb-43cc-8485-4b2088e233ea___RS_HL 4866.JPG,Strawberry___healthy,27
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Strawberry___healthy/6c08a905-65f4-4733-9e6a-081844b9f9a7___RS_HL 2029.JPG,Strawberry___healthy,27
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Strawberry___healthy/24de1e79-2489-4156-8197-72c4b46977bd___RS_HL 4802.JPG,Strawberry___healthy,27
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Strawberry___healthy/2a7a5c9d-1066-4af5-8560-30f53f9d5b33___RS_HL 4821.JPG,Strawberry___healthy,27
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Strawberry___healthy/02808b3e-ae88-4259-9b2c-f9096db336e4___RS_HL 1827.JPG,Strawberry___healthy,27
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Strawberry___healthy/fea9a141-9561-4508-bd7d-49cd9412bd2f___RS_HL 1624.JPG,Strawberry___healthy,27
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Strawberry___healthy/941b9454-80e0-44c5-b1ca-d0b16527d2b7___RS_HL 4811.JPG,Strawberry___healthy,27
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Strawberry___healthy/67db4fa4-922e-47f8-bf79-7dbb87adf47b___RS_HL 1986.JPG,Strawberry___healthy,27
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Strawberry___healthy/71d3e6d6-4810-4fbe-9b58-ff339b0a62ab___RS_HL 1751.JPG,Strawberry___healthy,27
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Strawberry___healthy/6e8627f0-d19e-46c2-876a-d36c5c57c25a___RS_HL 4503.JPG,Strawberry___healthy,27
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Strawberry___healthy/275f8963-f4f4-4903-962b-1da716725d08___RS_HL 4780.JPG,Strawberry___healthy,27
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Strawberry___healthy/da4dcda4-9c5e-43e5-a19d-f13b53be68fc___RS_HL 2130.JPG,Strawberry___healthy,27
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Strawberry___healthy/60856065-b1f0-45bb-aa6f-e2d569990834___RS_HL 4355.JPG,Strawberry___healthy,27
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Bacterial_spot/e19aa48d-2c0f-41ac-b6e4-d648371236f3___GCREC_Bact.Sp 5545.JPG,Tomato___Bacterial_spot,28
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Bacterial_spot/c6581fb4-670c-4a11-94b2-1c9b51d8dda8___GCREC_Bact.Sp 3181.JPG,Tomato___Bacterial_spot,28
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Bacterial_spot/bea52a18-00de-4080-b460-4cf34c3c8688___GCREC_Bact.Sp 3499.JPG,Tomato___Bacterial_spot,28
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Bacterial_spot/87de72a0-fb7c-493a-bec6-227f39b44f96___GCREC_Bact.Sp 5861.JPG,Tomato___Bacterial_spot,28
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Bacterial_spot/1f6a4e82-1d08-48d0-a488-1a787c854484___GCREC_Bact.Sp 5905.JPG,Tomato___Bacterial_spot,28
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Bacterial_spot/669e40d9-4ef8-4f22-82c1-778bf0895ac6___GCREC_Bact.Sp 3166.JPG,Tomato___Bacterial_spot,28
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Bacterial_spot/526959cc-f05a-46fb-8625-ed60fdac30cd___GCREC_Bact.Sp 3032.JPG,Tomato___Bacterial_spot,28
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Bacterial_spot/3c7e6602-8832-4502-9a10-fc06389b9604___UF.GRC_BS_Lab Leaf 0641.JPG,Tomato___Bacterial_spot,28
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Bacterial_spot/c9251133-b2c8-4227-9c29-f14857e83be1___GCREC_Bact.Sp 5692.JPG,Tomato___Bacterial_spot,28
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Bacterial_spot/fcff6ccd-294d-481f-affb-815097ed74dc___GCREC_Bact.Sp 3115.JPG,Tomato___Bacterial_spot,28
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Bacterial_spot/459dc80c-b60d-4da1-9400-7e0803cb2432___UF.GRC_BS_Lab Leaf 0708.JPG,Tomato___Bacterial_spot,28
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Bacterial_spot/38de266d-bb02-4dea-b3d8-9c3dcefb44c0___GCREC_Bact.Sp 3756.JPG,Tomato___Bacterial_spot,28
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Bacterial_spot/44ddc088-1234-4cc8-aa29-e695104a7d1b___GCREC_Bact.Sp 6162.JPG,Tomato___Bacterial_spot,28
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Bacterial_spot/ffbff5e5-6c0a-4005-9974-1cb6ac61b4c9___UF.GRC_BS_Lab Leaf 1108.JPG,Tomato___Bacterial_spot,28
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Bacterial_spot/3d38f4a9-37ac-4211-bfc3-e26c815afc23___GCREC_Bact.Sp 3781.JPG,Tomato___Bacterial_spot,28
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Bacterial_spot/90107060-4458-44d1-a2b3-20cd9e3d4d11___GCREC_Bact.Sp 5728.JPG,Tomato___Bacterial_spot,28
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Bacterial_spot/bfe43257-51c4-40c9-8989-a193b19ee2ed___GCREC_Bact.Sp 6111.JPG,Tomato___Bacterial_spot,28
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Bacterial_spot/158e6da7-6371-4575-b2e2-a42be9b0beed___GCREC_Bact.Sp 3042.JPG,Tomato___Bacterial_spot,28
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Bacterial_spot/e7c136fd-9f65-428c-8d94-b74bde9e19c2___GCREC_Bact.Sp 3829.JPG,Tomato___Bacterial_spot,28
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Bacterial_spot/10c418e8-59b3-4d9f-a22b-7762b538e758___UF.GRC_BS_Lab Leaf 0900.JPG,Tomato___Bacterial_spot,28
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Early_blight/5ad16a00-4f2d-4872-a45c-80250b507ecc___RS_Erly.B 9378.JPG,Tomato___Early_blight,29
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Early_blight/0f4e562d-77ee-47c2-8ee9-34b391bc0fc3___RS_Erly.B 9434.JPG,Tomato___Early_blight,29
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Early_blight/398d72f7-db26-4138-9364-eb506f9495f4___RS_Erly.B 9450.JPG,Tomato___Early_blight,29
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Early_blight/de96e7a2-6de3-4699-9680-9eb4d4e215c8___RS_Erly.B 9445.JPG,Tomato___Early_blight,29
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Early_blight/e803b217-d9a9-4b0d-9ea1-679145625159___RS_Erly.B 9571.JPG,Tomato___Early_blight,29
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Early_blight/d354267e-4855-4197-a18a-668d706db705___RS_Erly.B 7405.JPG,Tomato___Early_blight,29
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Early_blight/47e03272-d314-4928-bf7c-eda3ba6e7371___RS_Erly.B 7380.JPG,Tomato___Early_blight,29
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Early_blight/0bd357fe-1e54-4c65-979c-e894e0b8a3aa___RS_Erly.B 8328.JPG,Tomato___Early_blight,29
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Early_blight/468dba17-366a-422f-b3b6-061261942b0d___RS_Erly.B 7853.JPG,Tomato___Early_blight,29
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Early_blight/3069555f-45e9-4208-bc5e-015ce47e34e2___RS_Erly.B 7663.JPG,Tomato___Early_blight,29
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Early_blight/b450abe9-9282-42a8-af4d-3fa7da258f40___RS_Erly.B 7735.JPG,Tomato___Early_blight,29
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Early_blight/0d5f65a3-b32f-4565-b63a-c6da73c1322b___RS_Erly.B 8310.JPG,Tomato___Early_blight,29
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Early_blight/f63f3650-9f84-45f9-898b-a6adef0294a3___RS_Erly.B 8419.JPG,Tomato___Early_blight,29
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Early_blight/762585ed-e09c-43c8-8297-8b6ef503ecb0___RS_Erly.B 7420.JPG,Tomato___Early_blight,29
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Early_blight/ba75cd48-68cb-49cb-9d79-d03c1b007852___RS_Erly.B 7432.JPG,Tomato___Early_blight,29
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Early_blight/8d70db5b-7916-4397-836d-6a73a2faaead___RS_Erly.B 6330.JPG,Tomato___Early_blight,29
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Early_blight/d3ebceea-8021-4168-85a4-27ef48cdaacb___RS_Erly.B 7857.JPG,Tomato___Early_blight,29
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Early_blight/171b6622-c111-4fe9-b3f9-12b12ee0db06___RS_Erly.B 7836.JPG,Tomato___Early_blight,29
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Early_blight/1bff3ab2-9e99-4d4b-ad0e-acd943324050___RS_Erly.B 6460.JPG,Tomato___Early_blight,29
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Early_blight/5bbfc062-042e-4929-98ba-fd034a03092d___RS_Erly.B 7581.JPG,Tomato___Early_blight,29
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Late_blight/464d50a2-adf7-4a8d-b2e0-4fcb01b02fe6___RS_Late.B 5030.JPG,Tomato___Late_blight,30
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Late_blight/4fa3fe36-2c59-4860-be94-508954283149___RS_Late.B 5495.JPG,Tomato___Late_blight,30
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Late_blight/73e493c6-3149-451d-b4e4-39aa10d02113___RS_Late.B 6642.JPG,Tomato___Late_blight,30
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Late_blight/6c9c73fa-5c8d-40ce-9221-a600908bff33___RS_Late.B 4893.JPG,Tomato___Late_blight,30
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Late_blight/80fc88e3-e4b6-49be-9f10-a364dbf88767___GHLB2ES Leaf 137.jpg,Tomato___Late_blight,30
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Late_blight/86a7b7d2-8783-4622-84d7-a4a420ee10ba___RS_Late.B 6546.JPG,Tomato___Late_blight,30
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Late_blight/aefc20fb-6226-4bb9-90e7-6619219ec15a___GHLB Leaf 23.2 Day 12.JPG,Tomato___Late_blight,30
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Late_blight/9b4df340-b1bf-4294-a275-1bc0d9b64ff6___GHLB2ES Leaf 138.1.JPG,Tomato___Late_blight,30
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Late_blight/56c7bdb1-9b7e-40fc-8ec5-97e20770426b___GHLB2 Leaf 8951.JPG,Tomato___Late_blight,30
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Late_blight/d648ce42-6742-44b2-95b9-a01b24e3054a___RS_Late.B 6116.JPG,Tomato___Late_blight,30
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Late_blight/a6007dbc-3a2f-4c1e-9ec6-28d7d3a17f28___GHLB_PS Leaf 13 Day 8.jpg,Tomato___Late_blight,30
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Late_blight/19369d60-553a-416b-9378-84f4a1d203d9___GHLB2 Leaf 9006.JPG,Tomato___Late_blight,30
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Late_blight/f5cb0905-3729-492a-a45f-63c20ae7e6a1___RS_Late.B 6777.JPG,Tomato___Late_blight,30
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Late_blight/9b0836db-9e56-4dc2-ba79-2d02907eaee1___GHLB2 Leaf 9048.JPG,Tomato___Late_blight,30
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Late_blight/7609a2a4-654e-4dad-b3e6-1cb4aab89420___RS_Late.B 5633.JPG,Tomato___Late_blight,30
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Late_blight/8ebbd6ea-f580-492d-a01d-7f00a3e788fb___RS_Late.B 6603.JPG,Tomato___Late_blight,30
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Late_blight/5828f9c7-5083-45c3-b3bb-bb202ed1cd53___GHLB2 Leaf 128.1.JPG,Tomato___Late_blight,30
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Late_blight/fa524c8c-e08d-43ee-9f33-3bd2bf9b09f5___GHLB2 Leaf 8686.JPG,Tomato___Late_blight,30
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Late_blight/439d092e-4a77-4feb-be22-2f830926f602___GHLB2ES Leaf 54.JPG,Tomato___Late_blight,30
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Late_blight/c614e6d5-04cc-4846-9867-84c83961c5cf___GHLB2 Leaf 8617.JPG,Tomato___Late_blight,30
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Leaf_Mold/110d3ff1-96ea-43f2-96cb-ac57d0b7dd6b___Crnl_L.Mold 6738.JPG,Tomato___Leaf_Mold,31
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Leaf_Mold/7ecb46e3-8e87-411e-9afb-9543244e7c4b___Crnl_L.Mold 9059.JPG,Tomato___Leaf_Mold,31
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Leaf_Mold/9d63ab4a-2bf7-4965-b96c-5c4c28c844c0___Crnl_L.Mold 8944.JPG,Tomato___Leaf_Mold,31
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Leaf_Mold/e401be04-ce62-4682-ae91-765fc4c2cc31___Crnl_L.Mold 7114.JPG,Tomato___Leaf_Mold,31
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Leaf_Mold/c05c1b58-b391-41d4-bdd4-72f82b59a508___Crnl_L.Mold 8926.JPG,Tomato___Leaf_Mold,31
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Leaf_Mold/ec76173b-c354-4711-9bb7-b38dae1ea5b4___Crnl_L.Mold 9074.JPG,Tomato___Leaf_Mold,31
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Leaf_Mold/86e29af1-d73d-4403-b436-247705413f6d___Crnl_L.Mold 6599.JPG,Tomato___Leaf_Mold,31
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Leaf_Mold/6c859190-5922-4207-9bfe-ecb4fce2e273___Crnl_L.Mold 7010.JPG,Tomato___Leaf_Mold,31
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Leaf_Mold/790cfb1d-4926-46bb-bd50-b750e823c72a___Crnl_L.Mold 7130.JPG,Tomato___Leaf_Mold,31
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Leaf_Mold/171e415f-917b-49c1-90f5-9f4a90ac0f7f___Crnl_L.Mold 8648.JPG,Tomato___Leaf_Mold,31
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Leaf_Mold/99d2b2e1-b3e6-4689-ad9a-209cdfdf4084___Crnl_L.Mold 7025.JPG,Tomato___Leaf_Mold,31
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Leaf_Mold/90d8cc22-bf80-4882-ae80-0a8e02c7ef92___Crnl_L.Mold 6789.JPG,Tomato___Leaf_Mold,31
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Leaf_Mold/30677953-f7e1-4f57-95f2-288425b6bc02___Crnl_L.Mold 6938.JPG,Tomato___Leaf_Mold,31
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Leaf_Mold/55aaf81e-1a23-419c-9b20-a24f5ab5e0ec___Crnl_L.Mold 6549.JPG,Tomato___Leaf_Mold,31
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Leaf_Mold/52790cd9-3f4a-4da8-8786-37c17a102dd0___Crnl_L.Mold 6692.JPG,Tomato___Leaf_Mold,31
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Leaf_Mold/546f348a-359a-4cff-8cdd-c87ecb1cec95___Crnl_L.Mold 6873.JPG,Tomato___Leaf_Mold,31
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Leaf_Mold/cf7130f7-50b1-4dce-81ed-841302e5f71d___Crnl_L.Mold 7072.JPG,Tomato___Leaf_Mold,31
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Leaf_Mold/f655d3f3-4b41-4e5a-adcd-5bf481d8d8eb___Crnl_L.Mold 8716.JPG,Tomato___Leaf_Mold,31
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Leaf_Mold/4172a7c2-35dc-426f-9b59-c7b1908edc5a___Crnl_L.Mold 6710.JPG,Tomato___Leaf_Mold,31
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Leaf_Mold/452bc068-6862-4715-a724-a4057d4155ee___Crnl_L.Mold 6866.JPG,Tomato___Leaf_Mold,31
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Septoria_leaf_spot/80ec9d60-0f20-4c02-8d63-76108e90bc14___JR_Sept.L.S 8525.JPG,Tomato___Septoria_leaf_spot,32
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Septoria_leaf_spot/17c7e5bd-f44e-4dbd-9cd0-f0dbcc654306___JR_Sept.L.S 8557.JPG,Tomato___Septoria_leaf_spot,32
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Septoria_leaf_spot/76209651-9e68-4431-8ec8-b7483d548089___Matt.S_CG 6761.JPG,Tomato___Septoria_leaf_spot,32
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Septoria_leaf_spot/9e684d71-c6e4-45e4-ac84-ac99499c55c1___Matt.S_CG 7625.JPG,Tomato___Septoria_leaf_spot,32
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Septoria_leaf_spot/b5cdcab0-075d-4861-9b0d-a98c88d56f58___JR_Sept.L.S 2699.JPG,Tomato___Septoria_leaf_spot,32
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Septoria_leaf_spot/006c018a-bb21-4a24-b1ff-d8b2864a7354___Matt.S_CG 6192.JPG,Tomato___Septoria_leaf_spot,32
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Septoria_leaf_spot/c74c302b-0961-4004-89e5-ce1cb5563b54___Matt.S_CG 2700.JPG,Tomato___Septoria_leaf_spot,32
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Septoria_leaf_spot/27c7ab66-e5fe-477e-8aab-4ece72a04843___JR_Sept.L.S 8432.JPG,Tomato___Septoria_leaf_spot,32
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Septoria_leaf_spot/18b450ff-ae57-4873-9c73-7ebef0b659cd___Matt.S_CG 0953.JPG,Tomato___Septoria_leaf_spot,32
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Septoria_leaf_spot/c66d82d9-a895-42ae-a7fb-a93917e3f10d___Matt.S_CG 6813.JPG,Tomato___Septoria_leaf_spot,32
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Septoria_leaf_spot/026c9801-8f0c-41b6-adfe-12704eafa73d___Keller.St_CG 1939.JPG,Tomato___Septoria_leaf_spot,32
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Septoria_leaf_spot/eb6133d1-f0d9-4529-8949-c60b1deb5585___JR_Sept.L.S 8396.JPG,Tomato___Septoria_leaf_spot,32
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Septoria_leaf_spot/1d2e1e46-0835-4f07-bebe-edf37ade1a12___Matt.S_CG 6363.JPG,Tomato___Septoria_leaf_spot,32
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Septoria_leaf_spot/62188b89-e853-4547-9fe7-9354a6d3d449___Keller.St_CG 2004.JPG,Tomato___Septoria_leaf_spot,32
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Septoria_leaf_spot/8579043f-4082-47cc-80d4-a6fd37ebc9af___Matt.S_CG 6003.JPG,Tomato___Septoria_leaf_spot,32
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Septoria_leaf_spot/1f51fffd-4e03-4aca-be68-d78e12538d50___Matt.S_CG 7451.JPG,Tomato___Septoria_leaf_spot,32
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Septoria_leaf_spot/fdbf1c22-520c-4537-9f20-76f52fd4ae35___Matt.S_CG 6550.JPG,Tomato___Septoria_leaf_spot,32
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Septoria_leaf_spot/8658b25b-ee75-49e0-b4dd-13093e09a299___Matt.S_CG 1365.JPG,Tomato___Septoria_leaf_spot,32
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Septoria_leaf_spot/502e3bfa-f315-4be7-988f-be4b495cf8c5___Matt.S_CG 7640.JPG,Tomato___Septoria_leaf_spot,32
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Septoria_leaf_spot/50cb3118-d96b-4805-b975-99a443575a64___Matt.S_CG 7409.JPG,Tomato___Septoria_leaf_spot,32
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Spider_mites Two-spotted_spider_mite/83066a1d-3c45-452b-af6e-55d6782c152d___Com.G_SpM_FL 9398.JPG,Tomato___Spider_mites Two-spotted_spider_mite,33
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Spider_mites Two-spotted_spider_mite/70d6d93b-0c77-4181-8d38-0e3fc988e884___Com.G_SpM_FL 9292.JPG,Tomato___Spider_mites Two-spotted_spider_mite,33
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Spider_mites Two-spotted_spider_mite/62c5a856-8aca-4589-9e34-1076b7bd3ce5___Com.G_SpM_FL 1377.JPG,Tomato___Spider_mites Two-spotted_spider_mite,33
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Spider_mites Two-spotted_spider_mite/b6c84c96-c05b-426a-8b3e-f55338ece18e___Com.G_SpM_FL 1143.JPG,Tomato___Spider_mites Two-spotted_spider_mite,33
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Spider_mites Two-spotted_spider_mite/f34c4c14-fa28-4761-aeb3-7d00fa139bef___Com.G_SpM_FL 8481.JPG,Tomato___Spider_mites Two-spotted_spider_mite,33
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Spider_mites Two-spotted_spider_mite/924df887-35ad-4f81-b236-641f91ef2a1a___Com.G_SpM_FL 1490.JPG,Tomato___Spider_mites Two-spotted_spider_mite,33
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Spider_mites Two-spotted_spider_mite/68c2d48b-f91e-42a4-afeb-9061cb4c6c74___Com.G_SpM_FL 9271.JPG,Tomato___Spider_mites Two-spotted_spider_mite,33
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Spider_mites Two-spotted_spider_mite/4c9e9795-8252-4c13-84e8-1dd5564f6517___Com.G_SpM_FL 8828.JPG,Tomato___Spider_mites Two-spotted_spider_mite,33
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Spider_mites Two-spotted_spider_mite/ac313c3d-a18f-4890-a93a-136c12012b6c___Com.G_SpM_FL 1491.JPG,Tomato___Spider_mites Two-spotted_spider_mite,33
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Spider_mites Two-spotted_spider_mite/80dd8c2f-a53b-425c-b065-6c8b856cfe52___Com.G_SpM_FL 1247.JPG,Tomato___Spider_mites Two-spotted_spider_mite,33
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Spider_mites Two-spotted_spider_mite/54461621-21aa-4ae7-92e1-800c74162441___Com.G_SpM_FL 1721.JPG,Tomato___Spider_mites Two-spotted_spider_mite,33
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Spider_mites Two-spotted_spider_mite/8db2385b-edb8-46c1-92ab-c46bf76db8be___Com.G_SpM_FL 8602.JPG,Tomato___Spider_mites Two-spotted_spider_mite,33
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Spider_mites Two-spotted_spider_mite/a1b54d81-e157-4617-9d9e-c3335c7c7efd___Com.G_SpM_FL 9634.JPG,Tomato___Spider_mites Two-spotted_spider_mite,33
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Spider_mites Two-spotted_spider_mite/42338037-ae62-45f9-a040-ea9e900272a9___Com.G_SpM_FL 8464.JPG,Tomato___Spider_mites Two-spotted_spider_mite,33
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Spider_mites Two-spotted_spider_mite/497e7ecf-8350-4490-9946-b6e55f90d382___Com.G_SpM_FL 1423.JPG,Tomato___Spider_mites Two-spotted_spider_mite,33
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Spider_mites Two-spotted_spider_mite/e413f08a-f5dd-454a-b059-b81bb35c8509___Com.G_SpM_FL 8470.JPG,Tomato___Spider_mites Two-spotted_spider_mite,33
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Spider_mites Two-spotted_spider_mite/1da21007-3d29-487f-b839-e835993f20d2___Com.G_SpM_FL 1389.JPG,Tomato___Spider_mites Two-spotted_spider_mite,33
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Spider_mites Two-spotted_spider_mite/7c4005f6-3034-44aa-b6b8-2ab0386f5262___Com.G_SpM_FL 1424.JPG,Tomato___Spider_mites Two-spotted_spider_mite,33
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Spider_mites Two-spotted_spider_mite/db594718-ad38-4d28-969c-c4bac1b5bbe1___Com.G_SpM_FL 8443.JPG,Tomato___Spider_mites Two-spotted_spider_mite,33
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Spider_mites Two-spotted_spider_mite/abfc3926-5ff5-46c0-a131-0853b4e686b3___Com.G_SpM_FL 1162.JPG,Tomato___Spider_mites Two-spotted_spider_mite,33
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Target_Spot/9563d213-98cb-4d7c-bf09-b05fdfacf622___Com.G_TgS_FL 9823.JPG,Tomato___Target_Spot,34
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Target_Spot/6b66d5e4-aacb-405a-aea0-bbc9e842822a___Com.G_TgS_FL 9726.JPG,Tomato___Target_Spot,34
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Target_Spot/72831249-cb43-481b-a57e-cd62ef0f4eeb___Com.G_TgS_FL 0776.JPG,Tomato___Target_Spot,34
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Target_Spot/2334031d-35e6-4e99-bfee-e21c5fa1a75f___Com.G_TgS_FL 8334.JPG,Tomato___Target_Spot,34
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Target_Spot/7af2dbd9-ca90-4d58-862f-f08bc920e908___Com.G_TgS_FL 0657.JPG,Tomato___Target_Spot,34
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Target_Spot/c13a16d9-d079-4fb5-8316-dcc589a88cf0___Com.G_TgS_FL 9930.JPG,Tomato___Target_Spot,34
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Target_Spot/ab7126ed-6e91-4175-b552-e26756c54b3e___Com.G_TgS_FL 8341.JPG,Tomato___Target_Spot,34
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Target_Spot/47139cf4-a587-49f2-a935-a2d88a7bb48a___Com.G_TgS_FL 1071.JPG,Tomato___Target_Spot,34
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Target_Spot/4e0ced8b-16a8-45e9-8c2f-b39000230d90___Com.G_TgS_FL 0902.JPG,Tomato___Target_Spot,34
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Target_Spot/7926bc30-a080-4357-a66b-133c5befae23___Com.G_TgS_FL 0847.JPG,Tomato___Target_Spot,34
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Target_Spot/fa4ca95f-7e31-42d0-9b16-b2b4fcfdae59___Com.G_TgS_FL 7974.JPG,Tomato___Target_Spot,34
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Target_Spot/ea1a98f6-8ec2-434e-9e48-537378734029___Com.G_TgS_FL 0028.JPG,Tomato___Target_Spot,34
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Target_Spot/87b6a20f-1b39-4696-a2a7-5fdcf5dbc4f5___Com.G_TgS_FL 1014.JPG,Tomato___Target_Spot,34
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Target_Spot/92f24fb5-b16e-4378-bcf6-fc5e2e1215a5___Com.G_TgS_FL 8088.JPG,Tomato___Target_Spot,34
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Target_Spot/7dee92b9-b5b8-4ef7-b2de-81b83e4451e0___Com.G_TgS_FL 7946.JPG,Tomato___Target_Spot,34
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Target_Spot/d63ebe6c-5f6e-47dc-87c1-d8b44c97065d___Com.G_TgS_FL 0807.JPG,Tomato___Target_Spot,34
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Target_Spot/8c24d828-453c-4a03-8899-c7358d6da8c1___Com.G_TgS_FL 8401.JPG,Tomato___Target_Spot,34
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Target_Spot/0197df47-a9cb-4b6c-b72c-ac0e9af6d135___Com.G_TgS_FL 0779.JPG,Tomato___Target_Spot,34
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Target_Spot/c9535108-37fe-49ba-8ebe-61443f8ef7c8___Com.G_TgS_FL 8010.JPG,Tomato___Target_Spot,34
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Target_Spot/a903e94f-f46d-430c-9ff1-3aab78130dca___Com.G_TgS_FL 9696.JPG,Tomato___Target_Spot,34
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Tomato_Yellow_Leaf_Curl_Virus/1b7cabad-63f8-4022-8133-e972c9600b56___YLCV_NREC 2726.JPG,Tomato___Tomato_Yellow_Leaf_Curl_Virus,35
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Tomato_Yellow_Leaf_Curl_Virus/6fd9ffe1-8d25-4f44-a1bc-cb5f7c3795d3___UF.GRC_YLCV_Lab 09399.JPG,Tomato___Tomato_Yellow_Leaf_Curl_Virus,35
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Tomato_Yellow_Leaf_Curl_Virus/7c466e1e-fab1-49ad-8886-f91308c5a1ab___UF.GRC_YLCV_Lab 02184.JPG,Tomato___Tomato_Yellow_Leaf_Curl_Virus,35
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Tomato_Yellow_Leaf_Curl_Virus/4b2e4a8c-a995-4aa6-8b50-7d41ef8a7255___YLCV_GCREC 5433.JPG,Tomato___Tomato_Yellow_Leaf_Curl_Virus,35
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Tomato_Yellow_Leaf_Curl_Virus/347a0845-117b-4389-8265-8c635a362e90___YLCV_GCREC 2649.JPG,Tomato___Tomato_Yellow_Leaf_Curl_Virus,35
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Tomato_Yellow_Leaf_Curl_Virus/be7be6fa-e171-4a56-bae4-f53c718f4362___YLCV_NREC 2083.JPG,Tomato___Tomato_Yellow_Leaf_Curl_Virus,35
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Tomato_Yellow_Leaf_Curl_Virus/b2aba426-856c-4803-bc9e-5a5010e17d37___UF.GRC_YLCV_Lab 02767.JPG,Tomato___Tomato_Yellow_Leaf_Curl_Virus,35
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Tomato_Yellow_Leaf_Curl_Virus/4c308e9f-c30c-440f-9bb7-5b0ba49fc352___YLCV_GCREC 2450.JPG,Tomato___Tomato_Yellow_Leaf_Curl_Virus,35
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Tomato_Yellow_Leaf_Curl_Virus/15cddf07-9796-455e-9ded-a84655b9828e___UF.GRC_YLCV_Lab 02296.JPG,Tomato___Tomato_Yellow_Leaf_Curl_Virus,35
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Tomato_Yellow_Leaf_Curl_Virus/aae8bc89-1655-4d47-944c-4760c0f841f1___UF.GRC_YLCV_Lab 01692.JPG,Tomato___Tomato_Yellow_Leaf_Curl_Virus,35
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Tomato_Yellow_Leaf_Curl_Virus/095dc511-bc42-4abe-ab82-2e3aaa6507f8___YLCV_GCREC 5283.JPG,Tomato___Tomato_Yellow_Leaf_Curl_Virus,35
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Tomato_Yellow_Leaf_Curl_Virus/13dbd7f5-c73e-475d-8ae5-9e91d7887d37___UF.GRC_YLCV_Lab 03075.JPG,Tomato___Tomato_Yellow_Leaf_Curl_Virus,35
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Tomato_Yellow_Leaf_Curl_Virus/82c9f4ee-648c-4f54-aac0-dd2062636163___YLCV_NREC 2455.JPG,Tomato___Tomato_Yellow_Leaf_Curl_Virus,35
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Tomato_Yellow_Leaf_Curl_Virus/1d4fd3e9-0b14-4eb4-8034-699cf0c4ca3e___YLCV_NREC 2583.JPG,Tomato___Tomato_Yellow_Leaf_Curl_Virus,35
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Tomato_Yellow_Leaf_Curl_Virus/98235a1a-fe41-4d86-b5b3-8e4dc1794b43___YLCV_GCREC 2325.JPG,Tomato___Tomato_Yellow_Leaf_Curl_Virus,35
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Tomato_Yellow_Leaf_Curl_Virus/67206390-2511-488b-82a6-7e3c01b37987___YLCV_NREC 0071.JPG,Tomato___Tomato_Yellow_Leaf_Curl_Virus,35
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Tomato_Yellow_Leaf_Curl_Virus/f13c697c-a907-40b1-b7f4-efacce4601a4___YLCV_GCREC 2176.JPG,Tomato___Tomato_Yellow_Leaf_Curl_Virus,35
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Tomato_Yellow_Leaf_Curl_Virus/f5b223a1-d753-41a3-ae94-a97a93614d80___UF.GRC_YLCV_Lab 01990.JPG,Tomato___Tomato_Yellow_Leaf_Curl_Virus,35
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Tomato_Yellow_Leaf_Curl_Virus/ff8ee69d-dcba-4a3f-92b1-cd3debce5e94___YLCV_GCREC 5128.JPG,Tomato___Tomato_Yellow_Leaf_Curl_Virus,35
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Tomato_Yellow_Leaf_Curl_Virus/0757ed7d-27b6-4b66-b5d1-36efb744bbe2___UF.GRC_YLCV_Lab 02775.JPG,Tomato___Tomato_Yellow_Leaf_Curl_Virus,35
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Tomato_mosaic_virus/830ed62d-ec4b-4df9-97fe-fddf36d7c3cb___PSU_CG 2301.JPG,Tomato___Tomato_mosaic_virus,36
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Tomato_mosaic_virus/b0ca678e-a79d-457e-8887-952d757b2205___PSU_CG 2266.JPG,Tomato___Tomato_mosaic_virus,36
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Tomato_mosaic_virus/0c05f5bb-e38d-422f-8b1c-632d8c0d730c___PSU_CG 2133.JPG,Tomato___Tomato_mosaic_virus,36
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Tomato_mosaic_virus/c9da2f9b-58f3-4715-8012-ee1fe722921f___PSU_CG 2199.JPG,Tomato___Tomato_mosaic_virus,36
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Tomato_mosaic_virus/6374877d-fcc6-4a2a-97de-e4d0c157ffae___PSU_CG 2068.JPG,Tomato___Tomato_mosaic_virus,36
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Tomato_mosaic_virus/5c049070-cf7f-4508-8e61-c5efb64bca3c___PSU_CG 2326.JPG,Tomato___Tomato_mosaic_virus,36
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Tomato_mosaic_virus/135dcfad-367c-483b-921b-5d24986c471c___PSU_CG 2221.JPG,Tomato___Tomato_mosaic_virus,36
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Tomato_mosaic_virus/efd2cbd0-24dc-4c09-92b1-37963ae84721___PSU_CG 2379.JPG,Tomato___Tomato_mosaic_virus,36
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Tomato_mosaic_virus/dcb74f2b-c523-4147-b9ce-690800411273___PSU_CG 2154.JPG,Tomato___Tomato_mosaic_virus,36
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Tomato_mosaic_virus/7db0dde8-3597-4a71-8fc1-cc6bc1dd89c4___PSU_CG 2196.JPG,Tomato___Tomato_mosaic_virus,36
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Tomato_mosaic_virus/932959d9-826b-465f-82d7-8b419d2ad040___PSU_CG 2187.JPG,Tomato___Tomato_mosaic_virus,36
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Tomato_mosaic_virus/2afd76a3-68f8-42cf-a68a-2f3076168dc0___PSU_CG 2260.JPG,Tomato___Tomato_mosaic_virus,36
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Tomato_mosaic_virus/c1ff629a-8390-43a4-88ed-86e462d688a7___PSU_CG 2083.JPG,Tomato___Tomato_mosaic_virus,36
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Tomato_mosaic_virus/05910684-8466-4472-b520-b6f90bfc0d01___PSU_CG 2076.JPG,Tomato___Tomato_mosaic_virus,36
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Tomato_mosaic_virus/658e96ee-271d-442b-876e-a52970ff540f___PSU_CG 2269.JPG,Tomato___Tomato_mosaic_virus,36
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Tomato_mosaic_virus/1d89d788-438c-4cee-9403-6fd8ac9863de___PSU_CG 2254.JPG,Tomato___Tomato_mosaic_virus,36
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Tomato_mosaic_virus/3ecbb7b8-ad66-4944-886e-de2ae2c2c35e___PSU_CG 2095.JPG,Tomato___Tomato_mosaic_virus,36
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Tomato_mosaic_virus/eb04ce63-3a56-4ed4-abad-124215f10cae___PSU_CG 2264.JPG,Tomato___Tomato_mosaic_virus,36
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Tomato_mosaic_virus/57b10f20-7819-40b1-924c-b484c42c515f___PSU_CG 2356.JPG,Tomato___Tomato_mosaic_virus,36
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___Tomato_mosaic_virus/5b09c1a9-f5ca-4c26-a627-a6ac6b2045cb___PSU_CG 2247.JPG,Tomato___Tomato_mosaic_virus,36
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___healthy/809e36cd-8251-4fcf-854d-6b7bb2f41a64___RS_HL 0215.JPG,Tomato___healthy,37
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___healthy/54059d2e-8903-4cf1-9856-676620a5be93___GH_HL Leaf 484.JPG,Tomato___healthy,37
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___healthy/c8bb9905-8eb3-4d57-9c4b-caa1d4dca255___RS_HL 0243.JPG,Tomato___healthy,37
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___healthy/61a348ec-8afa-4445-9a98-6e38ba0cd6d4___RS_HL 9914.JPG,Tomato___healthy,37
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___healthy/4ce3098b-aad2-4e5b-8f3b-fd827cad2c0b___RS_HL 0026.JPG,Tomato___healthy,37
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___healthy/a1aa732c-1c39-4c6b-b5d1-e0ea7a8587a5___RS_HL 0565.JPG,Tomato___healthy,37
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___healthy/33232143-89a5-4226-b667-9f2a6b17ca5b___RS_HL 9918.JPG,Tomato___healthy,37
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___healthy/9582a64b-e8a3-476f-9127-af5b45b0d833___RS_HL 0121.JPG,Tomato___healthy,37
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___healthy/d45c5eb7-c7b7-430b-9b2c-917a4a34315e___RS_HL 0151.JPG,Tomato___healthy,37
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___healthy/cae87492-704e-472a-8bc4-fea1ce042167___RS_HL 9915.JPG,Tomato___healthy,37
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___healthy/e1860bf2-2656-4dba-b9de-f80932bca552___RS_HL 0398.JPG,Tomato___healthy,37
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___healthy/98e0a217-023f-45ad-a1b7-3719a5fdea49___GH_HL Leaf 283.JPG,Tomato___healthy,37
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___healthy/461aa22a-be16-4dc8-9d60-45c38eabe504___RS_HL 0501.JPG,Tomato___healthy,37
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___healthy/c1c04a55-0dd5-48e2-9cc6-76bbcc1899fd___GH_HL Leaf 340.1.JPG,Tomato___healthy,37
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___healthy/6d0a4eb6-2a48-4fd6-9bb5-df05eeeb05a8___GH_HL Leaf 316.2.JPG,Tomato___healthy,37
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___healthy/a90b4d5b-86f9-48ae-9ede-ae3ac462f9bc___RS_HL 9872.JPG,Tomato___healthy,37
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___healthy/16fd1407-644b-42f1-a40a-6cacd9bc0258___RS_HL 9705.JPG,Tomato___healthy,37
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___healthy/f163df8f-6510-4520-82ee-779d2679af33___GH_HL Leaf 422.2.JPG,Tomato___healthy,37
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___healthy/6d4e6329-bb8c-417c-8d28-6241a22c0a86___GH_HL Leaf 411.JPG,Tomato___healthy,37
+/home/arabaya/projects/msdp-cv/final_project/ml/datasets/plantvillage/Tomato___healthy/a37b6334-5748-413a-9c7d-85c3ac8edee8___GH_HL Leaf 260.1.JPG,Tomato___healthy,37

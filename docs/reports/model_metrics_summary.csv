@@ -1,4 +1,3 @@
-Model,Accuracy,Precision,Recall,F1,InferenceTime,ModelSize
-cnn,,,,,,
-mobilenet,,,,,,
-hybrid,,,,,,
+version https://git-lfs.github.com/spec/v1
+oid sha256:e4b4f69b6d24e514442bf73177f049b2270c4f4746b9251b123ca4b9884e3ca7
+size 102
