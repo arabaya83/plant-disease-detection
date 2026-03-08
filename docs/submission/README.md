@@ -15,13 +15,15 @@ This folder contains final-project submission support artifacts.
 
 Build command:
 ```bash
-pip install jupyter-book
-jupyter-book build docs/submission/jupyter_book
+bash docs/submission/scripts/build_jupyter_book.sh
 ```
 
 ## Export and Publish Checklist
-1. Export `technical_synopsis.pdf` from `technical_synopsis.md`.
-2. Export `management_presentation.pptx` from presentation source.
+1. Export `technical_synopsis.pdf`:
+   `bash docs/submission/scripts/export_synopsis_pdf.sh`
+2. Export `management_presentation.pptx`:
+   `bash docs/submission/scripts/export_presentation_pptx.sh`
 3. Publish Jupyter Book and record URL in `published_links.md`.
 4. Record and publish demo video and record URL in `published_links.md`.
-5. Ensure figure placeholders in `docs/reports/figures/` are replaced with real evidence captures.
+5. Refresh evidence only if new training/evaluation runs are produced:
+   `python docs/reports/scripts/generate_project_evidence.py`

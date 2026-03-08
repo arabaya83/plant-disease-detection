@@ -1,1 +1,0 @@
-TODO: Replace with real artifact `sample_gradcam_healthy.png` captured from runtime demo. See docs/submission/demo_video_script.md for required scenarios.

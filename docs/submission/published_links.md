@@ -17,13 +17,15 @@ Use this tracker during final submission packaging.
 
 ## Presentation Slides
 - URL: ______________________________
-- Status: ☐ Pending ☐ Exported ☐ Shared
+- Local file: `docs/submission/presentation/management_presentation.pptx`
+- Status: ☐ Pending ☑ Exported ☐ Shared
 - Owner: Dr. Amish Jain, Ayman Rabaya, Shannon Coutinho, Aayush Sharma
 - Needed by: before management presentation delivery
 
 ## Synopsis PDF
 - URL (if cloud-hosted): ______________________________
-- Status: ☐ Pending ☐ Exported
+- Local file: `docs/submission/technical_synopsis.pdf`
+- Status: ☐ Pending ☑ Exported
 - Owner: Ayman Rabaya
 - Needed by: final report submission
 

@@ -9,11 +9,11 @@ Submission-ready computer vision final project for mobile-first plant disease di
 | Training scripts | Complete | `ml/src/training` |
 | Evaluation pipeline | Complete | `ml/src/evaluation` |
 | Model comparison | Complete | `docs/reports` |
-| Figures | Partial (runtime captures remain) | `docs/reports/figures` |
-| Jupyter Book | Source complete (publish pending) | `docs/submission/jupyter_book` |
+| Figures | Complete (runtime evidence generated) | `docs/reports/figures` |
+| Jupyter Book | Built locally (publish pending) | `docs/submission/jupyter_book/_build/html` |
 | Demo video | Script/checklist complete (recording pending) | `docs/submission/demo_video_script.md` |
-| PPTX deck | Content complete (PPTX export pending) | `docs/submission/presentation` |
-| Synopsis PDF | Source complete (PDF export pending) | `docs/submission/technical_synopsis.md` |
+| PPTX deck | Exported (sharing/publish pending) | `docs/submission/presentation/management_presentation.pptx` |
+| Synopsis PDF | Exported | `docs/submission/technical_synopsis.pdf` |
 
 ## 1. Project Overview
 For each uploaded/captured image, the system:
