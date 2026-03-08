@@ -103,6 +103,7 @@ Recommended deck length: 14 slides + optional appendix.
 - Hybrid was competitive but larger and slower.
 - Deployment decision for v1: MobileNetV2.
 **Visual placeholder**: `[[V11: results table from docs/reports/model_comparison_summary.md]]`
+**Reference**: `docs/reports/selected_model_rationale.md`
 **Speaker notes**
 - Tie decision to business constraints (quality + deployability).
 

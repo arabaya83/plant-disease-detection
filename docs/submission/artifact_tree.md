@@ -1,0 +1,44 @@
+# Expected Final Submission Tree
+
+```text
+README.md
+docs/
+  architecture/
+    system_flow.md
+    system_architecture.md
+    data_pipeline.md
+  reports/
+    model_comparison_summary.md
+    selected_model_rationale.md
+    figures/
+      class_distribution_train.png
+      class_distribution_all_splits.png
+      sample_gradcam_healthy.png
+      sample_gradcam_diseased.png
+      sample_inference_healthy.json
+      sample_inference_diseased.json
+      sample_inference_multileaf.json
+      sample_inference_invalid.json
+      evidence_capture_checklist.md
+    scripts/
+      generate_submission_figures.py
+      run_submission_evidence.sh
+  submission/
+    assignment_compliance_report.md
+    technical_synopsis.md
+    technical_synopsis.pdf
+    demo_video_script.md
+    pre_submission_checklist.md
+    final_artifacts_manifest.md
+    published_links.md
+    release_readiness.md
+    artifact_tree.md
+    presentation/
+      management_presentation_content.md
+      management_presentation.pptx
+    jupyter_book/
+      _config.yml
+      _toc.yml
+      *_chapter_files.md
+      _build/html/   # published output source
+```

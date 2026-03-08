@@ -1,29 +1,51 @@
 # Final Artifacts Manifest
 
-This manifest lists required final-project deliverables and their expected repository locations.
+This manifest lists final-project deliverables and exact expected paths.
 
-| Artifact | Path | Status Type | Notes |
-|---|---|---|---|
-| Project entry documentation | `README.md` | In-repo | Primary reviewer entry point |
-| System flow diagram | `docs/architecture/system_flow.md` | In-repo | Mermaid flow included |
-| System architecture diagram | `docs/architecture/system_architecture.md` | In-repo | Layered architecture included |
-| Model comparison summary | `docs/reports/model_comparison_summary.md` | In-repo | Includes selection rationale |
-| Figures package guide | `docs/reports/figures/README.md` | In-repo | Figure expectations + generation |
-| Figure generation script | `docs/reports/scripts/generate_submission_figures.py` | In-repo | Reproducible chart generation |
-| Compliance mapping report | `docs/submission/assignment_compliance_report.md` | In-repo | Requirement-to-evidence matrix |
-| Technical synopsis source | `docs/submission/technical_synopsis.md` | In-repo | 2-page-target source |
-| Technical synopsis PDF | `docs/submission/technical_synopsis.pdf` | Human-export | Must be generated manually |
-| Demo video script/runbook | `docs/submission/demo_video_script.md` | In-repo | Includes fallback plan |
-| Management presentation source | `docs/submission/presentation/management_presentation_content.md` | In-repo | 12-15 slide executive outline |
-| Final management deck | `docs/submission/presentation/management_presentation.pptx` | Human-export | Create from source outline |
-| Jupyter Book source | `docs/submission/jupyter_book/` | In-repo | `_config.yml`, `_toc.yml`, chapters |
-| Jupyter Book HTML build | `docs/submission/jupyter_book/_build/html/` | Generated | Build locally before publish |
-| Published Jupyter Book URL | `docs/submission/published_links.md` | Human-add | Add hosted URL |
-| Demo video URL | `docs/submission/published_links.md` | Human-add | Add final recorded video URL |
+## In-Repo Artifacts
+- Project entry docs: `README.md`
+- Architecture diagrams:
+  - `docs/architecture/system_flow.md`
+  - `docs/architecture/system_architecture.md`
+- Model evidence:
+  - `docs/reports/model_comparison_summary.md`
+  - `docs/reports/selected_model_rationale.md`
+- Figure package:
+  - `docs/reports/figures/README.md`
+  - `docs/reports/figures/evidence_capture_checklist.md`
+  - `docs/reports/scripts/generate_submission_figures.py`
+  - `docs/reports/scripts/run_submission_evidence.sh`
+- Submission docs:
+  - `docs/submission/assignment_compliance_report.md`
+  - `docs/submission/technical_synopsis.md`
+  - `docs/submission/demo_video_script.md`
+  - `docs/submission/presentation/management_presentation_content.md`
+  - `docs/submission/pre_submission_checklist.md`
+  - `docs/submission/published_links.md`
 
-## Required Human-Action Checklist
-1. Export `technical_synopsis.pdf`.
-2. Export `management_presentation.pptx` (and optional PDF backup).
-3. Build and publish Jupyter Book, then record URL.
-4. Record and publish demo video, then record URL.
-5. Replace figure placeholder TODO files with real demo captures.
+## Generated Artifacts (Expected After Run)
+- `ml/weights/*_best.pt`
+- `ml/weights/*_test_metrics.json`
+- `ml/weights/*_benchmark.json`
+- `ml/weights/*_confusion_matrix.png`
+- `docs/reports/figures/class_distribution_train.png`
+- `docs/reports/figures/class_distribution_all_splits.png`
+
+## Human-Export Artifacts
+- Technical synopsis PDF:
+  - `docs/submission/technical_synopsis.pdf`
+- Final presentation deck:
+  - `docs/submission/presentation/management_presentation.pptx`
+- Published Jupyter Book URL:
+  - `docs/submission/published_links.md`
+- Demo video URL:
+  - `docs/submission/published_links.md`
+
+## Manual Runtime Evidence to Replace Placeholders
+Destination folder: `docs/reports/figures/`
+- `sample_gradcam_healthy.png`
+- `sample_gradcam_diseased.png`
+- `sample_inference_healthy.json`
+- `sample_inference_diseased.json`
+- `sample_inference_multileaf.json`
+- `sample_inference_invalid.json`
