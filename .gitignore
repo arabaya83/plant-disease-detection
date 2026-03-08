@@ -1,0 +1,8 @@
+.venv/
+.env
+ml/datasets/
+app/static/uploads/
+app/static/outputs/
+logs/
+__pycache__/
+*.pyc
