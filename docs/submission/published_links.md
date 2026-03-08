@@ -1,31 +1,16 @@
-# Published Links and Ownership Tracker
+# Published Links
 
-Use this tracker before final submission handoff.
+## Jupyter Book
+URL: ______________________________
+Status: ___________________________
 
-## 1) Jupyter Book
-- [ ] URL added
-- URL: ______________________________
-- Owner (who fills): __________________
-- Needed by: before final report submission
-- Notes: publish output from `docs/submission/jupyter_book/_build/html/`
+## Demo Video
+URL: ______________________________
+Status: ___________________________
 
-## 2) Demo Video (Module 10 Forum)
-- [ ] URL added
-- URL: ______________________________
-- Owner (who fills): __________________
-- Needed by: before demo grading deadline
-- Notes: ensure final post contains narration and required 4 scenarios
+## Presentation Slides
+URL: ______________________________
+Status: ___________________________
 
-## 3) Presentation Deck
-- [ ] Deck URL or file location added
-- URL/path: __________________________
-- Owner (who fills): __________________
-- Needed by: before management presentation delivery
-- Notes: source outline is `docs/submission/presentation/management_presentation_content.md`
-
-## 4) Optional Hosted Repo/Release Link
-- [ ] URL added (optional)
-- URL: ______________________________
-- Owner (who fills): __________________
-- Needed by: optional but recommended
-- Notes: include release tag if created
+## GitHub Repository
+URL: https://github.com/arabaya83/plant-disease-detection

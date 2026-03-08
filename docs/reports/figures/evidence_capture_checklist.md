@@ -1,67 +1,49 @@
 # Evidence Capture Checklist
 
-This checklist defines exact commands and output destinations for submission evidence.
+Use this checklist to produce final submission evidence without fabricating outputs.
 
-## A. Generate Metrics, Benchmarks, and Confusion Matrices
-Run from repo root after weights are available:
+## 1) Auto-Generated Evidence (Code-Driven)
+Run from repository root:
 
 ```bash
-python ml/src/evaluation/evaluate.py --model mobilenet --weights ml/weights/mobilenet_best.pt --out-dir ml/weights
-python ml/src/evaluation/evaluate.py --model cnn --weights ml/weights/cnn_best.pt --out-dir ml/weights
-python ml/src/evaluation/evaluate.py --model hybrid --weights ml/weights/hybrid_best.pt --out-dir ml/weights
-
-python ml/src/evaluation/benchmark.py --model mobilenet --weights ml/weights/mobilenet_best.pt --out-dir ml/weights
-python ml/src/evaluation/benchmark.py --model cnn --weights ml/weights/cnn_best.pt --out-dir ml/weights
-python ml/src/evaluation/benchmark.py --model hybrid --weights ml/weights/hybrid_best.pt --out-dir ml/weights
+python docs/reports/scripts/run_submission_evidence.py
 ```
 
-Expected outputs in `ml/weights/`:
-- `mobilenet_test_metrics.json`, `cnn_test_metrics.json`, `hybrid_test_metrics.json`
-- `mobilenet_benchmark.json`, `cnn_benchmark.json`, `hybrid_benchmark.json`
-- `mobilenet_confusion_matrix.png`, `cnn_confusion_matrix.png`, `hybrid_confusion_matrix.png`
+This runs evaluation/benchmark for available models and copies expected artifacts
+into `docs/reports/figures/` when available.
 
-## B. Generate Documentation Figure Package
-```bash
-python docs/reports/scripts/generate_submission_figures.py \
-  --splits-dir ml/splits \
-  --weights-dir ml/weights \
-  --output-dir docs/reports/figures
-```
+### Expected copied outputs
+- `docs/reports/figures/cnn_confusion_matrix.png`
+- `docs/reports/figures/mobilenet_confusion_matrix.png`
+- `docs/reports/figures/hybrid_confusion_matrix.png`
+- `docs/reports/figures/mobilenet_metrics.json`
+- `docs/reports/figures/mobilenet_benchmark.json`
 
-Expected outputs in `docs/reports/figures/`:
-- `class_distribution_train.png`
-- `class_distribution_all_splits.png`
-- copied confusion matrices (if present)
-- TODO placeholders for manual runtime captures
-
-## C. Capture Manual Runtime Evidence (Required)
-Run the app:
+## 2) Manual Runtime Evidence (Required)
+Start app:
 ```bash
 uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
 ```
 
-Then execute and save these artifacts into `docs/reports/figures/`:
-1. Healthy case
-- `sample_inference_healthy.json`
-- `sample_gradcam_healthy.png`
+Capture and save these files in `docs/reports/figures/`:
+- `gradcam_healthy.png`
+- `gradcam_disease.png`
+- `gradcam_multi_leaf.png`
+- `invalid_input.png`
 
-2. Diseased case
-- `sample_inference_diseased.json`
-- `sample_gradcam_diseased.png`
+Also save inference JSON payloads for submission traceability:
+- `inference_healthy.json`
+- `inference_diseased.json`
+- `inference_multi_leaf.json`
+- `inference_invalid.json`
 
-3. Multi-leaf mixed case
-- `sample_inference_multileaf.json`
-
-4. Invalid/no-leaf case
-- `sample_inference_invalid.json`
-
-## D. Example API Capture Command
+## 3) Suggested API Capture Command
 ```bash
 curl -s -X POST http://localhost:8000/infer \
   -F "file=@path/to/image.jpg" \
-  -o docs/reports/figures/sample_inference_example.json
+  -o docs/reports/figures/inference_healthy.json
 ```
 
-## E. Completion Check
-`docs/reports/figures/` should contain final artifacts above and no unresolved
-`.TODO.txt` placeholders for required evidence files.
+## 4) Completion Check
+Before submission, ensure all required files above exist and no placeholder
+`.TODO.txt` evidence files remain unresolved.

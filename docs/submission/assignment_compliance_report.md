@@ -26,6 +26,7 @@ in-repo completion from human-deliverable finalization steps.
   - Evaluation/Benchmark: `ml/src/evaluation/*`
   - Inference API: `app/api/routes_infer.py`
 - Status: `Complete` (code) / `Conditional` (requires regenerated weight outputs)
+  using `docs/reports/scripts/run_submission_evidence.py`.
 
 ### 3) Multi-Technique CV Integration
 - Evidence:
@@ -82,4 +83,5 @@ in-repo completion from human-deliverable finalization steps.
 3. Export presentation deck (`.pptx`) from source package.
 4. Build/publish Jupyter Book and add URL to `docs/submission/published_links.md`.
 5. Record/upload demo video and add URL to `docs/submission/published_links.md`.
-6. Replace figure placeholder TODO files with runtime captures.
+6. Replace runtime evidence placeholders with actual captures in
+   `docs/reports/figures/`.

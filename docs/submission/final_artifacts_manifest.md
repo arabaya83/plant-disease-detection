@@ -3,7 +3,8 @@
 This manifest lists final-project deliverables and exact expected paths.
 
 ## In-Repo Artifacts
-- Project entry docs: `README.md`
+- Project entry docs:
+  - `README.md`
 - Architecture diagrams:
   - `docs/architecture/system_flow.md`
   - `docs/architecture/system_architecture.md`
@@ -14,7 +15,7 @@ This manifest lists final-project deliverables and exact expected paths.
   - `docs/reports/figures/README.md`
   - `docs/reports/figures/evidence_capture_checklist.md`
   - `docs/reports/scripts/generate_submission_figures.py`
-  - `docs/reports/scripts/run_submission_evidence.sh`
+  - `docs/reports/scripts/run_submission_evidence.py`
 - Submission docs:
   - `docs/submission/assignment_compliance_report.md`
   - `docs/submission/technical_synopsis.md`
@@ -30,6 +31,8 @@ This manifest lists final-project deliverables and exact expected paths.
 - `ml/weights/*_confusion_matrix.png`
 - `docs/reports/figures/class_distribution_train.png`
 - `docs/reports/figures/class_distribution_all_splits.png`
+- `docs/reports/figures/mobilenet_metrics.json`
+- `docs/reports/figures/mobilenet_benchmark.json`
 
 ## Human-Export Artifacts
 - Technical synopsis PDF:
@@ -41,11 +44,13 @@ This manifest lists final-project deliverables and exact expected paths.
 - Demo video URL:
   - `docs/submission/published_links.md`
 
-## Manual Runtime Evidence to Replace Placeholders
+## Manual Runtime Evidence (Replace Placeholders)
 Destination folder: `docs/reports/figures/`
-- `sample_gradcam_healthy.png`
-- `sample_gradcam_diseased.png`
-- `sample_inference_healthy.json`
-- `sample_inference_diseased.json`
-- `sample_inference_multileaf.json`
-- `sample_inference_invalid.json`
+- `gradcam_healthy.png`
+- `gradcam_disease.png`
+- `gradcam_multi_leaf.png`
+- `invalid_input.png`
+- `inference_healthy.json`
+- `inference_diseased.json`
+- `inference_multi_leaf.json`
+- `inference_invalid.json`

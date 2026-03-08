@@ -3,22 +3,17 @@
 Submission-ready computer vision final project for mobile-first plant disease diagnosis. The system demonstrates an end-to-end deployable workflow from data preparation and model training to explainable multi-leaf inference through a FastAPI + browser interface.
 
 ## Submission Status
-### In-Repo Complete Artifacts
-- Core codebase: backend, frontend, CV/ML services (`app/`, `ml/src/`)
-- Architecture docs: `docs/architecture/system_flow.md`, `docs/architecture/system_architecture.md`
-- Model selection evidence: `docs/reports/model_comparison_summary.md`
-- Submission package docs: `docs/submission/*`
-
-### Generated Artifacts Expected After Training/Evaluation
-- Weight files: `ml/weights/cnn_best.pt`, `ml/weights/mobilenet_best.pt`, `ml/weights/hybrid_best.pt`
-- Metrics/benchmark: `ml/weights/*_test_metrics.json`, `ml/weights/*_benchmark.json`
-- Confusion matrices: `ml/weights/*_confusion_matrix.png`
-
-### Human-Export Artifacts Required Before Final Submission
-- `docs/submission/technical_synopsis.pdf`
-- `docs/submission/presentation/management_presentation.pptx` (optional PDF backup)
-- Published Jupyter Book URL
-- Demo video URL
+| Artifact | Status | Location |
+|---|---|---|
+| Source code | Complete | repo |
+| Training scripts | Complete | `ml/src/training` |
+| Evaluation pipeline | Complete | `ml/src/evaluation` |
+| Model comparison | Complete | `docs/reports` |
+| Figures | Partial | `docs/reports/figures` |
+| Jupyter Book | Pending | `docs/submission` |
+| Demo video | Pending | `docs/submission` |
+| PPTX deck | Pending | `docs/submission/presentation` |
+| Synopsis PDF | Pending | `docs/submission` |
 
 ## 1. Project Overview
 For each uploaded/captured image, the system:
@@ -69,57 +64,59 @@ ml/datasets/plantvillage/<Crop___Disease>/*.jpg
 
 ## 6. Data Preparation Workflow
 ```bash
-python ml/src/data/split_data.py \
-  --data-dir ml/datasets/plantvillage \
-  --out-dir ml/splits
-
-python ml/src/data/class_weights.py \
-  --train-csv ml/splits/train.csv \
-  --out-json ml/splits/class_weights.json
-
-python ml/src/data/export_classes.py \
-  --classes-txt ml/splits/classes.txt \
-  --out-json ml/weights/classes.json
+python -m ml.src.data.split_data --data-dir ml/datasets/plantvillage --out-dir ml/splits
+python -m ml.src.data.class_weights --train-csv ml/splits/train.csv --out-json ml/splits/class_weights.json
+python -m ml.src.data.export_classes --classes-txt ml/splits/classes.txt --out-json ml/weights/classes.json
 ```
 
 Expected artifact path:
 - `ml/weights/classes.json`
 
-If not present, regenerate with:
+If missing, regenerate with:
 ```bash
-python ml/src/data/export_classes.py --classes-txt ml/splits/classes.txt --out-json ml/weights/classes.json
+python -m ml.src.data.export_classes --classes-txt ml/splits/classes.txt --out-json ml/weights/classes.json
 ```
 
 ## 7. Training Workflow
 Train all comparison models:
 ```bash
-python ml/src/training/train_cnn.py
-python ml/src/training/train_mobilenet.py
-python ml/src/training/train_hybrid.py
+python -m ml.src.training.train_mobilenet
+python -m ml.src.training.train_cnn
+python -m ml.src.training.train_hybrid
 ```
 
-## 8. Evaluation and Benchmark Workflow
-### Primary Deployment Model (MobileNetV2)
+Expected deployment artifact:
+- `ml/weights/mobilenet_best.pt`
+
+If missing, regenerate with:
 ```bash
-python ml/src/evaluation/evaluate.py --model mobilenet --weights ml/weights/mobilenet_best.pt --out-dir ml/weights
-python ml/src/evaluation/benchmark.py --model mobilenet --weights ml/weights/mobilenet_best.pt --out-dir ml/weights
+python -m ml.src.training.train_mobilenet --out-weights ml/weights/mobilenet_best.pt --out-history ml/weights/mobilenet_history.json
 ```
 
-### Comparison Models (CNN and Hybrid)
+## 8. Evaluation Workflow
+### Primary Evaluation (Deployment Model: MobileNetV2)
 ```bash
-python ml/src/evaluation/evaluate.py --model cnn --weights ml/weights/cnn_best.pt --out-dir ml/weights
-python ml/src/evaluation/evaluate.py --model hybrid --weights ml/weights/hybrid_best.pt --out-dir ml/weights
-
-python ml/src/evaluation/benchmark.py --model cnn --weights ml/weights/cnn_best.pt --out-dir ml/weights
-python ml/src/evaluation/benchmark.py --model hybrid --weights ml/weights/hybrid_best.pt --out-dir ml/weights
+python -m ml.src.evaluation.evaluate --model mobilenet --weights ml/weights/mobilenet_best.pt --out-dir ml/weights
+python -m ml.src.evaluation.benchmark --model mobilenet --weights ml/weights/mobilenet_best.pt --out-dir ml/weights
 ```
 
-Expected artifact paths after evaluation:
+### Model Comparison Experiments
+```bash
+python -m ml.src.evaluation.evaluate --model mobilenet --weights ml/weights/mobilenet_best.pt --out-dir ml/weights
+python -m ml.src.evaluation.evaluate --model cnn --weights ml/weights/cnn_best.pt --out-dir ml/weights
+python -m ml.src.evaluation.evaluate --model hybrid --weights ml/weights/hybrid_best.pt --out-dir ml/weights
+
+python -m ml.src.evaluation.benchmark --model mobilenet --weights ml/weights/mobilenet_best.pt --out-dir ml/weights
+python -m ml.src.evaluation.benchmark --model cnn --weights ml/weights/cnn_best.pt --out-dir ml/weights
+python -m ml.src.evaluation.benchmark --model hybrid --weights ml/weights/hybrid_best.pt --out-dir ml/weights
+```
+
+Expected artifacts after evaluation:
 - `ml/weights/*_test_metrics.json`
 - `ml/weights/*_benchmark.json`
 - `ml/weights/*_confusion_matrix.png`
 
-If not present, run the commands above.
+If missing, run the commands above.
 
 ## 9. Inference Workflow
 ```bash
@@ -133,7 +130,9 @@ API endpoints:
 - `GET /analytics/summary`
 
 ## 10. Model Comparison Summary (Observed Run)
-See: `docs/reports/model_comparison_summary.md`
+See:
+- `docs/reports/model_comparison_summary.md`
+- `docs/reports/selected_model_rationale.md`
 
 | Model | Accuracy | Precision (macro) | Recall (macro) | F1 (macro) | Avg Inference (ms) | Model Size (MB) |
 |---|---:|---:|---:|---:|---:|---:|
@@ -141,21 +140,20 @@ See: `docs/reports/model_comparison_summary.md`
 | MobileNetV2 | 0.9976 | 0.9938 | 0.9965 | 0.9950 | 201.414 | 8.90 |
 | Hybrid | 0.9948 | 0.9899 | 0.9939 | 0.9917 | 206.399 | 18.35 |
 
-### Selected Deployment Model (v1)
+### Deployment Model
 `MobileNetV2` is the default deployment model for v1.
-
-Canonical rationale:
-- `docs/reports/selected_model_rationale.md`
 
 Submission config defaults:
 - `MODEL_NAME=mobilenet`
 - `MODEL_WEIGHTS_PATH=ml/weights/mobilenet_best.pt`
 
 ## 11. Reproducibility Notes
-Large model/data artifacts are intentionally excluded from public git history. Reproducible regeneration is fully documented in this README and:
+Large model/data artifacts are intentionally excluded from public git history.
+
+Reproducibility references:
 - `docs/architecture/data_pipeline.md`
 - `docs/reports/figures/evidence_capture_checklist.md`
-- `docs/reports/scripts/run_submission_evidence.sh`
+- `docs/reports/scripts/run_submission_evidence.py`
 
 ## 12. Limitations
 - PlantVillage-to-field domain shift may reduce real-world performance.
