@@ -33,14 +33,16 @@ def build_model(name: str, num_classes: int):
 
 def main():
     """CLI entrypoint for test-set evaluation and confusion matrix export."""
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--model", choices=["cnn", "mobilenet", "hybrid"], required=True)
-    parser.add_argument("--weights", required=True)
-    parser.add_argument("--split-dir", default="ml/splits")
-    parser.add_argument("--image-size", type=int, default=384)
-    parser.add_argument("--batch-size", type=int, default=16)
-    parser.add_argument("--num-workers", type=int, default=2)
-    parser.add_argument("--out-dir", default="ml/weights")
+    parser = argparse.ArgumentParser(
+        description="Evaluate a trained model on the test split and export metrics + confusion matrix."
+    )
+    parser.add_argument("--model", choices=["cnn", "mobilenet", "hybrid"], required=True, help="Model architecture to instantiate.")
+    parser.add_argument("--weights", required=True, help="Path to trained model checkpoint (.pt).")
+    parser.add_argument("--split-dir", default="ml/splits", help="Directory containing test.csv and classes.txt.")
+    parser.add_argument("--image-size", type=int, default=384, help="Input image size after evaluation transforms.")
+    parser.add_argument("--batch-size", type=int, default=16, help="Mini-batch size for evaluation.")
+    parser.add_argument("--num-workers", type=int, default=2, help="PyTorch DataLoader workers.")
+    parser.add_argument("--out-dir", default="ml/weights", help="Output directory for JSON metrics and confusion matrix PNG.")
     args = parser.parse_args()
 
     split_dir = Path(args.split_dir)

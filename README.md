@@ -9,11 +9,11 @@ Submission-ready computer vision final project for mobile-first plant disease di
 | Training scripts | Complete | `ml/src/training` |
 | Evaluation pipeline | Complete | `ml/src/evaluation` |
 | Model comparison | Complete | `docs/reports` |
-| Figures | Partial | `docs/reports/figures` |
-| Jupyter Book | Pending | `docs/submission` |
-| Demo video | Pending | `docs/submission` |
-| PPTX deck | Pending | `docs/submission/presentation` |
-| Synopsis PDF | Pending | `docs/submission` |
+| Figures | Partial (runtime captures remain) | `docs/reports/figures` |
+| Jupyter Book | Source complete (publish pending) | `docs/submission/jupyter_book` |
+| Demo video | Script/checklist complete (recording pending) | `docs/submission/demo_video_script.md` |
+| PPTX deck | Content complete (PPTX export pending) | `docs/submission/presentation` |
+| Synopsis PDF | Source complete (PDF export pending) | `docs/submission/technical_synopsis.md` |
 
 ## 1. Project Overview
 For each uploaded/captured image, the system:
@@ -152,6 +152,7 @@ Large model/data artifacts are intentionally excluded from public git history.
 
 Reproducibility references:
 - `docs/architecture/data_pipeline.md`
+- `docs/architecture/code_documentation.md`
 - `docs/reports/figures/evidence_capture_checklist.md`
 - `docs/reports/scripts/run_submission_evidence.py`
 
@@ -168,3 +169,19 @@ Reproducibility references:
 - Final artifacts manifest: `docs/submission/final_artifacts_manifest.md`
 - Pre-submission checklist: `docs/submission/pre_submission_checklist.md`
 - Published links tracker: `docs/submission/published_links.md`
+- Completion status board: `docs/submission/completion_status.md`
+
+## 14. Finalization Commands
+```bash
+# 1) Generate runtime evidence package
+python docs/reports/scripts/generate_project_evidence.py
+
+# 2) Build Jupyter Book locally
+bash docs/submission/scripts/build_jupyter_book.sh
+
+# 3) Export synopsis PDF (requires pandoc + LaTeX engine)
+bash docs/submission/scripts/export_synopsis_pdf.sh
+
+# 4) Export presentation deck as PPTX (requires pandoc)
+bash docs/submission/scripts/export_presentation_pptx.sh
+```

@@ -1,0 +1,52 @@
+{
+  "healthy": {
+    "status": "low_confidence",
+    "message": "Low confidence predictions. Please retake the photo.",
+    "results": []
+  },
+  "diseased": {
+    "status": "ok",
+    "message": "Diagnosis completed.",
+    "results": [
+      {
+        "leaf_id": 1,
+        "crop_name": "Apple",
+        "disease_name": "Black rot",
+        "confidence": 0.9999992847442627,
+        "healthy_or_diseased": "Diseased",
+        "short_description": "Fungal infection that causes leaf spots and fruit rot.",
+        "bbox": [
+          4,
+          6,
+          242,
+          176
+        ]
+      }
+    ]
+  },
+  "multi_leaf": {
+    "status": "ok",
+    "message": "Diagnosis completed.",
+    "results": [
+      {
+        "leaf_id": 2,
+        "crop_name": "Apple",
+        "disease_name": "Black rot",
+        "confidence": 0.9999992847442627,
+        "healthy_or_diseased": "Diseased",
+        "short_description": "Fungal infection that causes leaf spots and fruit rot.",
+        "bbox": [
+          300,
+          26,
+          538,
+          196
+        ]
+      }
+    ]
+  },
+  "invalid": {
+    "status": "invalid",
+    "message": "No leaf detected. Please retake the photo.",
+    "results": []
+  }
+}

@@ -59,10 +59,20 @@ class Artifacts:
     missing_weights: list[str]
 
 
-def run_cmd(cmd: list[str]) -> None:
-    """Run subprocess command from repo root."""
+def run_cmd(cmd: list[str], allow_failure: bool = False) -> bool:
+    """Run subprocess command from repo root.
+
+    Returns True on success. When `allow_failure=True`, failures are logged and
+    False is returned instead of raising.
+    """
     print("$", " ".join(cmd))
-    subprocess.run(cmd, cwd=ROOT, check=True)
+    proc = subprocess.run(cmd, cwd=ROOT, check=False)
+    if proc.returncode == 0:
+        return True
+    if allow_failure:
+        print(f"[warn] command failed ({proc.returncode}), continuing.")
+        return False
+    raise subprocess.CalledProcessError(proc.returncode, cmd)
 
 
 def load_class_names() -> list[str]:
@@ -76,7 +86,7 @@ def run_evaluate_and_benchmark(model: str, weights: Path) -> tuple[Path, Path] |
     if not weights.exists():
         return None, None
 
-    run_cmd(
+    eval_ok = run_cmd(
         [
             sys.executable,
             "-m",
@@ -89,9 +99,13 @@ def run_evaluate_and_benchmark(model: str, weights: Path) -> tuple[Path, Path] |
             str(METRICS_DIR),
             "--split-dir",
             str(SPLITS_DIR),
+            "--num-workers",
+            "0",
         ]
+        ,
+        allow_failure=True,
     )
-    run_cmd(
+    bench_ok = run_cmd(
         [
             sys.executable,
             "-m",
@@ -103,15 +117,17 @@ def run_evaluate_and_benchmark(model: str, weights: Path) -> tuple[Path, Path] |
             "--out-dir",
             str(METRICS_DIR),
         ]
+        ,
+        allow_failure=True,
     )
 
     metrics_src = METRICS_DIR / f"{model}_test_metrics.json"
     metrics_dst = METRICS_DIR / f"{model}_metrics.json"
-    if metrics_src.exists():
+    if eval_ok and metrics_src.exists():
         metrics_dst.write_bytes(metrics_src.read_bytes())
 
     bench_src = METRICS_DIR / f"{model}_benchmark.json"
-    return metrics_dst if metrics_dst.exists() else None, bench_src if bench_src.exists() else None
+    return metrics_dst if metrics_dst.exists() else None, bench_src if bench_ok and bench_src.exists() else None
 
 
 def build_model(model: str, num_classes: int) -> torch.nn.Module:
@@ -130,7 +146,7 @@ def generate_confusion_pair(model: str, weights: Path, class_names: list[str], i
 
     device = "cuda" if torch.cuda.is_available() else "cpu"
     ds = PlantVillageSplitDataset(str(SPLITS_DIR / "test.csv"), transform=build_eval_transforms(image_size))
-    loader = DataLoader(ds, batch_size=32, shuffle=False, num_workers=2)
+    loader = DataLoader(ds, batch_size=32, shuffle=False, num_workers=0)
 
     m = build_model(model, num_classes=len(class_names)).to(device)
     state = torch.load(str(weights), map_location=device, weights_only=True)

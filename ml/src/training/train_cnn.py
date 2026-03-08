@@ -27,17 +27,19 @@ def load_class_names(split_dir: Path):
 
 def main():
     """Configure data/model/loss and train CNN with early stopping."""
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--split-dir", default="ml/splits")
-    parser.add_argument("--weights-json", default="ml/splits/class_weights.json")
-    parser.add_argument("--image-size", type=int, default=384)
-    parser.add_argument("--batch-size", type=int, default=16)
-    parser.add_argument("--max-epochs", type=int, default=50)
-    parser.add_argument("--patience", type=int, default=8)
-    parser.add_argument("--lr", type=float, default=1e-3)
-    parser.add_argument("--num-workers", type=int, default=2)
-    parser.add_argument("--out-weights", default="ml/weights/cnn_best.pt")
-    parser.add_argument("--out-history", default="ml/weights/cnn_history.json")
+    parser = argparse.ArgumentParser(
+        description="Train SimpleCNN baseline on PlantVillage split CSVs."
+    )
+    parser.add_argument("--split-dir", default="ml/splits", help="Directory containing train/val/test CSVs and classes.txt.")
+    parser.add_argument("--weights-json", default="ml/splits/class_weights.json", help="JSON file with class-weight mapping by class index.")
+    parser.add_argument("--image-size", type=int, default=384, help="Input image size after transforms.")
+    parser.add_argument("--batch-size", type=int, default=16, help="Mini-batch size.")
+    parser.add_argument("--max-epochs", type=int, default=50, help="Maximum training epochs before early stopping.")
+    parser.add_argument("--patience", type=int, default=8, help="Early stopping patience on validation loss.")
+    parser.add_argument("--lr", type=float, default=1e-3, help="Adam learning rate.")
+    parser.add_argument("--num-workers", type=int, default=2, help="PyTorch DataLoader workers.")
+    parser.add_argument("--out-weights", default="ml/weights/cnn_best.pt", help="Output path for best checkpoint weights.")
+    parser.add_argument("--out-history", default="ml/weights/cnn_history.json", help="Output JSON path for training history.")
     args = parser.parse_args()
 
     split_dir = Path(args.split_dir)

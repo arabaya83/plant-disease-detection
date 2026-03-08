@@ -28,13 +28,15 @@ def build_model(name: str, num_classes: int = 38):
 
 def main():
     """CLI entrypoint for average per-image inference timing benchmark."""
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--model", choices=["cnn", "mobilenet", "hybrid"], required=True)
-    parser.add_argument("--weights", required=True)
-    parser.add_argument("--image-size", type=int, default=384)
-    parser.add_argument("--iters", type=int, default=100)
-    parser.add_argument("--num-classes", type=int, default=38)
-    parser.add_argument("--out-dir", default="ml/weights")
+    parser = argparse.ArgumentParser(
+        description="Benchmark model inference latency and report checkpoint size."
+    )
+    parser.add_argument("--model", choices=["cnn", "mobilenet", "hybrid"], required=True, help="Model architecture to benchmark.")
+    parser.add_argument("--weights", required=True, help="Path to trained model checkpoint (.pt).")
+    parser.add_argument("--image-size", type=int, default=384, help="Synthetic input size for latency timing.")
+    parser.add_argument("--iters", type=int, default=100, help="Number of timed inference iterations.")
+    parser.add_argument("--num-classes", type=int, default=38, help="Classifier output classes used when instantiating model.")
+    parser.add_argument("--out-dir", default="ml/weights", help="Output directory for benchmark JSON.")
     args = parser.parse_args()
 
     device = "cuda" if torch.cuda.is_available() else "cpu"

@@ -13,7 +13,7 @@ parse:
     - html_image
 
 repository:
-  url: https://example.com/replace-with-your-repo
+  url: https://github.com/arabaya83/plant-disease-detection
   branch: main
 
 html:
