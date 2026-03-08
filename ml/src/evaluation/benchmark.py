@@ -33,12 +33,14 @@ def main():
     parser.add_argument("--weights", required=True)
     parser.add_argument("--image-size", type=int, default=384)
     parser.add_argument("--iters", type=int, default=100)
+    parser.add_argument("--num-classes", type=int, default=38)
+    parser.add_argument("--out-dir", default="ml/weights")
     args = parser.parse_args()
 
     device = "cuda" if torch.cuda.is_available() else "cpu"
-    model = build_model(args.model).to(device)
+    model = build_model(args.model, num_classes=args.num_classes).to(device)
 
-    state = torch.load(args.weights, map_location=device)
+    state = torch.load(args.weights, map_location=device, weights_only=True)
     if isinstance(state, dict) and "state_dict" in state:
         state = state["state_dict"]
     model.load_state_dict(state, strict=False)
@@ -64,7 +66,9 @@ def main():
         "device": device,
     }
 
-    out_path = Path("ml/weights") / f"{args.model}_benchmark.json"
+    out_dir = Path(args.out_dir)
+    out_dir.mkdir(parents=True, exist_ok=True)
+    out_path = out_dir / f"{args.model}_benchmark.json"
     with out_path.open("w", encoding="utf-8") as f:
         json.dump(payload, f, indent=2)
     print(json.dumps(payload, indent=2))

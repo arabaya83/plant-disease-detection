@@ -1,40 +1,27 @@
-# Submission Packaging Guide
+# Submission Package Guide
 
-This folder contains the missing non-code deliverables required by the final-project rubric.
+This folder contains final-project submission support artifacts.
 
-## Contents
-- `assignment_compliance_report.md` - requirement-by-requirement status and evidence
-- `technical_synopsis.md` - two-page synopsis source
-- `demo_video_script.md` - recording script and checklist
-- `presentation/management_presentation_content.md` - full 12-15 slide content
-- `jupyter_book/` - Jupyter Book source files
+## Core Files
+- `assignment_compliance_report.md` - requirement-to-evidence matrix
+- `technical_synopsis.md` - 2-page-target synopsis source
+- `demo_video_script.md` - 5-8 minute demo runbook
+- `presentation/management_presentation_content.md` - executive deck source outline
+- `final_artifacts_manifest.md` - expected final deliverable locations
+- `published_links.md` - fill with final hosted links
 
-## 1) Publish Jupyter Book
-From project root:
+## Jupyter Book Source
+- `jupyter_book/` contains `_config.yml`, `_toc.yml`, and chapter pages.
 
+Build command:
 ```bash
 pip install jupyter-book
 jupyter-book build docs/submission/jupyter_book
 ```
 
-Upload the rendered `_build/html` to GitHub Pages or your institution host.
-
-## 2) Export Technical Synopsis PDF
-Recommended command (if `pandoc` is installed):
-
-```bash
-pandoc docs/submission/technical_synopsis.md -o docs/submission/technical_synopsis.pdf
-```
-
-If `pandoc` is unavailable, export from VS Code/Typora/Google Docs while preserving <=2 pages.
-
-## 3) Produce Management Presentation File
-Use `presentation/management_presentation_content.md` as the source to create:
-- `management_presentation.pptx`
-- optional backup `management_presentation.pdf`
-
-## 4) Record Demo Video
-Follow `demo_video_script.md`.
-- Duration: 5-8 minutes
-- Include required edge cases and narration
-- Post final video link to Module 10 forum
+## Export and Publish Checklist
+1. Export `technical_synopsis.pdf` from `technical_synopsis.md`.
+2. Export `management_presentation.pptx` from presentation source.
+3. Publish Jupyter Book and record URL in `published_links.md`.
+4. Record and publish demo video and record URL in `published_links.md`.
+5. Ensure figure placeholders in `docs/reports/figures/` are replaced with real evidence captures.

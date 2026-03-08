@@ -1,57 +1,98 @@
-# Demo Video Script (5-8 Minutes)
+# Demo Video Script and Runbook (5-8 Minutes)
 
-## 0:00-0:30 Introduction
-- Introduce team and project title.
-- Problem in one line: small farmers need fast in-field disease diagnosis.
-- Show high-level flow: mobile capture -> backend analysis -> per-leaf result + Grad-CAM.
+## Objective
+Demonstrate a complete end-to-end CV workflow with required scenarios:
+1. Healthy leaf
+2. Single diseased leaf
+3. Multi-leaf mixed image
+4. Invalid/no-leaf image
 
-## 0:30-1:15 System Overview
-- Briefly show architecture diagram (`docs/architecture/system_architecture.md`).
-- Mention integrated CV components: validation, segmentation, classification, explainability.
-- Mention deployment mode: browser + FastAPI server.
+## Timing Plan (Target 7:00)
+- 0:00-0:30 Intro and problem
+- 0:30-1:10 Architecture and workflow overview
+- 1:10-2:00 Scenario 1 (healthy)
+- 2:00-2:50 Scenario 2 (single diseased)
+- 2:50-4:00 Scenario 3 (multi-leaf mixed)
+- 4:00-4:40 Scenario 4 (invalid/no leaf)
+- 4:40-5:30 Grad-CAM explanation segment
+- 5:30-6:20 Metrics and selected model rationale
+- 6:20-7:00 Limitations and next steps
 
-## 1:15-2:15 Test Case 1 - Healthy Leaf
-- Capture/upload healthy leaf.
-- Show response fields: crop, `No disease detected`, confidence, Grad-CAM.
-- Explain confidence threshold behavior.
+## Narration Sequence
+### Opening (0:00-0:30)
+- "This system helps small farmers diagnose plant diseases from mobile photos."
+- "It combines leaf validation, segmentation, classification, and Grad-CAM explainability in one API workflow."
 
-## 2:15-3:15 Test Case 2 - Single Diseased Leaf
-- Run diseased sample.
-- Show disease class and confidence.
-- Discuss short disease description output.
+### Workflow Overview (0:30-1:10)
+- Show system flow diagram.
+- Mention browser-side capture/upload and server-side inference.
 
-## 3:15-4:30 Test Case 3 - Multi-Leaf Mixed Scenario
-- Use image with multiple leaves (or composite test image).
-- Show per-leaf outputs separately.
-- Highlight mixed outcomes (healthy + diseased).
+## Scenario Scripts and Expected Outputs
+### Scenario 1: Healthy Leaf (1:10-2:00)
+Action:
+- Capture/upload a healthy leaf image.
+Expected output:
+- status `ok`
+- disease shown as `No disease detected`
+- confidence >= threshold
+- Grad-CAM heatmap shown
+Narration:
+- "Healthy predictions are rendered as 'Healthy - No disease detected'."
 
-## 4:30-5:15 Test Case 4 - Edge Case / Invalid Input
-- Upload non-leaf or very poor image.
-- Show expected message: `No leaf detected. Please retake the photo.`
+### Scenario 2: Single Diseased Leaf (2:00-2:50)
+Action:
+- Upload single diseased leaf sample.
+Expected output:
+- status `ok`
+- crop + disease label
+- confidence and short disease description
+- Grad-CAM heatmap
+Narration:
+- "The system returns both class label and confidence, with visual explanation."
 
-## 5:15-6:00 Explainability Segment
-- Show one Grad-CAM overlay.
-- Explain that heatmap indicates influential regions for model decision.
-- Clarify it is supportive evidence, not absolute causality.
+### Scenario 3: Multiple Leaves, Mixed Outcomes (2:50-4:00)
+Action:
+- Upload image containing multiple leaves.
+Expected output:
+- `total_leaves_detected` > 1
+- per-leaf results may include healthy and diseased leaves together
+Narration:
+- "Each segmented leaf is classified independently, supporting mixed outcomes."
 
-## 6:00-6:45 Performance and Results
-- Present final selected model and key metrics.
-- Mention response-time target and observed benchmark context.
-- Summarize analytics tracking (invalid rate, confidence, common diseases, latency).
+### Scenario 4: Invalid / No Leaf Detected (4:00-4:40)
+Action:
+- Upload non-leaf image or poor frame.
+Expected output:
+- status `invalid`
+- message `No leaf detected. Please retake the photo.`
+Narration:
+- "The validation step prevents unreliable diagnosis on invalid images."
 
-## 6:45-7:30 Limitations and Next Steps
-- Domain gap warning (PlantVillage vs real-field variability).
-- Next steps: field data collection, domain adaptation, mobile packaging.
+## Explainability Segment (4:40-5:30)
+- Show one prediction with Grad-CAM.
+- Narrate that highlighted regions indicate influential evidence used by model.
 
-## 7:30-8:00 Conclusion
-- Restate impact: faster triage for farmers using mobile phones.
-- Close with repository and deliverables summary.
+## Performance and Selection Segment (5:30-6:20)
+- Present model comparison summary table.
+- State v1 deployment choice: MobileNetV2.
 
-## Recording Checklist
-- [ ] Audio clear, no background noise
-- [ ] Show both camera capture and upload fallback
-- [ ] Include all four required test scenarios
-- [ ] Show at least one Grad-CAM heatmap clearly
-- [ ] Show API/analytics behavior briefly
-- [ ] Keep runtime between 5 and 8 minutes
-- [ ] Upload link to Module 10 Demo Video Discussion Forum
+## Close (6:20-7:00)
+- Limitations (domain shift, segmentation sensitivity).
+- Next steps (field-data adaptation, calibration, mobile optimization).
+
+## Live Demo Fallback Plan
+If live camera capture fails:
+1. Switch to pre-selected upload samples immediately.
+2. Use saved JSON responses and screenshots from `docs/reports/figures/`.
+3. Continue narration using expected-output checkpoints.
+
+## Pre-Recording Checklist
+- [ ] API starts successfully (`/health` returns OK)
+- [ ] Camera capture works on target device
+- [ ] Upload fallback tested
+- [ ] All four scenarios prepared as sample files
+- [ ] At least one Grad-CAM output verified
+- [ ] Model comparison slide ready
+- [ ] Audio quality check completed
+- [ ] Runtime between 5 and 8 minutes
+- [ ] Final video upload destination confirmed

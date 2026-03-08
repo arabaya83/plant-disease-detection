@@ -35,6 +35,9 @@ def main():
     parser.add_argument("--max-epochs", type=int, default=50)
     parser.add_argument("--patience", type=int, default=8)
     parser.add_argument("--lr", type=float, default=1e-4)
+    parser.add_argument("--num-workers", type=int, default=2)
+    parser.add_argument("--out-weights", default="ml/weights/hybrid_best.pt")
+    parser.add_argument("--out-history", default="ml/weights/hybrid_history.json")
     args = parser.parse_args()
 
     split_dir = Path(args.split_dir)
@@ -44,8 +47,8 @@ def main():
     train_ds = PlantVillageSplitDataset(str(split_dir / "train.csv"), transform=build_train_transforms(args.image_size))
     val_ds = PlantVillageSplitDataset(str(split_dir / "val.csv"), transform=build_eval_transforms(args.image_size))
 
-    train_loader = DataLoader(train_ds, batch_size=args.batch_size, shuffle=True, num_workers=2)
-    val_loader = DataLoader(val_ds, batch_size=args.batch_size, shuffle=False, num_workers=2)
+    train_loader = DataLoader(train_ds, batch_size=args.batch_size, shuffle=True, num_workers=args.num_workers)
+    val_loader = DataLoader(val_ds, batch_size=args.batch_size, shuffle=False, num_workers=args.num_workers)
 
     with open(args.weights_json, "r", encoding="utf-8") as f:
         w_map = json.load(f)
@@ -64,8 +67,8 @@ def main():
         device,
         max_epochs=args.max_epochs,
         patience=args.patience,
-        out_weights="ml/weights/hybrid_best.pt",
-        out_history="ml/weights/hybrid_history.json",
+        out_weights=args.out_weights,
+        out_history=args.out_history,
     )
 
 

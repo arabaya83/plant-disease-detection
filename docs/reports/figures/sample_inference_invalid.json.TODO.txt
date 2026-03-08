@@ -1,0 +1,1 @@
+TODO: Replace with real artifact `sample_inference_invalid.json` captured from runtime demo. See docs/submission/demo_video_script.md for required scenarios.

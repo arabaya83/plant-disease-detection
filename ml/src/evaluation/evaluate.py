@@ -39,6 +39,8 @@ def main():
     parser.add_argument("--split-dir", default="ml/splits")
     parser.add_argument("--image-size", type=int, default=384)
     parser.add_argument("--batch-size", type=int, default=16)
+    parser.add_argument("--num-workers", type=int, default=2)
+    parser.add_argument("--out-dir", default="ml/weights")
     args = parser.parse_args()
 
     split_dir = Path(args.split_dir)
@@ -46,10 +48,10 @@ def main():
 
     device = "cuda" if torch.cuda.is_available() else "cpu"
     ds = PlantVillageSplitDataset(str(split_dir / "test.csv"), transform=build_eval_transforms(args.image_size))
-    loader = DataLoader(ds, batch_size=args.batch_size, shuffle=False, num_workers=2)
+    loader = DataLoader(ds, batch_size=args.batch_size, shuffle=False, num_workers=args.num_workers)
 
     model = build_model(args.model, num_classes=len(class_names)).to(device)
-    state = torch.load(args.weights, map_location=device)
+    state = torch.load(args.weights, map_location=device, weights_only=True)
     if isinstance(state, dict) and "state_dict" in state:
         state = state["state_dict"]
     model.load_state_dict(state, strict=False)
@@ -65,12 +67,13 @@ def main():
             y_true.extend(y.tolist())
 
     metrics = compute_metrics(y_true, y_pred)
-    out_json = Path("ml/weights") / f"{args.model}_test_metrics.json"
+    out_dir = Path(args.out_dir)
+    out_json = out_dir / f"{args.model}_test_metrics.json"
     out_json.parent.mkdir(parents=True, exist_ok=True)
     with out_json.open("w", encoding="utf-8") as f:
         json.dump(metrics, f, indent=2)
 
-    save_confusion_matrix(y_true, y_pred, class_names, f"ml/weights/{args.model}_confusion_matrix.png")
+    save_confusion_matrix(y_true, y_pred, class_names, str(out_dir / f"{args.model}_confusion_matrix.png"))
     print(json.dumps({k: v for k, v in metrics.items() if k != "classification_report"}, indent=2))
 
 

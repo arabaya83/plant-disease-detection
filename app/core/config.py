@@ -26,8 +26,8 @@ class Settings(BaseSettings):
 
     confidence_threshold: float = Field(default=0.70)
     max_leaves: int = Field(default=5)
-    model_name: str = Field(default="hybrid")
-    model_weights_path: str = Field(default="ml/weights/hybrid_best.pt")
+    model_name: str = Field(default="mobilenet")
+    model_weights_path: str = Field(default="ml/weights/mobilenet_best.pt")
     class_names_path: str = Field(default="ml/weights/classes.json")
     target_image_size: int = Field(default=384)
     strict_model_loading: bool = Field(default=True)

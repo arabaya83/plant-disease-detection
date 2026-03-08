@@ -1,121 +1,106 @@
 # AI-Powered Plant Disease Detection for Small Farmers
 
-## 1. Problem Statement and Objectives
-Plant disease identification in smallholder farms is frequently delayed because access to agronomy experts is limited in-field. Late diagnosis can reduce yield and increase treatment cost. This project targets a practical web prototype that lets farmers capture leaf images using a mobile browser and obtain rapid disease assessment with explainability.
+## 1. Problem and Objective
+Smallholder farmers often face delayed disease diagnosis because agronomy support is not immediately available in the field. Delayed decisions can increase yield loss and treatment cost. This project delivers a mobile-first web prototype that performs explainable plant disease diagnosis from leaf images.
 
-Objectives:
-- Build an end-to-end computer vision system using PlantVillage as the training source.
-- Support image upload and direct camera capture in a mobile-friendly interface.
-- Handle multi-leaf images by classical segmentation and per-leaf classification.
-- Provide explainable outputs with Grad-CAM overlays.
-- Return robust user guidance when no leaf is found or predictions are low confidence.
+Version-1 objectives:
+- support camera capture and image upload in browser,
+- validate leaf presence,
+- segment up to 5 leaves in one image,
+- classify each leaf as `Crop + Disease`,
+- return retake guidance for invalid/low-confidence inputs,
+- provide Grad-CAM visual explanations,
+- expose inference through FastAPI with logging/analytics.
 
 ## 2. Dataset and Preprocessing
-Dataset: PlantVillage (folder-per-class format, 38 classes in this project setup).
+Dataset: PlantVillage (38 classes in this setup), folder-per-class format.
 
-Target label: `Crop + Disease` (e.g., `Tomato___Late_blight`, `Apple___healthy`). Healthy labels are displayed as `Healthy - No disease detected`.
+Label target: `Crop + Disease` (e.g., `Tomato___Late_blight`, `Apple___healthy`).
+Healthy predictions are rendered as `Healthy - No disease detected`.
 
-Data splitting strategy:
-- Train/Validation/Test = 80/10/10
-- Stratified by class to preserve class proportions.
+Data split policy:
+- 80% train, 10% validation, 10% test,
+- stratified by class.
 
-Preprocessing and augmentation:
-- Resize to configurable input size (default 384x384)
-- Normalization to ImageNet statistics
-- Standard augmentations only: horizontal flip, rotation, scale/zoom, brightness jitter
+Preprocessing:
+- resize to configurable size (default 384x384),
+- ImageNet normalization,
+- standard augmentation only (horizontal flip, rotation, scale/zoom, brightness).
 
-Class imbalance handling:
-- Class weights are computed from the training split and used in cross-entropy loss.
+Class imbalance is handled with class-weighted cross-entropy (weights computed from train split).
 
-## 3. Mathematical and Modeling Foundations
-The project compares three classifiers:
-1. **Simple CNN baseline**: stacked conv-batchnorm-ReLU blocks with pooling and MLP head.
-2. **MobileNetV2 baseline**: ImageNet-pretrained backbone, fine-tuned for PlantVillage classes.
-3. **Hybrid model**: dual-branch architecture combining MobileNetV2 features with a custom residual branch, followed by feature concatenation and classification head.
+## 3. Methods and Mathematical Basis
+Three classifiers were implemented and compared:
+1. Simple CNN baseline,
+2. MobileNetV2 baseline (ImageNet pretrained),
+3. Hybrid model (MobileNetV2 branch + custom residual branch, feature concatenation).
 
-Given input image `x`, each model outputs logits `z`. Predicted class probability is:
+For input image `x`, model outputs logits `z`, with class probability:
 
-`p(y=k|x) = softmax(z)_k = exp(z_k) / sum_j exp(z_j)`
+`p(y=k|x) = softmax(z)_k`.
 
-Training objective is weighted cross-entropy:
+Training loss:
 
 `L = - w_y log p(y|x)`
 
-where `w_y` is the class weight for true class `y`.
+where `w_y` is the class-specific weight for true class `y`.
 
-Explainability uses Grad-CAM. For class `c`, Grad-CAM map is:
+Explainability uses Grad-CAM:
 
 `L^c = ReLU(sum_k alpha_k^c A^k)`
 
-where `A^k` are final convolution feature maps and `alpha_k^c` are gradients pooled over spatial dimensions.
+where `A^k` are target-layer feature maps and `alpha_k^c` are pooled gradients for class `c`.
 
-## 4. Training Methodology and Hyperparameters
-Training policy:
+## 4. Training Policy
 - Optimizer: Adam
 - Max epochs: up to 50
 - Early stopping on validation loss
-- Best checkpoint restoration
+- Best-checkpoint restore
 
 Representative hyperparameters:
-- Input size: 384x384
-- Batch size: 16 (CNN/MobileNet), 12 (Hybrid)
-- Learning rate: 1e-3 (CNN), 1e-4 (MobileNet/Hybrid)
-- Patience: 8 epochs
+- image size 384x384,
+- batch size 16 (CNN/MobileNetV2), 12 (Hybrid),
+- learning rate 1e-3 (CNN), 1e-4 (MobileNetV2/Hybrid),
+- early-stopping patience 8.
 
-Model artifacts saved under `ml/weights/`, including best checkpoints and training history JSON files.
-
-## 5. Evaluation Metrics and Detailed Results
-Metrics implemented:
+## 5. Evaluation and Results
+Metrics:
 - Accuracy
 - Precision (macro)
 - Recall (macro)
 - F1-score (macro)
 - Confusion matrix
-- Inference speed (ms per image)
+- Inference speed (ms)
 - Model size (MB)
 
-Observed test/benchmark outcomes:
-- CNN: Accuracy 0.9878, F1 0.9861, 127.754 ms, 1.79 MB
-- MobileNetV2: Accuracy 0.9976, F1 0.9950, 201.414 ms, 8.90 MB
-- Hybrid: Accuracy 0.9948, F1 0.9917, 206.399 ms, 18.35 MB
+Observed comparison record:
+- CNN: Accuracy 0.9878, Precision 0.9844, Recall 0.9882, F1 0.9861, 127.754 ms, 1.79 MB
+- MobileNetV2: Accuracy 0.9976, Precision 0.9938, Recall 0.9965, F1 0.9950, 201.414 ms, 8.90 MB
+- Hybrid: Accuracy 0.9948, Precision 0.9899, Recall 0.9939, F1 0.9917, 206.399 ms, 18.35 MB
 
-Model selection rationale:
-- MobileNetV2 provided the best accuracy/F1 while remaining smaller and slightly faster than the hybrid model in benchmark conditions, so it was selected as deployment default for v1.
+Selection decision (v1 deployment): `MobileNetV2`.
+Rationale: best Accuracy/F1 with better size and slightly better speed than Hybrid in the benchmarked setup.
 
-## 6. End-to-End Inference and Deployment Behavior
-Pipeline behavior in FastAPI `/infer`:
-1. Save uploaded image.
-2. Validate leaf presence via HSV green-content heuristic.
-3. Segment up to 5 leaf candidates using classical CV (thresholding + contour filtering).
-4. Run per-leaf classification.
-5. Apply confidence threshold (0.70 default): low-confidence leaves are not forced.
-6. Generate Grad-CAM overlay for accepted predictions.
-7. Return structured JSON response with per-leaf disease info.
-8. Log analytics (status, confidence, latency, predicted diseases).
+## 6. Inference and Deployment Behavior
+`POST /infer` pipeline:
+1. save uploaded image,
+2. validate leaf presence (HSV heuristic),
+3. segment leaves with classical OpenCV processing,
+4. classify each leaf independently,
+5. suppress predictions below confidence threshold (default 0.70),
+6. generate Grad-CAM overlays for accepted leaves,
+7. return structured per-leaf response,
+8. log timestamp, status, confidence, predicted classes, and latency.
 
-User-facing edge-case handling:
-- No valid leaf: `No leaf detected. Please retake the photo.`
-- All predictions below threshold: ask user to retake photo.
+Edge-case handling:
+- no leaf detected -> `No leaf detected. Please retake the photo.`
+- all low-confidence predictions -> retake guidance message.
 
-## 7. Baseline Comparison and Practical Trade-offs
-Compared to the simple CNN baseline, transfer learning significantly improves robustness and macro-F1. The hybrid model increases complexity and model size but does not outperform MobileNetV2 in this setup. For field prototypes where latency and deployability matter, MobileNetV2 provides the best balance.
+## 7. Challenges and Mitigations
+1. Domain shift (PlantVillage vs real-field images): mitigated with conservative confidence thresholding and explicit retake messaging.
+2. Multi-leaf field photos: handled by segmentation + per-leaf inference.
+3. Trust and interpretability: addressed with Grad-CAM heatmap overlays.
+4. Operational traceability: addressed with analytics logging and summary endpoint.
 
-## 8. Challenges and Solutions
-1. **Domain gap (PlantVillage vs field images)**
-- Challenge: controlled backgrounds in PlantVillage may not match in-field environments.
-- Solution: conservative confidence threshold, explicit retake messaging, Grad-CAM transparency.
-
-2. **Multi-leaf photos in real usage**
-- Challenge: single-image classifiers assume one subject.
-- Solution: classical segmentation + per-leaf inference to support mixed outcomes.
-
-3. **Interpretability requirements**
-- Challenge: end users need trust signals.
-- Solution: Grad-CAM heatmap overlays returned per leaf.
-
-4. **Operational monitoring**
-- Challenge: prototype quality must be measurable.
-- Solution: analytics logs and summary endpoint for invalid rate, common diseases, confidence, and latency.
-
-## 9. Conclusion
-The project demonstrates an integrated computer vision solution covering data engineering, multi-model training, evaluation, explainability, backend inference, and a mobile-oriented frontend. The implementation is production-oriented in structure and suitable as an MVP foundation, with next steps focused on domain adaptation, stronger field-validation datasets, and packaging for mobile deployment.
+## 8. Conclusion
+The project demonstrates full computer vision integration from data preparation to deployment-oriented inference. It includes multi-model training, quantitative comparison, explainability, API deployment, and mobile demo workflow. The current system is suitable as an MVP foundation, with next steps focused on real-field data adaptation, calibration, and mobile optimization.
