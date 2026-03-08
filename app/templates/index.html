@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plant Disease Detector</title>
+  <link rel="stylesheet" href="/app/static/css/styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Plant Disease Detector</h1>
+    <p class="hint">Move closer to the leaf, avoid shadows, and keep the leaf in frame.</p>
+
+    <section class="capture-card">
+      <video id="camera" autoplay playsinline muted></video>
+      <canvas id="snapshot" class="hidden"></canvas>
+      <div class="buttons">
+        <button id="startCameraBtn" type="button">Start Camera</button>
+        <button id="captureBtn" type="button">Capture</button>
+      </div>
+      <div class="upload-row">
+        <label for="fileInput">Upload from gallery</label>
+        <input id="fileInput" type="file" accept="image/*" />
+      </div>
+      <img id="preview" alt="Image preview" class="preview hidden" />
+      <button id="analyzeBtn" type="button" class="analyze">Analyze</button>
+    </section>
+
+    <section id="loading" class="hidden">Analyzing image...</section>
+
+    <section id="result" class="result"></section>
+  </main>
+
+  <script src="/app/static/js/app.js"></script>
+</body>
+</html>

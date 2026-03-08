@@ -1,0 +1,22 @@
+# Jupyter Book configuration
+
+title: AI-Powered Plant Disease Detection
+author: MSDP-CV Final Project Team
+
+execute:
+  execute_notebooks: "off"
+
+parse:
+  myst_enable_extensions:
+    - colon_fence
+    - deflist
+    - html_image
+
+repository:
+  url: https://example.com/replace-with-your-repo
+  branch: main
+
+html:
+  use_repository_button: true
+  use_issues_button: false
+  use_edit_page_button: false
