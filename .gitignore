@@ -6,3 +6,6 @@ app/static/outputs/
 logs/
 __pycache__/
 *.pyc
+
+# Local dataset
+ml/datasets/plantvillage/
