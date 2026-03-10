@@ -26,10 +26,11 @@ weights_path = "ml/weights/mobilenet_best.pt"
 if not os.path.exists(weights_path):
     os.makedirs("ml/weights", exist_ok=True)
     hf_hub_download(
-        repo_id="arabaya83/plant-disease-detection",  # your HF model repo
-        filename="mobilenet_best.pt",
-        local_dir="ml/weights"
-    )
+    repo_id="arabaya83/plant-disease-detection",
+    filename="mobilenet_best.pt",
+    repo_type="model",        
+    local_dir="ml/weights"
+    )   
     
 settings = get_settings()
 setup_logging(settings.app_log)
