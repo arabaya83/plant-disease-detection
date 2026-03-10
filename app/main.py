@@ -1,9 +1,7 @@
-"""Application entrypoint.
+"""Application entrypoint."""
 
-Initializes shared services (storage, CV pipeline, inference, analytics),
-binds them to API routers, and exposes static frontend assets.
-"""
-
+import os
+from huggingface_hub import hf_hub_download
 from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 
@@ -19,19 +17,17 @@ from app.services.inference import InferenceService
 from app.services.segmentation import SegmentationService
 from app.services.storage import StorageService
 
-import os
-from huggingface_hub import hf_hub_download
-
+# Download model weights from HF Hub if not present locally
 weights_path = "ml/weights/mobilenet_best.pt"
 if not os.path.exists(weights_path):
     os.makedirs("ml/weights", exist_ok=True)
     hf_hub_download(
-    repo_id="arabaya83/plant-disease-detection",
-    filename="mobilenet_best.pt",
-    repo_type="model",        
-    local_dir="ml/weights"
-    )   
-    
+        repo_id="rabaya/plant-disease-detection",
+        filename="mobilenet_best.pt",
+        repo_type="model",
+        local_dir="ml/weights"
+    )
+
 settings = get_settings()
 setup_logging(settings.app_log)
 
