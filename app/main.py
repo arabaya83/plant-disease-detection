@@ -19,6 +19,18 @@ from app.services.inference import InferenceService
 from app.services.segmentation import SegmentationService
 from app.services.storage import StorageService
 
+import os
+from huggingface_hub import hf_hub_download
+
+weights_path = "ml/weights/mobilenet_best.pt"
+if not os.path.exists(weights_path):
+    os.makedirs("ml/weights", exist_ok=True)
+    hf_hub_download(
+        repo_id="arabaya83/plant-disease-detection",  # your HF model repo
+        filename="mobilenet_best.pt",
+        local_dir="ml/weights"
+    )
+    
 settings = get_settings()
 setup_logging(settings.app_log)
 

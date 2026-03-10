@@ -3,9 +3,9 @@
 Use this tracker during final submission packaging.
 
 ## Jupyter Book
-- URL (public): ______________________________
+- URL (public): https://arabaya83.github.io/plant-disease-detection/
 - Local build: `docs/submission/jupyter_book/_build/html/index.html`
-- Status: ☐ Pending ☑ Built locally ☐ Published
+- Status: ☐ Pending ☐ Built locally ☑ Published
 - Owner: Ayman Rabaya
 - Needed by: before final submission upload
 

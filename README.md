@@ -2,19 +2,6 @@
 
 Submission-ready computer vision final project for mobile-first plant disease diagnosis. The system demonstrates an end-to-end deployable workflow from data preparation and model training to explainable multi-leaf inference through a FastAPI + browser interface.
 
-## Submission Status
-| Artifact | Status | Location |
-|---|---|---|
-| Source code | Complete | repo |
-| Training scripts | Complete | `ml/src/training` |
-| Evaluation pipeline | Complete | `ml/src/evaluation` |
-| Model comparison | Complete | `docs/reports` |
-| Figures | Complete (runtime evidence generated) | `docs/reports/figures` |
-| Jupyter Book | Built locally (publish pending) | `docs/submission/jupyter_book/_build/html` |
-| Demo video | Script/checklist complete (recording pending) | `docs/submission/demo_video_script.md` |
-| PPTX deck | Exported (sharing/publish pending) | `docs/submission/presentation/management_presentation.pptx` |
-| Synopsis PDF | Exported | `docs/submission/technical_synopsis.pdf` |
-
 ## 1. Project Overview
 For each uploaded/captured image, the system:
 1. validates leaf presence,
