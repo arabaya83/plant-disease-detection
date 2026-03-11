@@ -1,4 +1,10 @@
-"""Model loading and leaf-level inference service."""
+"""Model loading and leaf-level prediction for deployed inference.
+
+This module owns the runtime classifier used by the FastAPI application. It
+loads class metadata and model weights, applies the same normalization used
+during training, and converts raw logits into the user-facing prediction fields
+required by the frontend.
+"""
 
 import json
 from dataclasses import dataclass
@@ -18,7 +24,17 @@ from ml.src.models.mobilenet_baseline import build_mobilenet_v2
 
 @dataclass
 class Prediction:
-    """Structured prediction payload used by API response formatter."""
+    """Structured prediction returned for one segmented leaf.
+
+    Attributes:
+        class_label: Raw dataset class label produced by the model.
+        confidence: Softmax confidence for the winning class.
+        crop_name: Human-readable crop name derived from the class label.
+        disease_name: Human-readable disease name for the UI.
+        healthy_or_diseased: High-level health label used for badges.
+        short_description: Short explanatory text shown in the UI.
+        class_index: Integer class index used for Grad-CAM targeting.
+    """
 
     class_label: str
     confidence: float
@@ -30,7 +46,11 @@ class Prediction:
 
 
 class InferenceService:
-    """Loads selected model/weights and runs normalized leaf classification."""
+    """Load a trained classifier and perform leaf-level predictions.
+
+    The service is instantiated once at application startup and reused across
+    requests. This avoids reloading model weights for every inference call.
+    """
 
     def __init__(
         self,
@@ -41,6 +61,22 @@ class InferenceService:
         device: str | None = None,
         strict_loading: bool = True,
     ):
+        """Initialize the runtime inference service.
+
+        Args:
+            model_name: Architecture identifier: ``cnn``, ``mobilenet``, or
+                ``hybrid``.
+            weights_path: Filesystem path to the trained checkpoint.
+            class_names_path: JSON file mapping class indices to labels.
+            image_size: Target square image size used for preprocessing.
+            device: Optional explicit torch device override.
+            strict_loading: Whether missing weights/class metadata should raise
+                an exception instead of falling back to placeholder defaults.
+
+        Raises:
+            FileNotFoundError: If required weights or class metadata are missing
+                and ``strict_loading`` is enabled.
+        """
         self.device = device or ("cuda" if torch.cuda.is_available() else "cpu")
         self.image_size = image_size
         self.strict_loading = strict_loading
@@ -61,7 +97,18 @@ class InferenceService:
         )
 
     def _load_class_names(self, class_names_path: str) -> List[str]:
-        """Load class names from JSON; optionally fall back to a minimal list."""
+        """Load class labels from disk.
+
+        Args:
+            class_names_path: Path to the JSON file storing class-index mapping.
+
+        Returns:
+            Ordered list of class labels aligned with model output indices.
+
+        Raises:
+            FileNotFoundError: If the file is missing and strict loading is
+                enabled.
+        """
         path = Path(class_names_path)
         if path.exists():
             with path.open("r", encoding="utf-8") as f:
@@ -74,6 +121,8 @@ class InferenceService:
         if self.strict_loading:
             raise FileNotFoundError(f"Class names file not found at: {class_names_path}")
 
+        # The fallback list keeps the module inspectable in contexts where full
+        # artifacts are absent, but strict mode remains the default for the app.
         return [
             "Apple___healthy",
             "Apple___Apple_scab",
@@ -84,18 +133,34 @@ class InferenceService:
         ]
 
     def _build_model(self, model_name: str, num_classes: int) -> torch.nn.Module:
-        """Factory for supported classifier architectures."""
-        model_name = model_name.lower()
-        if model_name == "cnn":
+        """Instantiate the requested classifier architecture.
+
+        Args:
+            model_name: Requested architecture name.
+            num_classes: Number of output classes required by the checkpoint.
+
+        Returns:
+            Torch module moved onto the configured device.
+        """
+        normalized_model_name = model_name.lower()
+        if normalized_model_name == "cnn":
             model = SimpleCNN(num_classes=num_classes)
-        elif model_name == "mobilenet":
+        elif normalized_model_name == "mobilenet":
             model = build_mobilenet_v2(num_classes=num_classes, pretrained=False)
         else:
             model = HybridPlantDiseaseModel(num_classes=num_classes, pretrained_backbone=False)
         return model.to(self.device)
 
     def _load_weights(self, weights_path: str) -> bool:
-        """Load model checkpoint state and report whether load succeeded."""
+        """Load model weights from a checkpoint file.
+
+        Args:
+            weights_path: Path to the checkpoint to load.
+
+        Returns:
+            ``True`` when weights were loaded successfully, otherwise ``False``
+            if the checkpoint file is missing.
+        """
         path = Path(weights_path)
         if not path.exists():
             return False
@@ -107,7 +172,16 @@ class InferenceService:
 
     @torch.no_grad()
     def predict(self, leaf_bgr: np.ndarray) -> tuple[Prediction, torch.Tensor]:
-        """Predict class for one leaf crop and return model input tensor."""
+        """Predict a label for one segmented leaf crop.
+
+        Args:
+            leaf_bgr: Leaf crop in BGR channel order.
+
+        Returns:
+            A tuple of the structured :class:`Prediction` and the normalized
+            input tensor used to generate it. The tensor is returned so the API
+            can reuse it for Grad-CAM without preprocessing twice.
+        """
         leaf_rgb = cv2.cvtColor(leaf_bgr, cv2.COLOR_BGR2RGB)
         tensor = self.transform(leaf_rgb).unsqueeze(0).to(self.device)
         logits = self.model(tensor)
@@ -131,8 +205,14 @@ class InferenceService:
         return pred, tensor
 
     def get_gradcam_target_layer(self):
-        """Return the conv layer used by Grad-CAM for this model."""
-        # MobileNet branch conv head in hybrid model; fallback for other models.
+        """Return the layer whose activations should drive Grad-CAM.
+
+        Returns:
+            The convolutional feature layer that best represents the model's
+            final spatial features for Grad-CAM visualization.
+        """
+        # Use the last convolutional feature block so the overlay reflects the
+        # model's final spatial reasoning before classification.
         if hasattr(self.model, "mobilenet"):
             return self.model.mobilenet.features[-1]
         if hasattr(self.model, "features"):

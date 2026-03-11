@@ -1,4 +1,9 @@
-"""CLI training entrypoint for MobileNetV2 transfer-learning baseline."""
+"""Train the MobileNetV2 baseline on the generated PlantVillage splits.
+
+This script is the main training entrypoint for the deployment candidate. It
+loads the canonical split artifacts, applies class weighting, trains with early
+stopping, and saves the best checkpoint plus a JSON training history.
+"""
 
 import argparse
 import json
@@ -20,13 +25,24 @@ from ml.src.models.mobilenet_baseline import build_mobilenet_v2
 from ml.src.training.utils import train_model
 
 
-def load_class_names(split_dir: Path):
-    """Load class name order used to align class-weight vectors."""
+def load_class_names(split_dir: Path) -> list[str]:
+    """Load class-name order used to align labels and class weights.
+
+    Args:
+        split_dir: Directory containing ``classes.txt``.
+
+    Returns:
+        Ordered class labels matching the split CSV label indices.
+    """
     return [line.strip() for line in (split_dir / "classes.txt").read_text(encoding="utf-8").splitlines() if line.strip()]
 
 
-def main():
-    """Configure data/model/loss and train MobileNetV2 with early stopping."""
+def main() -> None:
+    """Configure data, model, and optimizer then train MobileNetV2.
+
+    Side Effects:
+        Saves the best model weights and a training-history JSON file.
+    """
     parser = argparse.ArgumentParser(
         description="Train MobileNetV2 baseline on PlantVillage split CSVs."
     )
@@ -46,15 +62,21 @@ def main():
     classes = load_class_names(split_dir)
     device = "cuda" if torch.cuda.is_available() else "cpu"
 
-    train_ds = PlantVillageSplitDataset(str(split_dir / "train.csv"), transform=build_train_transforms(args.image_size))
-    val_ds = PlantVillageSplitDataset(str(split_dir / "val.csv"), transform=build_eval_transforms(args.image_size))
+    train_dataset = PlantVillageSplitDataset(
+        str(split_dir / "train.csv"),
+        transform=build_train_transforms(args.image_size),
+    )
+    val_dataset = PlantVillageSplitDataset(
+        str(split_dir / "val.csv"),
+        transform=build_eval_transforms(args.image_size),
+    )
 
-    train_loader = DataLoader(train_ds, batch_size=args.batch_size, shuffle=True, num_workers=args.num_workers)
-    val_loader = DataLoader(val_ds, batch_size=args.batch_size, shuffle=False, num_workers=args.num_workers)
+    train_loader = DataLoader(train_dataset, batch_size=args.batch_size, shuffle=True, num_workers=args.num_workers)
+    val_loader = DataLoader(val_dataset, batch_size=args.batch_size, shuffle=False, num_workers=args.num_workers)
 
     with open(args.weights_json, "r", encoding="utf-8") as f:
-        w_map = json.load(f)
-    weight_tensor = torch.tensor([w_map[str(i)] for i in range(len(classes))], dtype=torch.float32).to(device)
+        weight_map = json.load(f)
+    weight_tensor = torch.tensor([weight_map[str(i)] for i in range(len(classes))], dtype=torch.float32).to(device)
 
     model = build_mobilenet_v2(num_classes=len(classes), pretrained=True).to(device)
     criterion = nn.CrossEntropyLoss(weight=weight_tensor)

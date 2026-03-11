@@ -1,10 +1,23 @@
-"""Metric helpers for classification evaluation outputs."""
+"""Metric helpers for model evaluation outputs.
+
+This module keeps the scalar metrics reported in JSON artifacts consistent
+across all evaluated architectures.
+"""
 
 from sklearn.metrics import accuracy_score, classification_report, f1_score, precision_score, recall_score
 
 
-def compute_metrics(y_true, y_pred):
-    """Compute scalar summary metrics and text classification report."""
+def compute_metrics(y_true: list[int], y_pred: list[int]) -> dict[str, float | str]:
+    """Compute scalar metrics and a detailed text classification report.
+
+    Args:
+        y_true: Ground-truth class indices.
+        y_pred: Predicted class indices.
+
+    Returns:
+        Dictionary containing scalar summary metrics plus the sklearn text
+        classification report.
+    """
     return {
         "accuracy": accuracy_score(y_true, y_pred),
         "precision_macro": precision_score(y_true, y_pred, average="macro", zero_division=0),

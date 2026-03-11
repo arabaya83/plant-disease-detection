@@ -1,4 +1,10 @@
-"""Evaluate trained model on test split and persist metrics artifacts."""
+"""Evaluate a trained checkpoint on the canonical test split.
+
+This script loads a requested architecture, restores trained weights, runs
+inference on ``test.csv``, computes summary metrics, and saves both JSON
+metrics and a confusion-matrix PNG. The outputs are used in the written report
+and model-comparison materials.
+"""
 
 import argparse
 import json
@@ -22,17 +28,29 @@ from ml.src.models.mobilenet_baseline import build_mobilenet_v2
 
 
 def build_model(name: str, num_classes: int):
-    """Instantiate evaluation model by architecture name."""
-    name = name.lower()
-    if name == "cnn":
+    """Instantiate the requested architecture for evaluation.
+
+    Args:
+        name: Model architecture identifier.
+        num_classes: Number of classifier outputs.
+
+    Returns:
+        Uninitialized model instance matching the requested architecture.
+    """
+    normalized_name = name.lower()
+    if normalized_name == "cnn":
         return SimpleCNN(num_classes=num_classes)
-    if name == "mobilenet":
+    if normalized_name == "mobilenet":
         return build_mobilenet_v2(num_classes=num_classes, pretrained=False)
     return HybridPlantDiseaseModel(num_classes=num_classes, pretrained_backbone=False)
 
 
-def main():
-    """CLI entrypoint for test-set evaluation and confusion matrix export."""
+def main() -> None:
+    """Run checkpoint evaluation and export metrics artifacts.
+
+    Side Effects:
+        Writes a metrics JSON file and a confusion-matrix PNG.
+    """
     parser = argparse.ArgumentParser(
         description="Evaluate a trained model on the test split and export metrics + confusion matrix."
     )
@@ -49,8 +67,11 @@ def main():
     class_names = [line.strip() for line in (split_dir / "classes.txt").read_text(encoding="utf-8").splitlines() if line.strip()]
 
     device = "cuda" if torch.cuda.is_available() else "cpu"
-    ds = PlantVillageSplitDataset(str(split_dir / "test.csv"), transform=build_eval_transforms(args.image_size))
-    loader = DataLoader(ds, batch_size=args.batch_size, shuffle=False, num_workers=args.num_workers)
+    test_dataset = PlantVillageSplitDataset(
+        str(split_dir / "test.csv"),
+        transform=build_eval_transforms(args.image_size),
+    )
+    test_loader = DataLoader(test_dataset, batch_size=args.batch_size, shuffle=False, num_workers=args.num_workers)
 
     model = build_model(args.model, num_classes=len(class_names)).to(device)
     state = torch.load(args.weights, map_location=device, weights_only=True)
@@ -61,12 +82,12 @@ def main():
 
     y_true, y_pred = [], []
     with torch.no_grad():
-        for x, y in loader:
-            x = x.to(device)
-            logits = model(x)
-            pred = torch.argmax(logits, dim=1).cpu().tolist()
-            y_pred.extend(pred)
-            y_true.extend(y.tolist())
+        for input_batch, target_batch in test_loader:
+            input_batch = input_batch.to(device)
+            logits = model(input_batch)
+            predictions = torch.argmax(logits, dim=1).cpu().tolist()
+            y_pred.extend(predictions)
+            y_true.extend(target_batch.tolist())
 
     metrics = compute_metrics(y_true, y_pred)
     out_dir = Path(args.out_dir)

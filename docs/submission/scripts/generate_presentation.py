@@ -1,13 +1,16 @@
-# generate_presentation.py
-# Run: pip install python-pptx && python generate_presentation.py
-# Output: management_presentation.pptx
+"""Programmatically build the final management presentation deck.
+
+This script uses ``python-pptx`` to create the submission presentation with a
+consistent visual style and reproducible slide content. It is best treated as a
+source file for the deck rather than as a general-purpose slide library.
+"""
+
+import copy
 
 from pptx import Presentation
-from pptx.util import Inches, Pt, Emu
 from pptx.dml.color import RGBColor
 from pptx.enum.text import PP_ALIGN
-from pptx.util import Inches, Pt
-import copy
+from pptx.util import Emu, Inches, Pt
 
 # ── Colour Palette ──────────────────────────────────────────────────────────
 GREEN_DARK   = RGBColor(0x1B, 0x5E, 0x20)   # deep forest green  #1B5E20
@@ -29,6 +32,21 @@ BLANK = prs.slide_layouts[6]   # completely blank layout
 # ── Helper utilities ─────────────────────────────────────────────────────────
 
 def add_rect(slide, l, t, w, h, fill_color=None, line_color=None, line_width=Pt(0)):
+    """Add a rectangle shape to a slide.
+
+    Args:
+        slide: Target PowerPoint slide.
+        l: Left position in inches.
+        t: Top position in inches.
+        w: Width in inches.
+        h: Height in inches.
+        fill_color: Optional fill color.
+        line_color: Optional border color.
+        line_width: Border width.
+
+    Returns:
+        The created shape object.
+    """
     shape = slide.shapes.add_shape(1, Inches(l), Inches(t), Inches(w), Inches(h))
     shape.line.width = line_width
     if fill_color:
@@ -46,6 +64,7 @@ def add_rect(slide, l, t, w, h, fill_color=None, line_color=None, line_width=Pt(
 def add_textbox(slide, l, t, w, h, text, font_size=Pt(12), bold=False,
                 color=CHARCOAL, align=PP_ALIGN.LEFT, wrap=True,
                 font_name="Calibri", italic=False):
+    """Add a textbox with a single formatted paragraph to a slide."""
     txb = slide.shapes.add_textbox(Inches(l), Inches(t), Inches(w), Inches(h))
     txb.word_wrap = wrap
     tf = txb.text_frame
@@ -63,7 +82,7 @@ def add_textbox(slide, l, t, w, h, text, font_size=Pt(12), bold=False,
 
 
 def header_bar(slide, title, subtitle=None):
-    """Dark green top bar with white title."""
+    """Draw the standard slide header bar with optional subtitle."""
     add_rect(slide, 0, 0, 13.33, 1.35, fill_color=GREEN_DARK)
     add_textbox(slide, 0.3, 0.12, 12.7, 0.75, title,
                 font_size=Pt(30), bold=True, color=WHITE,
@@ -75,11 +94,12 @@ def header_bar(slide, title, subtitle=None):
 
 
 def slide_bg(slide):
-    """Pale green full-slide background."""
+    """Draw the standard pale-green full-slide background."""
     add_rect(slide, 0, 0, 13.33, 7.5, fill_color=GREEN_PALE)
 
 
 def footer_bar(slide, slide_num, total=16):
+    """Draw the standard footer bar with slide numbering."""
     add_rect(slide, 0, 7.1, 13.33, 0.4, fill_color=GREEN_MID)
     add_textbox(slide, 0.2, 7.12, 8, 0.28,
                 "AI-Powered Plant Disease Detection  |  PlantVillage Project",
@@ -92,7 +112,24 @@ def footer_bar(slide, slide_num, total=16):
 
 def bullet_block(slide, l, t, w, h, items, font_size=Pt(13),
                  color=CHARCOAL, bullet_color=GREEN_MID, indent=0.25):
-    """Render a list of strings as bullet points inside a textbox."""
+    """Render a list of strings as bullet points inside a textbox.
+
+    Args:
+        slide: Target PowerPoint slide.
+        l: Left position in inches.
+        t: Top position in inches.
+        w: Width in inches.
+        h: Height in inches.
+        items: Bullet strings to render.
+        font_size: Font size for each bullet line.
+        color: Text color.
+        bullet_color: Bullet glyph color.
+        indent: Reserved for future indentation support.
+
+    Returns:
+        The created textbox shape.
+    """
+    del indent
     txb = slide.shapes.add_textbox(Inches(l), Inches(t), Inches(w), Inches(h))
     txb.word_wrap = True
     tf = txb.text_frame
@@ -116,6 +153,7 @@ def bullet_block(slide, l, t, w, h, items, font_size=Pt(13),
 
 
 def section_label(slide, l, t, w, text, bg=GREEN_LIGHT, fg=WHITE):
+    """Draw a compact section label bar."""
     add_rect(slide, l, t, w, 0.32, fill_color=bg)
     add_textbox(slide, l + 0.1, t + 0.03, w - 0.2, 0.28, text,
                 font_size=Pt(11), bold=True, color=fg, font_name="Calibri")
@@ -124,11 +162,24 @@ def section_label(slide, l, t, w, text, bg=GREEN_LIGHT, fg=WHITE):
 def table_block(slide, l, t, col_widths, headers, rows,
                 header_fill=GREEN_MID, row_fill=WHITE,
                 alt_fill=GREEN_PALE, font_size=Pt(11)):
-    """Draw a simple styled table using rectangles and textboxes."""
+    """Draw a styled table using rectangles and textboxes.
+
+    Args:
+        slide: Target PowerPoint slide.
+        l: Left position in inches.
+        t: Top position in inches.
+        col_widths: Column widths in inches.
+        headers: Header labels.
+        rows: Table rows.
+        header_fill: Header background color.
+        row_fill: Primary row background color.
+        alt_fill: Alternating row background color.
+        font_size: Font size used in the table.
+    """
     row_h = 0.32
     # header row
     x = l
-    for i, (hdr, cw) in enumerate(zip(headers, col_widths)):
+    for hdr, cw in zip(headers, col_widths):
         add_rect(slide, x, t, cw, row_h, fill_color=header_fill,
                  line_color=WHITE, line_width=Pt(1))
         add_textbox(slide, x + 0.05, t + 0.04, cw - 0.1, row_h - 0.06,
@@ -152,6 +203,7 @@ def table_block(slide, l, t, col_widths, headers, rows,
 
 
 def stat_card(slide, l, t, w, h, value, label, val_color=GREEN_DARK):
+    """Draw a KPI-style statistic card."""
     add_rect(slide, l, t, w, h, fill_color=WHITE,
              line_color=GREEN_LIGHT, line_width=Pt(1.5))
     add_textbox(slide, l + 0.1, t + 0.12, w - 0.2, h * 0.55,

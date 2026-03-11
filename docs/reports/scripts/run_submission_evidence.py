@@ -1,12 +1,10 @@
-"""Submission evidence orchestrator.
+"""Orchestrate reproducible submission-evidence generation.
 
-Automates reproducible evidence generation without fabricating manual runtime captures.
-
-Actions:
-1. Run evaluate/benchmark for available models (if weights exist).
-2. Copy confusion matrices and mobilenet summary artifacts into figures folder.
-3. Generate distribution figures and TODO placeholders via existing script.
-4. Print a final status report of missing manual evidence captures.
+This script is a lightweight coordinator for the documentation assets required
+by the final submission. It runs evaluation/benchmark scripts when weights are
+available, generates deterministic figures, copies canonical filenames into the
+report directory, and reports which manual demo artifacts still need to be
+captured by a human.
 """
 
 from __future__ import annotations
@@ -23,13 +21,26 @@ FIGURES = ROOT / "docs" / "reports" / "figures"
 
 
 def run(cmd: list[str]) -> None:
-    """Execute command and stream output; fail fast on non-zero status."""
+    """Execute a subprocess command from the repository root.
+
+    Args:
+        cmd: Command and arguments to run.
+
+    Raises:
+        CalledProcessError: If the command exits with a non-zero status.
+    """
     print("$", " ".join(cmd))
     subprocess.run(cmd, check=True, cwd=ROOT)
 
 
 def maybe_run_model_artifacts(model: str, weight_name: str) -> None:
-    """Run evaluation and benchmark for a model if corresponding weights exist."""
+    """Generate evaluation artifacts for one model when weights exist.
+
+    Args:
+        model: Model architecture identifier understood by the evaluation
+            scripts.
+        weight_name: Filename of the expected checkpoint under ``ml/weights``.
+    """
     weight_path = WEIGHTS / weight_name
     if not weight_path.exists():
         print(f"[skip] Missing weights for {model}: {weight_path}")
@@ -64,7 +75,12 @@ def maybe_run_model_artifacts(model: str, weight_name: str) -> None:
 
 
 def copy_if_exists(src: Path, dst: Path) -> None:
-    """Copy a file if it exists, else print an explicit missing notice."""
+    """Copy a file if it exists, otherwise emit a clear missing notice.
+
+    Args:
+        src: Source file path.
+        dst: Destination file path.
+    """
     if src.exists():
         dst.parent.mkdir(parents=True, exist_ok=True)
         shutil.copy2(src, dst)
@@ -74,6 +90,12 @@ def copy_if_exists(src: Path, dst: Path) -> None:
 
 
 def main() -> None:
+    """Run the full reproducible submission-evidence workflow.
+
+    Side Effects:
+        Generates figures, copies metrics artifacts, writes an evidence-status
+        JSON file, and prints a status summary to stdout.
+    """
     FIGURES.mkdir(parents=True, exist_ok=True)
 
     print("[1/4] Generate model metrics and benchmarks (if weights exist)")

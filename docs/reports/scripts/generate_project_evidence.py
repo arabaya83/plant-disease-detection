@@ -1,7 +1,11 @@
-"""Generate runtime evidence artifacts for submission docs and slides.
+"""Generate reproducible evidence artifacts for reports and submission assets.
 
-This script automates everything reproducible and skips model-dependent steps when
-weights are missing. It does not fabricate outputs.
+This script is the most complete evidence-generation workflow in the
+repository. It runs evaluation and benchmark scripts, renders confusion
+matrices, creates class-distribution plots, executes the runtime inference
+pipeline on representative examples, and writes summary indices for the
+documentation package. It deliberately skips artifacts that cannot be produced
+honestly without the required model weights or source images.
 """
 
 from __future__ import annotations
@@ -51,6 +55,16 @@ MODELS = {
 
 @dataclass
 class Artifacts:
+    """Structured record of the artifacts produced by this script.
+
+    Attributes:
+        metrics: Paths to generated metrics JSON files.
+        benchmarks: Paths to benchmark JSON files.
+        confusion: Paths to confusion-matrix figures.
+        gradcam: Paths to Grad-CAM evidence figures.
+        demo: Paths to rendered demo-output figures.
+        missing_weights: Checkpoint files that were expected but unavailable.
+    """
     metrics: list[str]
     benchmarks: list[str]
     confusion: list[str]
@@ -76,13 +90,26 @@ def run_cmd(cmd: list[str], allow_failure: bool = False) -> bool:
 
 
 def load_class_names() -> list[str]:
-    """Read class order from split artifact."""
+    """Read the canonical class order from the split artifacts.
+
+    Returns:
+        Ordered list of class labels from ``ml/splits/classes.txt``.
+    """
     classes_path = SPLITS_DIR / "classes.txt"
     return [line.strip() for line in classes_path.read_text(encoding="utf-8").splitlines() if line.strip()]
 
 
 def run_evaluate_and_benchmark(model: str, weights: Path) -> tuple[Path, Path] | tuple[None, None]:
-    """Execute standard evaluation and benchmark scripts for one model."""
+    """Run evaluation and benchmark scripts for one model.
+
+    Args:
+        model: Model architecture identifier understood by the CLI tools.
+        weights: Path to the checkpoint file for that model.
+
+    Returns:
+        Tuple of paths to the metrics and benchmark JSON files when generated,
+        or ``(None, None)`` if the required weights are missing.
+    """
     if not weights.exists():
         return None, None
 
@@ -131,7 +158,15 @@ def run_evaluate_and_benchmark(model: str, weights: Path) -> tuple[Path, Path] |
 
 
 def build_model(model: str, num_classes: int) -> torch.nn.Module:
-    """Instantiate architecture for normalized confusion matrix generation."""
+    """Instantiate a model architecture for local artifact generation.
+
+    Args:
+        model: Architecture identifier.
+        num_classes: Number of output classes.
+
+    Returns:
+        Torch model instance matching the requested architecture.
+    """
     if model == "cnn":
         return SimpleCNN(num_classes=num_classes)
     if model == "mobilenet":
@@ -140,29 +175,43 @@ def build_model(model: str, num_classes: int) -> torch.nn.Module:
 
 
 def generate_confusion_pair(model: str, weights: Path, class_names: list[str], image_size: int = 384) -> tuple[Path, Path] | tuple[None, None]:
-    """Generate raw and normalized confusion matrix images in figures directory."""
+    """Generate raw and normalized confusion matrices for one checkpoint.
+
+    Args:
+        model: Architecture identifier.
+        weights: Path to the trained checkpoint.
+        class_names: Ordered class labels aligned with model outputs.
+        image_size: Input resolution for evaluation preprocessing.
+
+    Returns:
+        Tuple of ``(raw_path, normalized_path)`` when generation succeeds, or
+        ``(None, None)`` if the weights are missing.
+    """
     if not weights.exists():
         return None, None
 
     device = "cuda" if torch.cuda.is_available() else "cpu"
-    ds = PlantVillageSplitDataset(str(SPLITS_DIR / "test.csv"), transform=build_eval_transforms(image_size))
-    loader = DataLoader(ds, batch_size=32, shuffle=False, num_workers=0)
+    test_dataset = PlantVillageSplitDataset(
+        str(SPLITS_DIR / "test.csv"),
+        transform=build_eval_transforms(image_size),
+    )
+    test_loader = DataLoader(test_dataset, batch_size=32, shuffle=False, num_workers=0)
 
-    m = build_model(model, num_classes=len(class_names)).to(device)
+    model_instance = build_model(model, num_classes=len(class_names)).to(device)
     state = torch.load(str(weights), map_location=device, weights_only=True)
     if isinstance(state, dict) and "state_dict" in state:
         state = state["state_dict"]
-    m.load_state_dict(state, strict=False)
-    m.eval()
+    model_instance.load_state_dict(state, strict=False)
+    model_instance.eval()
 
     y_true, y_pred = [], []
     with torch.no_grad():
-        for x, y in loader:
-            x = x.to(device)
-            logits = m(x)
-            pred = torch.argmax(logits, dim=1).cpu().numpy().tolist()
-            y_pred.extend(pred)
-            y_true.extend(y.numpy().tolist())
+        for input_batch, target_batch in test_loader:
+            input_batch = input_batch.to(device)
+            logits = model_instance(input_batch)
+            predictions = torch.argmax(logits, dim=1).cpu().numpy().tolist()
+            y_pred.extend(predictions)
+            y_true.extend(target_batch.numpy().tolist())
 
     cm = confusion_matrix(y_true, y_pred)
     cmn = confusion_matrix(y_true, y_pred, normalize="true")
@@ -194,7 +243,11 @@ def generate_confusion_pair(model: str, weights: Path, class_names: list[str], i
 
 
 def generate_class_distribution_plots() -> list[Path]:
-    """Generate train/validation/test class distribution figures."""
+    """Generate class-distribution figures for all data splits.
+
+    Returns:
+        List of paths to the generated PNG files.
+    """
     paths = []
     split_map = {
         "train": "class_distribution_train.png",
@@ -220,18 +273,35 @@ def generate_class_distribution_plots() -> list[Path]:
 
 
 def select_sample_images() -> tuple[Path | None, Path | None]:
-    """Pick one healthy and one diseased image from test split."""
-    df = pd.read_csv(SPLITS_DIR / "test.csv")
-    healthy = df[df["class_name"].str.contains("healthy", case=False, na=False)]
-    diseased = df[~df["class_name"].str.contains("healthy", case=False, na=False)]
-    h = Path(healthy.iloc[0]["image_path"]) if not healthy.empty else None
-    d = Path(diseased.iloc[0]["image_path"]) if not diseased.empty else None
-    return h, d
+    """Pick one healthy and one diseased example image from the test split.
+
+    Returns:
+        Tuple of ``(healthy_image_path, diseased_image_path)``. Either value can
+        be ``None`` if no suitable sample is available.
+    """
+    test_df = pd.read_csv(SPLITS_DIR / "test.csv")
+    healthy_rows = test_df[test_df["class_name"].str.contains("healthy", case=False, na=False)]
+    diseased_rows = test_df[~test_df["class_name"].str.contains("healthy", case=False, na=False)]
+    healthy_path = Path(healthy_rows.iloc[0]["image_path"]) if not healthy_rows.empty else None
+    diseased_path = Path(diseased_rows.iloc[0]["image_path"]) if not diseased_rows.empty else None
+    return healthy_path, diseased_path
 
 
 def make_multi_leaf_image(healthy: np.ndarray, diseased: np.ndarray) -> np.ndarray:
-    """Build synthetic multi-leaf image by placing two leaves on white canvas."""
-    canvas = np.full((max(healthy.shape[0], diseased.shape[0]) + 40, healthy.shape[1] + diseased.shape[1] + 80, 3), 255, dtype=np.uint8)
+    """Build a synthetic two-leaf image for multi-leaf demo evidence.
+
+    Args:
+        healthy: Healthy-leaf image.
+        diseased: Diseased-leaf image.
+
+    Returns:
+        White canvas containing both leaves side by side.
+    """
+    canvas = np.full(
+        (max(healthy.shape[0], diseased.shape[0]) + 40, healthy.shape[1] + diseased.shape[1] + 80, 3),
+        255,
+        dtype=np.uint8,
+    )
     canvas[20:20 + healthy.shape[0], 20:20 + healthy.shape[1]] = healthy
     x2 = 40 + healthy.shape[1]
     canvas[20:20 + diseased.shape[0], x2:x2 + diseased.shape[1]] = diseased
@@ -239,7 +309,14 @@ def make_multi_leaf_image(healthy: np.ndarray, diseased: np.ndarray) -> np.ndarr
 
 
 def render_demo_image(image: np.ndarray, title: str, lines: list[str], out_path: Path) -> None:
-    """Render a simple annotated demo panel image."""
+    """Render a simple annotated panel summarizing one demo scenario.
+
+    Args:
+        image: Base image to annotate.
+        title: Title placed at the top of the panel.
+        lines: Status or explanation lines rendered below the title.
+        out_path: Destination path for the rendered image.
+    """
     panel = image.copy()
     y = 24
     cv2.putText(panel, title, (10, y), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2)
@@ -250,33 +327,47 @@ def render_demo_image(image: np.ndarray, title: str, lines: list[str], out_path:
 
 
 def run_inference_pipeline(image: np.ndarray, infer: InferenceService, gradcam: GradCAMService, threshold: float = 0.70) -> dict:
-    """Execute validation->segmentation->classification->gradcam like API path."""
+    """Execute the same validation-to-Grad-CAM flow used by the API.
+
+    Args:
+        image: Input image to process.
+        infer: Reusable inference service.
+        gradcam: Reusable Grad-CAM service.
+        threshold: Confidence threshold for accepting predictions.
+
+    Returns:
+        Dictionary mirroring the key response structure of the deployed API.
+    """
     validator = LeafValidationService()
     segmenter = SegmentationService(max_leaves=5)
 
-    val = validator.validate(image)
-    if not val.is_valid:
+    validation = validator.validate(image)
+    if not validation.is_valid:
         return {"status": "invalid", "message": "No leaf detected. Please retake the photo.", "results": []}
 
-    segs = segmenter.segment_leaves(image)
-    if not segs:
+    segments = segmenter.segment_leaves(image)
+    if not segments:
         return {"status": "invalid", "message": "No leaf detected. Please retake the photo.", "results": []}
 
     results = []
-    for seg in segs:
-        pred, tensor = infer.predict(seg.crop_bgr)
-        if pred.confidence < threshold:
+    for segment in segments:
+        prediction, input_tensor = infer.predict(segment.crop_bgr)
+        if prediction.confidence < threshold:
             continue
-        overlay = gradcam.generate_overlay(tensor, seg.crop_bgr, class_idx=pred.class_index)
+        overlay = gradcam.generate_overlay(
+            input_tensor,
+            segment.crop_bgr,
+            class_idx=prediction.class_index,
+        )
         results.append(
             {
-                "leaf_id": seg.leaf_id,
-                "crop_name": pred.crop_name,
-                "disease_name": pred.disease_name,
-                "confidence": float(pred.confidence),
-                "healthy_or_diseased": pred.healthy_or_diseased,
-                "short_description": pred.short_description,
-                "bbox": seg.bbox,
+                "leaf_id": segment.leaf_id,
+                "crop_name": prediction.crop_name,
+                "disease_name": prediction.disease_name,
+                "confidence": float(prediction.confidence),
+                "healthy_or_diseased": prediction.healthy_or_diseased,
+                "short_description": prediction.short_description,
+                "bbox": segment.bbox,
                 "overlay": overlay,
             }
         )
@@ -288,7 +379,15 @@ def run_inference_pipeline(image: np.ndarray, infer: InferenceService, gradcam: 
 
 
 def generate_gradcam_and_demo_outputs(mobilenet_weights: Path) -> tuple[list[Path], list[Path], Path | None]:
-    """Generate Grad-CAM and demo output figures for required scenarios."""
+    """Generate demo evidence figures using the deployed MobileNetV2 model.
+
+    Args:
+        mobilenet_weights: Path to the deployment checkpoint.
+
+    Returns:
+        Tuple containing generated Grad-CAM figure paths, demo figure paths,
+        and the saved API-response JSON path.
+    """
     if not mobilenet_weights.exists():
         return [], [], None
 
@@ -373,7 +472,16 @@ def generate_gradcam_and_demo_outputs(mobilenet_weights: Path) -> tuple[list[Pat
 
 
 def write_model_summary_csv(metrics_files: dict[str, Path | None], bench_files: dict[str, Path | None], weight_files: dict[str, Path]) -> Path:
-    """Create model comparison CSV from generated metrics and benchmark files."""
+    """Create a compact model-comparison CSV from generated artifacts.
+
+    Args:
+        metrics_files: Mapping of model name to metrics JSON path.
+        bench_files: Mapping of model name to benchmark JSON path.
+        weight_files: Mapping of model name to checkpoint path.
+
+    Returns:
+        Path to the generated CSV summary file.
+    """
     out = ROOT / "docs" / "reports" / "model_metrics_summary.csv"
     rows = []
     for model in ["cnn", "mobilenet", "hybrid"]:
@@ -409,7 +517,11 @@ def write_model_summary_csv(metrics_files: dict[str, Path | None], bench_files: 
 
 
 def write_figure_index() -> Path:
-    """Create a markdown index of current figure files and descriptions."""
+    """Create a markdown index describing the generated figure files.
+
+    Returns:
+        Path to the generated markdown index.
+    """
     descriptions = {
         "cnn_confusion_matrix.png": "confusion matrix for CNN baseline",
         "mobilenet_confusion_matrix.png": "confusion matrix for MobileNetV2",
@@ -440,6 +552,12 @@ def write_figure_index() -> Path:
 
 
 def main() -> None:
+    """Run the full evidence-generation workflow.
+
+    Side Effects:
+        Writes metrics files, benchmark files, figures, demo JSON, and summary
+        index artifacts into the documentation directories.
+    """
     METRICS_DIR.mkdir(parents=True, exist_ok=True)
     FIGURES_DIR.mkdir(parents=True, exist_ok=True)
 

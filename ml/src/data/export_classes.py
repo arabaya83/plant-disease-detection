@@ -1,4 +1,9 @@
-"""Export class list to inference-friendly JSON index mapping."""
+"""Export class names into the JSON format used by runtime inference.
+
+The deployed application expects a JSON file mapping integer output indices to
+the original PlantVillage class labels. This script converts the split-time
+``classes.txt`` artifact into that runtime-friendly representation.
+"""
 
 import argparse
 import json
@@ -6,7 +11,17 @@ from pathlib import Path
 
 
 def load_classes(classes_txt: Path) -> list[str]:
-    """Read newline-separated class labels from split artifact."""
+    """Read the ordered class list from ``classes.txt``.
+
+    Args:
+        classes_txt: Path to the newline-delimited class file.
+
+    Returns:
+        Ordered list of non-empty class labels.
+
+    Raises:
+        ValueError: If the file exists but contains no class labels.
+    """
     classes = [line.strip() for line in classes_txt.read_text(encoding="utf-8").splitlines() if line.strip()]
     if not classes:
         raise ValueError(f"No classes found in {classes_txt}")
@@ -14,7 +29,11 @@ def load_classes(classes_txt: Path) -> list[str]:
 
 
 def main() -> None:
-    """CLI entrypoint for creating `ml/weights/classes.json`."""
+    """Create the runtime class-name JSON artifact.
+
+    Side Effects:
+        Writes the class-index mapping JSON expected by the deployed API.
+    """
     parser = argparse.ArgumentParser()
     parser.add_argument("--classes-txt", default="ml/splits/classes.txt")
     parser.add_argument("--out-json", default="ml/weights/classes.json")

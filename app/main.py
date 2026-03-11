@@ -1,6 +1,14 @@
-"""Application entrypoint."""
+"""FastAPI application entrypoint for the deployed diagnosis service.
+
+This module constructs the production-style runtime graph used by the browser
+demo: configuration, logging, storage, validation, segmentation, model
+inference, Grad-CAM generation, analytics logging, and route registration.
+It is intentionally import-driven so ``uvicorn app.main:app`` can boot the
+entire service without extra wiring code.
+"""
 
 import os
+
 from huggingface_hub import hf_hub_download
 from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
@@ -17,17 +25,39 @@ from app.services.inference import InferenceService
 from app.services.segmentation import SegmentationService
 from app.services.storage import StorageService
 
-# Download model weights from HF Hub if not present locally
-weights_path = "ml/weights/mobilenet_best.pt"
-if not os.path.exists(weights_path):
+
+DEFAULT_WEIGHTS_PATH = "ml/weights/mobilenet_best.pt"
+HF_MODEL_REPO_ID = "rabaya/plant-disease-detection"
+HF_MODEL_FILENAME = "mobilenet_best.pt"
+
+
+def ensure_default_weights_present(weights_path: str = DEFAULT_WEIGHTS_PATH) -> None:
+    """Download the default deployment checkpoint if it is not present locally.
+
+    The repository intentionally does not store large binary checkpoints in git.
+    This helper keeps the deployed app runnable by pulling the canonical
+    MobileNetV2 weights from Hugging Face when needed.
+
+    Args:
+        weights_path: Local path where the default checkpoint is expected.
+
+    Side Effects:
+        Creates ``ml/weights`` if needed and may download model weights from
+        the project's Hugging Face repository.
+    """
+    if os.path.exists(weights_path):
+        return
+
     os.makedirs("ml/weights", exist_ok=True)
     hf_hub_download(
-        repo_id="rabaya/plant-disease-detection",
-        filename="mobilenet_best.pt",
+        repo_id=HF_MODEL_REPO_ID,
+        filename=HF_MODEL_FILENAME,
         repo_type="model",
-        local_dir="ml/weights"
+        local_dir="ml/weights",
     )
 
+
+ensure_default_weights_present()
 settings = get_settings()
 setup_logging(settings.app_log)
 

@@ -1,9 +1,9 @@
-"""Generate/copy submission figures for documentation and slides.
+"""Generate deterministic figure assets for reports and slides.
 
-This script is intentionally lightweight and deterministic:
-- plots class distributions from split CSVs,
-- copies confusion matrix images when available,
-- writes placeholders for manual evidence that cannot be fabricated.
+This script focuses on figures that can be reproduced from repository
+artifacts without manual interaction. It creates dataset-distribution charts,
+copies available confusion matrices, and writes placeholder files for runtime
+captures that must still be produced manually.
 """
 
 from __future__ import annotations
@@ -16,7 +16,15 @@ import pandas as pd
 
 
 def save_train_distribution(splits_dir: Path, output_dir: Path) -> Path:
-    """Plot class frequency in the training split."""
+    """Plot class frequency for the training split.
+
+    Args:
+        splits_dir: Directory containing generated split CSV files.
+        output_dir: Directory where the figure should be saved.
+
+    Returns:
+        Path to the saved PNG file.
+    """
     train_df = pd.read_csv(splits_dir / "train.csv")
     counts = train_df["class_name"].value_counts().sort_index()
 
@@ -35,7 +43,15 @@ def save_train_distribution(splits_dir: Path, output_dir: Path) -> Path:
 
 
 def save_all_splits_distribution(splits_dir: Path, output_dir: Path) -> Path:
-    """Plot split-level image counts and verify 80/10/10 artifact sizes."""
+    """Plot the number of images in each split.
+
+    Args:
+        splits_dir: Directory containing generated split CSV files.
+        output_dir: Directory where the figure should be saved.
+
+    Returns:
+        Path to the saved PNG file.
+    """
     rows = []
     for split_name in ["train", "val", "test"]:
         csv_path = splits_dir / f"{split_name}.csv"
@@ -59,7 +75,15 @@ def save_all_splits_distribution(splits_dir: Path, output_dir: Path) -> Path:
 
 
 def copy_confusion_matrices(weights_dir: Path, output_dir: Path) -> list[str]:
-    """Copy confusion matrix images from weights folder when they exist."""
+    """Copy available confusion-matrix images into the figure directory.
+
+    Args:
+        weights_dir: Directory that may contain evaluation PNG artifacts.
+        output_dir: Destination directory for copied figures.
+
+    Returns:
+        List of filenames that were copied.
+    """
     copied = []
     for name in ["cnn_confusion_matrix.png", "mobilenet_confusion_matrix.png", "hybrid_confusion_matrix.png"]:
         src = weights_dir / name
@@ -71,11 +95,23 @@ def copy_confusion_matrices(weights_dir: Path, output_dir: Path) -> list[str]:
 
 
 def write_placeholder(output_dir: Path, filename: str, message: str) -> None:
-    """Write TODO-style placeholder for human-generated demo artifacts."""
+    """Write a TODO placeholder for a manually captured artifact.
+
+    Args:
+        output_dir: Directory where the placeholder should be written.
+        filename: Placeholder filename.
+        message: Human-readable instructions for replacing the placeholder.
+    """
     (output_dir / filename).write_text(message.strip() + "\n", encoding="utf-8")
 
 
 def main() -> None:
+    """Generate all deterministic submission figures and summaries.
+
+    Side Effects:
+        Writes figure PNG files, placeholder TODO files, and a markdown summary
+        into the requested output directory.
+    """
     parser = argparse.ArgumentParser()
     parser.add_argument("--splits-dir", default="ml/splits")
     parser.add_argument("--weights-dir", default="ml/weights")

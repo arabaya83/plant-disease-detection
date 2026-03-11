@@ -1,4 +1,9 @@
-"""Benchmark inference latency and checkpoint size for a model artifact."""
+"""Benchmark inference latency and checkpoint size for a trained model.
+
+This script provides a lightweight deployment-oriented comparison: it measures
+average per-image inference time on synthetic input and records checkpoint file
+size. The resulting JSON files support model-selection tradeoff discussions.
+"""
 
 import argparse
 import json
@@ -18,7 +23,15 @@ from ml.src.models.mobilenet_baseline import build_mobilenet_v2
 
 
 def build_model(name: str, num_classes: int = 38):
-    """Instantiate model used for latency benchmarking."""
+    """Instantiate the requested architecture for benchmarking.
+
+    Args:
+        name: Model architecture identifier.
+        num_classes: Output class count expected by the checkpoint.
+
+    Returns:
+        Uninitialized model instance for the requested architecture.
+    """
     if name == "cnn":
         return SimpleCNN(num_classes=num_classes)
     if name == "mobilenet":
@@ -26,8 +39,13 @@ def build_model(name: str, num_classes: int = 38):
     return HybridPlantDiseaseModel(num_classes=num_classes, pretrained_backbone=False)
 
 
-def main():
-    """CLI entrypoint for average per-image inference timing benchmark."""
+def main() -> None:
+    """Measure average per-image inference latency and checkpoint size.
+
+    Side Effects:
+        Writes a benchmark JSON artifact containing latency, size, and device
+        information.
+    """
     parser = argparse.ArgumentParser(
         description="Benchmark model inference latency and report checkpoint size."
     )
@@ -48,16 +66,16 @@ def main():
     model.load_state_dict(state, strict=False)
     model.eval()
 
-    x = torch.randn(1, 3, args.image_size, args.image_size).to(device)
+    synthetic_input = torch.randn(1, 3, args.image_size, args.image_size).to(device)
 
     with torch.no_grad():
         for _ in range(10):
-            _ = model(x)
+            _ = model(synthetic_input)
 
     t0 = time.perf_counter()
     with torch.no_grad():
         for _ in range(args.iters):
-            _ = model(x)
+            _ = model(synthetic_input)
     elapsed = (time.perf_counter() - t0) / args.iters
 
     model_size_mb = Path(args.weights).stat().st_size / (1024 * 1024)

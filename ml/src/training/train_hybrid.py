@@ -1,4 +1,9 @@
-"""CLI training entrypoint for HybridPlantDiseaseModel."""
+"""Train the hybrid feature-fusion classifier on the PlantVillage splits.
+
+This script trains the highest-complexity comparison model in the repository.
+It exists to test whether combining MobileNetV2 features with a custom
+residual branch improves enough to justify the larger footprint.
+"""
 
 import argparse
 import json
@@ -20,13 +25,17 @@ from ml.src.models.hybrid_model import HybridPlantDiseaseModel
 from ml.src.training.utils import train_model
 
 
-def load_class_names(split_dir: Path):
-    """Load class name order used to align class-weight vectors."""
+def load_class_names(split_dir: Path) -> list[str]:
+    """Load class-name order used to align labels and class weights."""
     return [line.strip() for line in (split_dir / "classes.txt").read_text(encoding="utf-8").splitlines() if line.strip()]
 
 
-def main():
-    """Configure data/model/loss and train hybrid model with early stopping."""
+def main() -> None:
+    """Configure data, model, and optimizer then train the hybrid model.
+
+    Side Effects:
+        Saves the best model weights and a training-history JSON file.
+    """
     parser = argparse.ArgumentParser(
         description="Train hybrid model (MobileNet branch + residual branch) on PlantVillage split CSVs."
     )
@@ -46,15 +55,21 @@ def main():
     classes = load_class_names(split_dir)
     device = "cuda" if torch.cuda.is_available() else "cpu"
 
-    train_ds = PlantVillageSplitDataset(str(split_dir / "train.csv"), transform=build_train_transforms(args.image_size))
-    val_ds = PlantVillageSplitDataset(str(split_dir / "val.csv"), transform=build_eval_transforms(args.image_size))
+    train_dataset = PlantVillageSplitDataset(
+        str(split_dir / "train.csv"),
+        transform=build_train_transforms(args.image_size),
+    )
+    val_dataset = PlantVillageSplitDataset(
+        str(split_dir / "val.csv"),
+        transform=build_eval_transforms(args.image_size),
+    )
 
-    train_loader = DataLoader(train_ds, batch_size=args.batch_size, shuffle=True, num_workers=args.num_workers)
-    val_loader = DataLoader(val_ds, batch_size=args.batch_size, shuffle=False, num_workers=args.num_workers)
+    train_loader = DataLoader(train_dataset, batch_size=args.batch_size, shuffle=True, num_workers=args.num_workers)
+    val_loader = DataLoader(val_dataset, batch_size=args.batch_size, shuffle=False, num_workers=args.num_workers)
 
     with open(args.weights_json, "r", encoding="utf-8") as f:
-        w_map = json.load(f)
-    weight_tensor = torch.tensor([w_map[str(i)] for i in range(len(classes))], dtype=torch.float32).to(device)
+        weight_map = json.load(f)
+    weight_tensor = torch.tensor([weight_map[str(i)] for i in range(len(classes))], dtype=torch.float32).to(device)
 
     model = HybridPlantDiseaseModel(num_classes=len(classes), pretrained_backbone=True).to(device)
     criterion = nn.CrossEntropyLoss(weight=weight_tensor)

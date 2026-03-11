@@ -1,4 +1,9 @@
-"""Hybrid classifier combining MobileNetV2 and custom residual branch."""
+"""Hybrid classifier that fuses transfer-learned and custom CNN features.
+
+This model combines a MobileNetV2 backbone with a lightweight residual branch.
+It exists to test whether multi-branch feature fusion improves over the
+transfer-learning baseline enough to justify the added complexity.
+"""
 
 import torch
 import torch.nn as nn
@@ -6,7 +11,7 @@ from torchvision.models import MobileNet_V2_Weights, mobilenet_v2
 
 
 class ResidualBlock(nn.Module):
-    """Residual refinement block used in custom branch."""
+    """Residual refinement block used inside the custom branch."""
 
     def __init__(self, channels: int):
         super().__init__()
@@ -17,7 +22,7 @@ class ResidualBlock(nn.Module):
         self.relu = nn.ReLU(inplace=True)
 
     def forward(self, x: torch.Tensor) -> torch.Tensor:
-        """Apply residual transform and return fused activation."""
+        """Apply the residual transform and return the fused activation."""
         identity = x
         out = self.relu(self.bn1(self.conv1(x)))
         out = self.bn2(self.conv2(out))
@@ -26,9 +31,16 @@ class ResidualBlock(nn.Module):
 
 
 class HybridPlantDiseaseModel(nn.Module):
-    """Feature-fusion model: transfer branch + lightweight residual branch."""
+    """Feature-fusion model with MobileNet and residual branches."""
 
     def __init__(self, num_classes: int, pretrained_backbone: bool = True):
+        """Initialize the hybrid classifier.
+
+        Args:
+            num_classes: Number of output classes for classification.
+            pretrained_backbone: Whether to initialize MobileNet with ImageNet
+                weights.
+        """
         super().__init__()
 
         weights = MobileNet_V2_Weights.IMAGENET1K_V1 if pretrained_backbone else None
@@ -61,10 +73,17 @@ class HybridPlantDiseaseModel(nn.Module):
         )
 
     def forward(self, x: torch.Tensor) -> torch.Tensor:
-        """Extract branch features, concatenate, and produce class logits."""
-        mobile_feat = self.mobilenet_backbone(x)
-        mobile_feat = self.mobilenet_pool(mobile_feat)
-        res_feat = self.res_branch(x)
+        """Extract both branch features, fuse them, and produce logits.
 
-        fused = torch.cat([mobile_feat, res_feat], dim=1)
-        return self.head(fused)
+        Args:
+            x: Input image batch.
+
+        Returns:
+            Unnormalized class logits for each image.
+        """
+        mobile_features = self.mobilenet_backbone(x)
+        mobile_features = self.mobilenet_pool(mobile_features)
+        residual_features = self.res_branch(x)
+
+        fused_features = torch.cat([mobile_features, residual_features], dim=1)
+        return self.head(fused_features)

@@ -1,7 +1,9 @@
-"""Central application settings loaded from environment variables.
+"""Environment-backed configuration for the deployed application.
 
-This module provides a cached `Settings` instance used by both backend
-runtime and scripts.
+The project uses a single settings object for runtime paths, model-selection
+defaults, confidence thresholds, and logging destinations. Centralizing these
+values makes the API easier to reason about and reduces the chance of route or
+service modules hard-coding inconsistent behavior.
 """
 
 from functools import lru_cache
@@ -12,7 +14,11 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class Settings(BaseSettings):
-    """Environment-backed configuration for API, model, and storage paths."""
+    """Typed application configuration loaded from ``.env``.
+
+    The defaults are chosen to match the repository layout and the MobileNetV2
+    deployment model described in the project documentation.
+    """
 
     model_config = SettingsConfigDict(
         env_file=".env",
@@ -38,14 +44,28 @@ class Settings(BaseSettings):
     app_log: str = Field(default="logs/app.log")
 
     def ensure_dirs(self) -> None:
-        """Create configured output/log directories if they do not exist."""
-        for path in [self.upload_dir, self.output_dir, Path(self.analytics_log).parent, Path(self.app_log).parent]:
+        """Create directories required by runtime storage and logging.
+
+        Side Effects:
+            Creates upload, output, and log directories when missing.
+        """
+        required_paths = [
+            self.upload_dir,
+            self.output_dir,
+            Path(self.analytics_log).parent,
+            Path(self.app_log).parent,
+        ]
+        for path in required_paths:
             Path(path).mkdir(parents=True, exist_ok=True)
 
 
 @lru_cache(maxsize=1)
 def get_settings() -> Settings:
-    """Return a process-wide cached settings object."""
+    """Return the cached process-wide settings instance.
+
+    Returns:
+        The lazily created :class:`Settings` object shared across the process.
+    """
     settings = Settings()
     settings.ensure_dirs()
     return settings

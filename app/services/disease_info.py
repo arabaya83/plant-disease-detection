@@ -1,4 +1,10 @@
-"""Helpers for decoding class labels into user-friendly disease messages."""
+"""Label parsing and user-facing disease descriptions.
+
+This module converts raw model class labels such as ``Tomato___Late_blight``
+into frontend-friendly crop names, disease names, and educational text. It is
+kept separate from model inference so label presentation can evolve without
+changing classifier code.
+"""
 
 from typing import Dict, Tuple
 
@@ -19,7 +25,14 @@ DISEASE_DESCRIPTIONS: Dict[str, str] = {
 
 
 def parse_label(class_label: str) -> Tuple[str, str, str]:
-    """Convert raw class label into crop, disease text, and health status."""
+    """Convert a raw dataset label into user-facing fields.
+
+    Args:
+        class_label: Raw class label in PlantVillage naming format.
+
+    Returns:
+        A tuple of ``(crop_name, disease_name, health_status)``.
+    """
     if "___" in class_label:
         crop, disease = class_label.split("___", 1)
     else:
@@ -31,7 +44,15 @@ def parse_label(class_label: str) -> Tuple[str, str, str]:
 
 
 def get_description(class_label: str, healthy_or_diseased: str) -> str:
-    """Return short educational text for the predicted class."""
+    """Return a short educational description for a predicted label.
+
+    Args:
+        class_label: Raw model label for the predicted class.
+        healthy_or_diseased: High-level health state derived from the label.
+
+    Returns:
+        A concise user-facing message suitable for the result card UI.
+    """
     if healthy_or_diseased == "Healthy":
         return "Healthy - No disease detected."
     return DISEASE_DESCRIPTIONS.get(

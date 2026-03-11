@@ -1,7 +1,8 @@
-"""Frontend and inference API routes.
+"""Frontend page and inference endpoint for the deployed diagnosis pipeline.
 
-This router coordinates the full prediction workflow:
-upload -> validate -> segment -> classify -> Grad-CAM -> response + analytics.
+This module owns the main user-facing request flow. The route handlers receive
+uploads from the browser UI, invoke the shared service layer in the correct
+order, and shape the final response contract returned to the frontend.
 """
 
 import logging
@@ -23,7 +24,20 @@ templates = Jinja2Templates(directory="app/templates")
 
 
 def bind_services(storage, validator, segmenter, inference, analytics, settings) -> None:
-    """Attach shared service instances to router state at application startup."""
+    """Attach startup-created services to the router.
+
+    Args:
+        storage: Service responsible for saving uploads and derived images.
+        validator: Service that rejects clearly invalid non-leaf inputs.
+        segmenter: Service that extracts candidate leaf crops.
+        inference: Service that runs the trained classifier.
+        analytics: Service that logs request outcomes.
+        settings: Application settings object shared across routes.
+
+    Side Effects:
+        Stores the shared services on the router object and creates the
+        Grad-CAM wrapper for the active model.
+    """
     router.storage = storage
     router.validator = validator
     router.segmenter = segmenter
@@ -35,13 +49,68 @@ def bind_services(storage, validator, segmenter, inference, analytics, settings)
 
 @router.get("/", response_class=HTMLResponse)
 def index(request: Request):
-    """Serve the mobile-friendly capture/upload frontend."""
+    """Serve the mobile-friendly browser UI.
+
+    Args:
+        request: FastAPI request object required by Jinja templates.
+
+    Returns:
+        Rendered HTML page for camera capture and file upload.
+    """
     return templates.TemplateResponse("index.html", {"request": request})
+
+
+def _build_invalid_response(image_id: str, latency_ms: float) -> InferResponse:
+    """Create the standard response used for invalid or non-leaf images."""
+    return InferResponse(
+        status="invalid",
+        message="No leaf detected. Please retake the photo.",
+        image_id=image_id,
+        latency_ms=latency_ms,
+        total_leaves_detected=0,
+        results=[],
+    )
+
+
+def _log_inference_event(response: InferResponse) -> None:
+    """Write a normalized analytics record for an inference response.
+
+    Args:
+        response: API response object produced by the inference pipeline.
+
+    Side Effects:
+        Appends a record to the analytics JSONL log.
+    """
+    router.analytics.log_event(
+        {
+            "timestamp": datetime.now(timezone.utc).isoformat(),
+            "image_id": response.image_id,
+            "status": response.status,
+            "message": response.message,
+            "results": [result.model_dump() for result in response.results],
+            "latency_ms": response.latency_ms,
+        }
+    )
 
 
 @router.post("/infer", response_model=InferResponse)
 async def infer(file: UploadFile = File(...)):
-    """Run full multi-leaf diagnosis pipeline on an uploaded image."""
+    """Run the full image-to-diagnosis pipeline on one upload.
+
+    The flow is intentionally linear so maintainers can trace behavior:
+    save upload -> validate leaf content -> segment leaves -> classify each
+    segment -> apply confidence filter -> generate Grad-CAM -> log analytics.
+
+    Args:
+        file: Uploaded image file from the browser client.
+
+    Returns:
+        Structured inference response containing overall status, latency, and
+        zero or more accepted leaf-level predictions.
+
+    Raises:
+        HTTPException: If the uploaded file cannot be decoded as an image.
+    """
     start = time.perf_counter()
     image_id, image_path = await router.storage.save_upload(file)
 
@@ -51,81 +120,54 @@ async def infer(file: UploadFile = File(...)):
 
     validation = router.validator.validate(image_bgr)
     if not validation.is_valid:
-        # Fail fast when the frame does not contain enough leaf-like content.
         latency_ms = (time.perf_counter() - start) * 1000
-        response = InferResponse(
-            status="invalid",
-            message="No leaf detected. Please retake the photo.",
-            image_id=image_id,
-            latency_ms=latency_ms,
-            total_leaves_detected=0,
-            results=[],
-        )
-        router.analytics.log_event(
-            {
-                "timestamp": datetime.now(timezone.utc).isoformat(),
-                "image_id": image_id,
-                "status": response.status,
-                "message": response.message,
-                "results": [],
-                "latency_ms": latency_ms,
-            }
-        )
+        response = _build_invalid_response(image_id=image_id, latency_ms=latency_ms)
+        _log_inference_event(response)
         return response
 
     segments = router.segmenter.segment_leaves(image_bgr)
     if not segments:
-        # Validation passed but no robust contour survived segmentation filters.
         latency_ms = (time.perf_counter() - start) * 1000
-        response = InferResponse(
-            status="invalid",
-            message="No leaf detected. Please retake the photo.",
-            image_id=image_id,
-            latency_ms=latency_ms,
-            total_leaves_detected=0,
-            results=[],
-        )
-        router.analytics.log_event(
-            {
-                "timestamp": datetime.now(timezone.utc).isoformat(),
-                "image_id": image_id,
-                "status": response.status,
-                "message": response.message,
-                "results": [],
-                "latency_ms": latency_ms,
-            }
-        )
+        # Segmentation can still fail after validation if the green regions are
+        # too small or too noisy to survive contour filtering.
+        response = _build_invalid_response(image_id=image_id, latency_ms=latency_ms)
+        _log_inference_event(response)
         return response
 
     leaf_results = []
-    accepted = 0
-    for seg in segments:
-        pred, input_tensor = router.inference.predict(seg.crop_bgr)
+    accepted_count = 0
+    for segment in segments:
+        prediction, input_tensor = router.inference.predict(segment.crop_bgr)
 
-        if pred.confidence < router.settings.confidence_threshold:
-            # Do not force low-confidence predictions.
+        # Low-confidence predictions are suppressed rather than force-labeled so
+        # the UI can ask for a retake instead of presenting misleading results.
+        if prediction.confidence < router.settings.confidence_threshold:
             continue
 
-        overlay = router.gradcam.generate_overlay(input_tensor, seg.crop_bgr, class_idx=pred.class_index)
-        out_path = router.storage.output_path(image_id=image_id, leaf_idx=seg.leaf_id)
+        overlay = router.gradcam.generate_overlay(
+            input_tensor,
+            segment.crop_bgr,
+            class_idx=prediction.class_index,
+        )
+        out_path = router.storage.output_path(image_id=image_id, leaf_idx=segment.leaf_id)
         router.gradcam.save_overlay(overlay, out_path)
 
         leaf_results.append(
             LeafResult(
-                leaf_id=seg.leaf_id,
-                crop_name=pred.crop_name,
-                disease_name=pred.disease_name,
-                confidence=round(pred.confidence, 4),
-                healthy_or_diseased=pred.healthy_or_diseased,
-                short_description=pred.short_description,
+                leaf_id=segment.leaf_id,
+                crop_name=prediction.crop_name,
+                disease_name=prediction.disease_name,
+                confidence=round(prediction.confidence, 4),
+                healthy_or_diseased=prediction.healthy_or_diseased,
+                short_description=prediction.short_description,
                 heatmap_path=f"/{out_path.as_posix()}",
             )
         )
-        accepted += 1
+        accepted_count += 1
 
     latency_ms = (time.perf_counter() - start) * 1000
 
-    if accepted == 0:
+    if accepted_count == 0:
         response = InferResponse(
             status="low_confidence",
             message="Low confidence predictions. Please retake the photo.",
@@ -144,16 +186,7 @@ async def infer(file: UploadFile = File(...)):
             results=leaf_results,
         )
 
-    router.analytics.log_event(
-        {
-            "timestamp": datetime.now(timezone.utc).isoformat(),
-            "image_id": image_id,
-            "status": response.status,
-            "message": response.message,
-            "results": [r.model_dump() for r in response.results],
-            "latency_ms": latency_ms,
-        }
-    )
+    _log_inference_event(response)
     logger.info("inference image_id=%s status=%s leaves=%d latency_ms=%.2f", image_id, response.status, len(segments), latency_ms)
 
     return response

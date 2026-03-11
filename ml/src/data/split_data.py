@@ -1,4 +1,9 @@
-"""Create stratified train/val/test CSV splits from class-folder dataset."""
+"""Generate reproducible stratified dataset splits from PlantVillage folders.
+
+This script scans the raw class-folder dataset layout and writes train,
+validation, and test CSV manifests. Those manifests become the canonical data
+inputs for the rest of the ML pipeline.
+"""
 
 import argparse
 from pathlib import Path
@@ -7,8 +12,16 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 
 
-def collect_samples(data_dir: Path):
-    """Scan class directories and return dataframe rows + ordered class names."""
+def collect_samples(data_dir: Path) -> tuple[pd.DataFrame, list[str]]:
+    """Scan dataset folders and assemble sample metadata.
+
+    Args:
+        data_dir: Root directory containing one subdirectory per class.
+
+    Returns:
+        A tuple of the sample dataframe and the sorted class-name list used to
+        assign class indices.
+    """
     rows = []
     class_names = sorted([p.name for p in data_dir.iterdir() if p.is_dir()])
     class_to_idx = {name: i for i, name in enumerate(class_names)}
@@ -27,8 +40,16 @@ def collect_samples(data_dir: Path):
     return pd.DataFrame(rows), class_names
 
 
-def main():
-    """CLI entrypoint for generating 80/10/10 stratified split files."""
+def main() -> None:
+    """Create the canonical 80/10/10 split artifacts for the project.
+
+    Side Effects:
+        Writes ``train.csv``, ``val.csv``, ``test.csv``, and ``classes.txt``
+        into the requested output directory.
+
+    Raises:
+        ValueError: If no valid images are found in the dataset directory.
+    """
     parser = argparse.ArgumentParser()
     parser.add_argument("--data-dir", required=True)
     parser.add_argument("--out-dir", required=True)
@@ -42,16 +63,16 @@ def main():
     if df.empty:
         raise ValueError("No images found in dataset directory")
 
-    train_df, tmp_df = train_test_split(
+    train_df, temp_df = train_test_split(
         df,
         test_size=0.2,
         stratify=df["label_idx"],
         random_state=42,
     )
     val_df, test_df = train_test_split(
-        tmp_df,
+        temp_df,
         test_size=0.5,
-        stratify=tmp_df["label_idx"],
+        stratify=temp_df["label_idx"],
         random_state=42,
     )
 
