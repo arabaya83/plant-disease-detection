@@ -2,6 +2,32 @@
 
 Submission-ready computer vision final project for mobile-first plant disease diagnosis. The system demonstrates an end-to-end deployable workflow from data preparation and model training to explainable multi-leaf inference through a FastAPI + browser interface.
 
+Developer-oriented documentation:
+- `docs/DEVELOPER_GUIDE.md`
+
+## Quick Start
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+```
+
+Open:
+- `http://localhost:8000`
+
+Quick health checks:
+- `GET /health`
+- `GET /analytics/summary`
+
+Runtime requirements:
+- `ml/weights/classes.json`
+- `ml/weights/mobilenet_best.pt`
+
+If `ml/weights/mobilenet_best.pt` is missing, the app will attempt to download
+the default MobileNetV2 checkpoint from the configured Hugging Face model repo
+at startup.
+
 ## 1. Project Overview
 For each uploaded/captured image, the system:
 1. validates leaf presence,
@@ -43,6 +69,13 @@ source .venv/bin/activate
 pip install -r requirements.txt
 cp .env.example .env
 ```
+
+Recommended first-run verification:
+1. Confirm `ml/weights/classes.json` exists.
+2. Start the API with `uvicorn app.main:app --reload`.
+3. Open `http://localhost:8000`.
+4. Check `http://localhost:8000/health`.
+5. Upload a valid leaf image through the browser UI.
 
 Expected dataset layout:
 ```text
@@ -116,6 +149,12 @@ API endpoints:
 - `POST /infer`
 - `GET /analytics/summary`
 
+Runtime directories used by the deployed app:
+- `app/static/uploads` for original uploaded images
+- `app/static/outputs` for Grad-CAM overlays
+- `logs/analytics.jsonl` for inference analytics events
+- `logs/app.log` for application logs
+
 ## 10. Model Comparison Summary (Observed Run)
 See:
 - `docs/reports/model_comparison_summary.md`
@@ -148,7 +187,18 @@ Reproducibility references:
 - Classical segmentation can degrade in heavy shadows/clutter.
 - Thresholded inference may increase retake prompts on uncertain samples.
 
-## 13. Final Deliverables Map
+## 13. Troubleshooting
+- Startup fails with model/class errors:
+  Check that `ml/weights/classes.json` exists and that the configured weights
+  path is valid.
+- `POST /infer` returns `"status": "invalid"` for a seemingly good image:
+  The HSV validation or contour-based segmentation may be rejecting the sample.
+- `POST /infer` returns `"status": "low_confidence"`:
+  The model did not produce any predictions above the confidence threshold.
+- UI loads but no heatmap appears:
+  Check `app/static/outputs/` and `logs/app.log`.
+
+## 14. Final Deliverables Map
 - Compliance report: `docs/submission/assignment_compliance_report.md`
 - Technical synopsis source: `docs/submission/technical_synopsis.md`
 - Demo runbook: `docs/submission/demo_video_script.md`
@@ -158,7 +208,7 @@ Reproducibility references:
 - Published links tracker: `docs/submission/published_links.md`
 - Completion status board: `docs/submission/completion_status.md`
 
-## 14. Finalization Commands
+## 15. Finalization Commands
 ```bash
 # 1) Generate runtime evidence package
 python docs/reports/scripts/generate_project_evidence.py
