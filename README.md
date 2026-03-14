@@ -197,14 +197,3 @@ Reproducibility references:
   The model did not produce any predictions above the confidence threshold.
 - UI loads but no heatmap appears:
   Check `app/static/outputs/` and `logs/app.log`.
-
-## 14. Final Deliverables Map
-- Compliance report: `docs/submission/assignment_compliance_report.md`
-- Technical synopsis source: `docs/submission/technical_synopsis.md`
-- Demo runbook: `docs/submission/demo_video_script.md`
-- Presentation source package: `docs/submission/presentation/management_presentation_content.md`
-- Final artifacts manifest: `docs/submission/final_artifacts_manifest.md`
-- Pre-submission checklist: `docs/submission/pre_submission_checklist.md`
-- Published links tracker: `docs/submission/published_links.md`
-- Completion status board: `docs/submission/completion_status.md`
-```
