@@ -207,18 +207,4 @@ Reproducibility references:
 - Pre-submission checklist: `docs/submission/pre_submission_checklist.md`
 - Published links tracker: `docs/submission/published_links.md`
 - Completion status board: `docs/submission/completion_status.md`
-
-## 15. Finalization Commands
-```bash
-# 1) Generate runtime evidence package
-python docs/reports/scripts/generate_project_evidence.py
-
-# 2) Build Jupyter Book locally
-bash docs/submission/scripts/build_jupyter_book.sh
-
-# 3) Export synopsis PDF (requires pandoc + LaTeX engine)
-bash docs/submission/scripts/export_synopsis_pdf.sh
-
-# 4) Export presentation deck as PPTX (requires pandoc)
-bash docs/submission/scripts/export_presentation_pptx.sh
 ```
